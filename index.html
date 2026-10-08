@@ -43,19 +43,53 @@ a{
 
 .demo-badge{
     position:fixed;
-    top:15px;
+    top:78px;
     left:50%;
     transform:translateX(-50%);
-    z-index:2000;
+    z-index:900;
     background:#d5b77a;
     color:#17251f;
-    padding:8px 18px;
+    padding:7px 17px;
     border-radius:30px;
-    font-size:11px;
+    font-size:10px;
     font-weight:800;
     letter-spacing:1.5px;
     text-transform:uppercase;
-    box-shadow:0 5px 20px rgba(0,0,0,.2);
+    box-shadow:0 4px 15px rgba(0,0,0,.18);
+    white-space:nowrap;
+}
+
+/* =========================
+   LANGUAGE SWITCHER
+========================= */
+
+.language-switcher{
+    position:fixed;
+    top:20px;
+    right:25px;
+    z-index:2000;
+    display:flex;
+    gap:4px;
+    background:rgba(20,34,30,.88);
+    padding:4px;
+    border-radius:25px;
+    backdrop-filter:blur(8px);
+}
+
+.language-switcher button{
+    border:0;
+    background:transparent;
+    color:#d7ded9;
+    padding:6px 10px;
+    border-radius:18px;
+    font-size:11px;
+    font-weight:800;
+    cursor:pointer;
+}
+
+.language-switcher button.active{
+    background:#d5b77a;
+    color:#17251f;
 }
 
 /* =========================
@@ -704,9 +738,18 @@ footer{
     }
 
     .demo-badge{
-        top:10px;
-        font-size:9px;
-        padding:7px 13px;
+        top:72px;
+        font-size:8px;
+        padding:6px 12px;
+    }
+
+    .language-switcher{
+        top:14px;
+        right:15px;
+    }
+
+    .hero{
+        padding-top:55px;
     }
 
     .hero h1{
@@ -758,10 +801,29 @@ footer{
 
 <body>
 
-<!-- DEMO -->
+<!-- =========================
+     LANGUAGE
+========================= -->
 
-<div class="demo-badge">
-    DEMO · SITIO WEB DE EJEMPLO
+<div class="language-switcher">
+
+<button id="esBtn" class="active" onclick="setLanguage('es')">
+ES
+</button>
+
+<button id="enBtn" onclick="setLanguage('en')">
+EN
+</button>
+
+</div>
+
+
+<!-- =========================
+     DEMO
+========================= -->
+
+<div class="demo-badge" id="demoBadge">
+DEMO · SITIO WEB DE EJEMPLO
 </div>
 
 
@@ -777,11 +839,19 @@ PATAGONIA <span>LODGE</span>
 
 <nav>
 
-<a href="#nosotros">Nosotros</a>
-<a href="#habitaciones">Habitaciones</a>
-<a href="#experiencias">Experiencias</a>
-<a href="#galeria">Galería</a>
-<a href="#contacto" class="nav-button">Contacto</a>
+<a href="#nosotros" data-es="Nosotros" data-en="About us">Nosotros</a>
+
+<a href="#habitaciones" data-es="Habitaciones" data-en="Rooms">Habitaciones</a>
+
+<a href="#experiencias" data-es="Experiencias" data-en="Experiences">Experiencias</a>
+
+<a href="#galeria" data-es="Galería" data-en="Gallery">Galería</a>
+
+<a href="#contacto" class="nav-button"
+data-es="Contacto"
+data-en="Contact">
+Contacto
+</a>
 
 </nav>
 
@@ -796,7 +866,9 @@ PATAGONIA <span>LODGE</span>
 
 <div class="hero-content">
 
-<div class="hero-small">
+<div class="hero-small"
+data-es="Esquel · Patagonia Argentina"
+data-en="Esquel · Patagonia Argentina">
 Esquel · Patagonia Argentina
 </div>
 
@@ -804,18 +876,26 @@ Esquel · Patagonia Argentina
 Patagonia<br>Lodge
 </h1>
 
-<p>
+<p
+data-es="Un refugio entre montañas, bosques y lagos. Viví la Patagonia con el confort que merecés."
+data-en="A refuge surrounded by mountains, forests and lakes. Experience Patagonia in comfort.">
 Un refugio entre montañas, bosques y lagos.
 Viví la Patagonia con el confort que merecés.
 </p>
 
 <div class="hero-buttons">
 
-<a href="#habitaciones" class="btn btn-primary">
+<a href="#habitaciones"
+class="btn btn-primary"
+data-es="Ver habitaciones"
+data-en="View rooms">
 Ver habitaciones
 </a>
 
-<a href="#contacto" class="btn btn-light">
+<a href="#contacto"
+class="btn btn-light"
+data-es="Consultar disponibilidad"
+data-en="Check availability">
 Consultar disponibilidad
 </a>
 
@@ -838,45 +918,49 @@ Consultar disponibilidad
 
 <div>
 
-<div class="section-label">
+<div class="section-label"
+data-es="El lugar"
+data-en="The place">
 El lugar
 </div>
 
-<h2 class="section-title">
+<h2 class="section-title"
+data-es="Tu refugio en la cordillera"
+data-en="Your refuge in the mountains">
 Tu refugio en la cordillera
 </h2>
 
-<p class="section-text">
-
+<p class="section-text"
+data-es="Patagonia Lodge es un alojamiento boutique ficticio inspirado en los paisajes de Esquel y la Cordillera de los Andes. Un espacio pensado para quienes buscan desconectar, respirar aire puro y descubrir una de las regiones más increíbles de Argentina."
+data-en="Patagonia Lodge is a fictional boutique accommodation inspired by the landscapes of Esquel and the Andes Mountains. A place designed for those looking to disconnect, breathe fresh air and discover one of Argentina's most incredible regions.">
 Patagonia Lodge es un alojamiento boutique ficticio
 inspirado en los paisajes de Esquel y la Cordillera de los Andes.
 
 Un espacio pensado para quienes buscan desconectar,
 respirar aire puro y descubrir una de las regiones
 más increíbles de Argentina.
-
 </p>
 
 <div class="features">
 
 <div class="feature">
-<strong>🏔️ Montañas</strong>
-<span>Vistas privilegiadas</span>
+<strong>🏔️ <span data-es="Montañas" data-en="Mountains">Montañas</span></strong>
+<span data-es="Vistas privilegiadas" data-en="Exceptional views">Vistas privilegiadas</span>
 </div>
 
 <div class="feature">
-<strong>🔥 Hogar</strong>
-<span>Espacios cálidos</span>
+<strong>🔥 <span data-es="Hogar" data-en="Fireplace">Hogar</span></strong>
+<span data-es="Espacios cálidos" data-en="Warm spaces">Espacios cálidos</span>
 </div>
 
 <div class="feature">
-<strong>🥐 Desayuno</strong>
-<span>Productos regionales</span>
+<strong>🥐 <span data-es="Desayuno" data-en="Breakfast">Desayuno</span></strong>
+<span data-es="Productos regionales" data-en="Local products">Productos regionales</span>
 </div>
 
 <div class="feature">
 <strong>📶 Wi-Fi</strong>
-<span>Conectividad incluida</span>
+<span data-es="Conectividad incluida" data-en="Wi-Fi included">Conectividad incluida</span>
 </div>
 
 </div>
@@ -898,15 +982,21 @@ más increíbles de Argentina.
 
 <div class="center">
 
-<div class="section-label">
+<div class="section-label"
+data-es="Descansá"
+data-en="Relax">
 Descansá
 </div>
 
-<h2 class="section-title">
+<h2 class="section-title"
+data-es="Habitaciones"
+data-en="Rooms">
 Habitaciones
 </h2>
 
-<p class="section-text">
+<p class="section-text"
+data-es="Diseñadas para descansar después de un día explorando la Patagonia."
+data-en="Designed for relaxing after a day exploring Patagonia.">
 Diseñadas para descansar después de un día
 explorando la Patagonia.
 </p>
@@ -921,9 +1011,15 @@ explorando la Patagonia.
 
 <div class="room-body">
 
-<h3>Habitación Bosque</h3>
+<h3
+data-es="Habitación Bosque"
+data-en="Forest Room">
+Habitación Bosque
+</h3>
 
-<p>
+<p
+data-es="Calidez, madera y vistas al bosque. Ideal para una escapada en pareja."
+data-en="Warmth, wood and forest views. Ideal for a romantic getaway.">
 Calidez, madera y vistas al bosque.
 Ideal para una escapada en pareja.
 </p>
@@ -944,9 +1040,15 @@ Ideal para una escapada en pareja.
 
 <div class="room-body">
 
-<h3>Suite Cordillera</h3>
+<h3
+data-es="Suite Cordillera"
+data-en="Mountain Suite">
+Suite Cordillera
+</h3>
 
-<p>
+<p
+data-es="Amplios espacios y una vista privilegiada hacia las montañas."
+data-en="Spacious interiors and privileged mountain views.">
 Amplios espacios y una vista privilegiada
 hacia las montañas.
 </p>
@@ -967,9 +1069,15 @@ hacia las montañas.
 
 <div class="room-body">
 
-<h3>Suite Familiar</h3>
+<h3
+data-es="Suite Familiar"
+data-en="Family Suite">
+Suite Familiar
+</h3>
 
-<p>
+<p
+data-es="Comodidad y espacio para compartir la Patagonia en familia."
+data-en="Comfort and space to enjoy Patagonia with the whole family.">
 Comodidad y espacio para compartir
 la Patagonia en familia.
 </p>
@@ -996,77 +1104,63 @@ la Patagonia en familia.
 
 <div class="container">
 
-<div class="section-label">
+<div class="section-label"
+data-es="Descubrí"
+data-en="Discover">
 Descubrí
 </div>
 
-<h2 class="section-title">
+<h2 class="section-title"
+data-es="Experiencias"
+data-en="Experiences">
 Experiencias
 </h2>
 
-<p class="section-text">
+<p class="section-text"
+data-es="La Patagonia empieza cuando salís por la puerta."
+data-en="Patagonia begins when you step outside.">
 La Patagonia empieza cuando salís por la puerta.
 </p>
 
 <div class="experience-grid">
 
 <div class="experience exp-1">
-
 <div class="experience-content">
-
-<h3>🏔️ Montaña</h3>
-
-<p>
+<h3>🏔️ <span data-es="Montaña" data-en="Mountains">Montaña</span></h3>
+<p data-es="Senderos y paisajes cordilleranos." data-en="Trails and mountain landscapes.">
 Senderos y paisajes cordilleranos.
 </p>
-
 </div>
-
 </div>
 
 
 <div class="experience exp-2">
-
 <div class="experience-content">
-
-<h3>🥾 Trekking</h3>
-
-<p>
+<h3>🥾 <span data-es="Trekking" data-en="Trekking">Trekking</span></h3>
+<p data-es="Caminatas para todos los niveles." data-en="Hiking routes for every level.">
 Caminatas para todos los niveles.
 </p>
-
 </div>
-
 </div>
 
 
 <div class="experience exp-3">
-
 <div class="experience-content">
-
-<h3>🎣 Pesca</h3>
-
-<p>
+<h3>🎣 <span data-es="Pesca" data-en="Fishing">Pesca</span></h3>
+<p data-es="Ríos y lagos de la región." data-en="Rivers and lakes throughout the region.">
 Ríos y lagos de la región.
 </p>
-
 </div>
-
 </div>
 
 
 <div class="experience exp-4">
-
 <div class="experience-content">
-
-<h3>🌲 Naturaleza</h3>
-
-<p>
+<h3>🌲 <span data-es="Naturaleza" data-en="Nature">Naturaleza</span></h3>
+<p data-es="Bosques y fauna patagónica." data-en="Patagonian forests and wildlife.">
 Bosques y fauna patagónica.
 </p>
-
 </div>
-
 </div>
 
 </div>
@@ -1082,11 +1176,15 @@ Bosques y fauna patagónica.
 
 <div class="container">
 
-<div class="section-label">
+<div class="section-label"
+data-es="Galería"
+data-en="Gallery">
 Galería
 </div>
 
-<h2 class="section-title">
+<h2 class="section-title"
+data-es="La Patagonia te espera"
+data-en="Patagonia is waiting for you">
 La Patagonia te espera
 </h2>
 
@@ -1113,11 +1211,15 @@ La Patagonia te espera
 
 <div class="center">
 
-<div class="section-label">
+<div class="section-label"
+data-es="Nuestros huéspedes"
+data-en="Our guests">
 Nuestros huéspedes
 </div>
 
-<h2 class="section-title">
+<h2 class="section-title"
+data-es="Lo que dicen"
+data-en="What they say">
 Lo que dicen
 </h2>
 
@@ -1127,55 +1229,49 @@ Lo que dicen
 
 <div class="review">
 
-<div class="stars">
-★★★★★
-</div>
+<div class="stars">★★★★★</div>
 
-<p>
+<p
+data-es='"Un lugar increíble. La tranquilidad, las vistas y la atención hicieron que nuestra estadía fuera perfecta."'
+data-en='"An incredible place. The peaceful atmosphere, views and service made our stay perfect."'>
 "Un lugar increíble. La tranquilidad,
 las vistas y la atención hicieron
 que nuestra estadía fuera perfecta."
 </p>
 
-<strong>
-— Martín, Buenos Aires
-</strong>
+<strong>— Martín, Buenos Aires</strong>
 
 </div>
 
 
 <div class="review">
 
-<div class="stars">
-★★★★★
-</div>
+<div class="stars">★★★★★</div>
 
-<p>
+<p
+data-es='"El lugar ideal para desconectar. Volveríamos sin pensarlo."'
+data-en='"The perfect place to disconnect. We would definitely come back."'>
 "El lugar ideal para desconectar.
 Volveríamos sin pensarlo."
 </p>
 
-<strong>
-— Sofía, Córdoba
-</strong>
+<strong>— Sofía, Córdoba</strong>
 
 </div>
 
 
 <div class="review">
 
-<div class="stars">
-★★★★★
-</div>
+<div class="stars">★★★★★</div>
 
-<p>
+<p
+data-es='"Una experiencia hermosa en la Patagonia. Todo cuidado hasta el último detalle."'
+data-en='"A beautiful Patagonia experience. Every detail was carefully considered."'>
 "Una experiencia hermosa en la Patagonia.
 Todo cuidado hasta el último detalle."
 </p>
 
-<strong>
-— Lucas, Rosario
-</strong>
+<strong>— Lucas, Rosario</strong>
 
 </div>
 
@@ -1202,9 +1298,7 @@ Todo cuidado hasta el último detalle."
 
 <h3>Esquel</h3>
 
-<p>
-Chubut · Patagonia Argentina
-</p>
+<p>Chubut · Patagonia Argentina</p>
 
 </div>
 
@@ -1213,41 +1307,41 @@ Chubut · Patagonia Argentina
 
 <div>
 
-<div class="section-label">
+<div class="section-label"
+data-es="Encontranos"
+data-en="Find us">
 Encontranos
 </div>
 
-<h2 class="section-title">
+<h2 class="section-title"
+data-es="Tu próxima aventura comienza acá"
+data-en="Your next adventure starts here">
 Tu próxima aventura comienza acá
 </h2>
 
-<p class="section-text">
-
+<p class="section-text"
+data-es="Este sitio es una demostración de cómo podría verse una página web profesional para un alojamiento turístico de la región."
+data-en="This website is a demonstration of how a professional website could look for a tourism business in the region.">
 Este sitio es una demostración de cómo podría
 verse una página web profesional para un alojamiento
 turístico de la región.
-
 </p>
 
 <div class="contact-list">
 
 <div class="contact-item">
 
-<strong>📍 Ubicación</strong>
+<strong>📍 <span data-es="Ubicación" data-en="Location">Ubicación</span></strong>
 
-<span>
-Esquel, Chubut, Argentina · DEMO
-</span>
+<span>Esquel, Chubut, Argentina · DEMO</span>
 
 </div>
 
 <div class="contact-item">
 
-<strong>✉️ Contacto del desarrollador</strong>
+<strong>✉️ <span data-es="Contacto del desarrollador" data-en="Developer contact">Contacto del desarrollador</span></strong>
 
-<span>
-presufacil1@gmail.com
-</span>
+<span>presufacil1@gmail.com</span>
 
 </div>
 
@@ -1268,11 +1362,15 @@ presufacil1@gmail.com
 
 <div class="container">
 
-<h2>
+<h2
+data-es="¿Querés una web así para tu negocio?"
+data-en="Would you like a website like this for your business?">
 ¿Querés una web así para tu negocio?
 </h2>
 
-<p>
+<p
+data-es="Este sitio es una demo. Si tenés un alojamiento, restaurante, comercio, servicio o emprendimiento y querés una página profesional, escribime."
+data-en="This website is a demo. If you own a hotel, restaurant, shop, service or business and want a professional website, get in touch.">
 Este sitio es una demo. Si tenés un alojamiento,
 restaurante, comercio, servicio o emprendimiento
 y querés una página profesional, escribime.
@@ -1280,7 +1378,9 @@ y querés una página profesional, escribime.
 
 <a
 href="mailto:presufacil1@gmail.com?subject=Consulta%20sobre%20desarrollo%20web"
-class="btn btn-primary">
+class="btn btn-primary"
+data-es="✉️ Quiero una web así"
+data-en="✉️ I want a website like this">
 ✉️ Quiero una web así
 </a>
 
@@ -1297,26 +1397,26 @@ class="btn btn-primary">
 
 <div>
 
-<h3>
-PATAGONIA LODGE
-</h3>
+<h3>PATAGONIA LODGE</h3>
 
-<p>
+<p data-es="DEMO · Sitio web de ejemplo"
+data-en="DEMO · Example website">
 DEMO · Sitio web de ejemplo
 </p>
 
-<p>
-Esquel · Patagonia Argentina
-</p>
+<p>Esquel · Patagonia Argentina</p>
 
 </div>
 
 <div class="footer-links">
 
-<a href="#nosotros">Nosotros</a>
-<a href="#habitaciones">Habitaciones</a>
-<a href="#experiencias">Experiencias</a>
-<a href="#contacto">Contacto</a>
+<a href="#nosotros" data-es="Nosotros" data-en="About us">Nosotros</a>
+
+<a href="#habitaciones" data-es="Habitaciones" data-en="Rooms">Habitaciones</a>
+
+<a href="#experiencias" data-es="Experiencias" data-en="Experiences">Experiencias</a>
+
+<a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
 
 </div>
 
@@ -1339,8 +1439,7 @@ Esquel · Patagonia Argentina
 
 window.addEventListener("scroll",function(){
 
-const header =
-document.getElementById("header");
+const header = document.getElementById("header");
 
 if(window.scrollY > 50){
 
@@ -1353,6 +1452,49 @@ header.classList.remove("scrolled");
 }
 
 });
+
+
+/* =========================
+   LANGUAGE SWITCHER
+========================= */
+
+function setLanguage(language){
+
+document.documentElement.lang = language;
+
+const elements = document.querySelectorAll("[data-es]");
+
+elements.forEach(function(element){
+
+element.textContent = element.getAttribute("data-" + language);
+
+});
+
+
+document.getElementById("esBtn").classList.remove("active");
+document.getElementById("enBtn").classList.remove("active");
+
+if(language === "es"){
+
+document.getElementById("esBtn").classList.add("active");
+
+}else{
+
+document.getElementById("enBtn").classList.add("active");
+
+}
+
+if(language === "en"){
+
+document.title = "Patagonia Lodge | Web Demo";
+
+}else{
+
+document.title = "Patagonia Lodge | Demo Web";
+
+}
+
+}
 
 </script>
 
