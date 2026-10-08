@@ -1,1768 +1,1918 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
-
-  <meta
-    name="description"
-    content="Patagonia Fly - Guías, lodges y experiencias de pesca con mosca en Esquel, Trevelin, Los Alerces y Cholila."
-  >
-
-  <title>Patagonia Fly | Pesca con Mosca</title>
-
-
-  <style>
-
-    /* =========================================
-       RESET
-    ========================================= */
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      background: #f3f0e8;
-
-      color: #17352c;
-
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-
-    /* =========================================
-       HEADER
-    ========================================= */
-
-    header {
-
-      position: fixed;
-
-      top: 0;
-      left: 0;
-
-      width: 100%;
-
-      z-index: 1000;
-
-      padding:
-        18px
-        6%;
-
-      display: flex;
-
-      justify-content: space-between;
-
-      align-items: center;
-
-      background:
-        rgba(9, 35, 29, 0.96);
-
-      color: white;
-    }
-
-
-    .logo {
-
-      font-size: 22px;
-
-      font-weight: bold;
-
-      letter-spacing: 1px;
-    }
-
-
-    nav {
-
-      display: flex;
-
-      gap: 25px;
-    }
-
-
-    nav a {
-
-      color: white;
-
-      font-size: 15px;
-
-      transition: 0.3s;
-    }
-
-
-    nav a:hover {
-
-      color: #dca04d;
-    }
-
-
-    /* =========================================
-       HERO
-    ========================================= */
-
-    .hero {
-
-      min-height: 100vh;
-
-      padding:
-        140px
-        20px
-        80px;
-
-      display: flex;
-
-      justify-content: center;
-
-      align-items: center;
-
-      text-align: center;
-
-      color: white;
-
-
-      background:
-
-        linear-gradient(
-          rgba(7, 31, 26, 0.72),
-          rgba(7, 31, 26, 0.72)
-        ),
-
-        linear-gradient(
-          135deg,
-          #356b58,
-          #102d25
-        );
-    }
-
-
-    .hero-content {
-
-      max-width: 950px;
-    }
-
-
-    .hero-small {
-
-      text-transform: uppercase;
-
-      letter-spacing: 4px;
-
-      font-size: 14px;
-
-      color: #dfb26b;
-
-      margin-bottom: 18px;
-    }
-
-
-    .hero h1 {
-
-      font-size:
-        clamp(50px, 9vw, 95px);
-
-      line-height: 1;
-
-      margin-bottom: 25px;
-
-      letter-spacing: -3px;
-    }
-
-
-    .hero p {
-
-      font-size:
-        clamp(19px, 3vw, 27px);
-
-      color: #edf1ed;
-
-      max-width: 800px;
-
-      margin:
-        0 auto 35px;
-    }
-
-
-    .hero-button {
-
-      display: inline-block;
-
-      padding:
-        16px
-        32px;
-
-      background: #d49743;
-
-      color: white;
-
-      border-radius: 50px;
-
-      font-weight: bold;
-
-      transition: 0.3s;
-    }
-
-
-    .hero-button:hover {
-
-      transform:
-        translateY(-3px);
-
-      background: #bd7d2d;
-    }
-
-
-    /* =========================================
-       SECCIONES
-    ========================================= */
-
-    section {
-
-      padding:
-        90px 7%;
-    }
-
-
-    .section-title {
-
-      text-align: center;
-
-      max-width: 800px;
-
-      margin:
-        0 auto 50px;
-    }
-
-
-    .section-title h2 {
-
-      font-size: 42px;
-
-      margin-bottom: 12px;
-    }
-
-
-    .section-title p {
-
-      color: #66736d;
-
-      font-size: 18px;
-    }
-
-
-    /* =========================================
-       DESTINOS
-    ========================================= */
-
-    .destinations {
-
-      background: #f3f0e8;
-    }
-
-
-    .destination-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(
-          auto-fit,
-          minmax(250px, 1fr)
-        );
-
-      gap: 25px;
-
-      max-width: 1200px;
-
-      margin: auto;
-    }
-
-
-    .destination {
-
-      background: white;
-
-      padding: 32px 25px;
-
-      border-radius: 20px;
-
-      box-shadow:
-        0 10px 30px
-        rgba(0,0,0,0.07);
-
-      transition: 0.3s;
-
-      text-align: center;
-    }
-
-
-    .destination:hover {
-
-      transform:
-        translateY(-7px);
-
-      box-shadow:
-        0 18px 40px
-        rgba(0,0,0,0.12);
-    }
-
-
-    .destination-icon {
-
-      font-size: 55px;
-
-      margin-bottom: 15px;
-    }
-
-
-    .destination h3 {
-
-      font-size: 25px;
-
-      margin-bottom: 10px;
-    }
-
-
-    .destination p {
-
-      color: #68736e;
-
-      margin-bottom: 20px;
-    }
-
-
-    .destination-button {
-
-      display: inline-block;
-
-      padding:
-        10px 20px;
-
-      border:
-        1px solid #d49743;
-
-      border-radius: 30px;
-
-      color: #a8681f;
-
-      font-weight: bold;
-
-      font-size: 14px;
-    }
-
-
-    /* =========================================
-       CATEGORÍAS
-    ========================================= */
-
-    .categories {
-
-      background: #e4e1d6;
-    }
-
-
-    .category-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(
-          auto-fit,
-          minmax(230px, 1fr)
-        );
-
-      gap: 22px;
-
-      max-width: 1100px;
-
-      margin: auto;
-    }
-
-
-    .category {
-
-      background: #123d32;
-
-      color: white;
-
-      padding: 35px 25px;
-
-      border-radius: 18px;
-
-      text-align: center;
-
-      transition: 0.3s;
-    }
-
-
-    .category:hover {
-
-      transform:
-        translateY(-5px);
-    }
-
-
-    .category-icon {
-
-      font-size: 48px;
-
-      margin-bottom: 12px;
-    }
-
-
-    .category h3 {
-
-      font-size: 23px;
-
-      margin-bottom: 8px;
-    }
-
-
-    .category p {
-
-      color: #cbd9d3;
-
-      font-size: 15px;
-    }
-
-
-    /* =========================================
-       BUSCADOR
-    ========================================= */
-
-    .search-section {
-
-      background:
-        linear-gradient(
-          135deg,
-          #143f33,
-          #0c2922
-        );
-
-      color: white;
-
-      text-align: center;
-    }
-
-
-    .search-section h2 {
-
-      font-size: 42px;
-
-      margin-bottom: 12px;
-    }
-
-
-    .search-section p {
-
-      color: #d1ded8;
-
-      margin-bottom: 30px;
-    }
-
-
-    .search-box {
-
-      max-width: 700px;
-
-      margin: auto;
-
-      display: flex;
-
-      background: white;
-
-      border-radius: 50px;
-
-      padding: 6px;
-    }
-
-
-    .search-box input {
-
-      flex: 1;
-
-      border: none;
-
-      outline: none;
-
-      padding:
-        15px 20px;
-
-      border-radius: 50px;
-
-      font-size: 16px;
-    }
-
-
-    .search-box button {
-
-      border: none;
-
-      background: #d49743;
-
-      color: white;
-
-      padding:
-        0 25px;
-
-      border-radius: 50px;
-
-      font-weight: bold;
-
-      cursor: pointer;
-    }
-
-
-    /* =========================================
-       DESTACADOS
-    ========================================= */
-
-    .featured {
-
-      background: #f3f0e8;
-    }
-
-
-    .featured-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(
-          auto-fit,
-          minmax(280px, 1fr)
-        );
-
-      gap: 25px;
-
-      max-width: 1100px;
-
-      margin: auto;
-    }
-
-
-    .featured-card {
-
-      background: white;
-
-      border-radius: 20px;
-
-      overflow: hidden;
-
-      box-shadow:
-        0 10px 30px
-        rgba(0,0,0,0.08);
-    }
-
-
-    .featured-image {
-
-      height: 190px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      font-size: 65px;
-
-      background:
-        linear-gradient(
-          135deg,
-          #477665,
-          #193b31
-        );
-
-      color: white;
-    }
-
-
-    .featured-content {
-
-      padding: 25px;
-    }
-
-
-    .tag {
-
-      display: inline-block;
-
-      background: #e6efe9;
-
-      color: #245744;
-
-      padding:
-        5px 10px;
-
-      border-radius: 20px;
-
-      font-size: 12px;
-
-      font-weight: bold;
-
-      margin-bottom: 12px;
-    }
-
-
-    .featured-content h3 {
-
-      font-size: 24px;
-
-      margin-bottom: 8px;
-    }
-
-
-    .featured-content p {
-
-      color: #68736e;
-
-      margin-bottom: 18px;
-    }
-
-
-    .featured-link {
-
-      color: #a8681f;
-
-      font-weight: bold;
-    }
-
-
-    /* =========================================
-       MOSCAS
-    ========================================= */
-
-    .flies {
-
-      background: #e4e1d6;
-    }
-
-
-    .flies-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(
-          auto-fit,
-          minmax(200px, 1fr)
-        );
-
-      gap: 20px;
-
-      max-width: 1000px;
-
-      margin: auto;
-    }
-
-
-    .fly {
-
-      background: white;
-
-      padding: 25px;
-
-      border-radius: 16px;
-
-      text-align: center;
-    }
-
-
-    .fly-icon {
-
-      font-size: 45px;
-
-      margin-bottom: 10px;
-    }
-
-
-    .fly h3 {
-
-      margin-bottom: 6px;
-    }
-
-
-    .fly p {
-
-      color: #68736e;
-
-      font-size: 14px;
-    }
-
-
-    /* =========================================
-       CTA
-    ========================================= */
-
-    .cta {
-
-      background:
-        linear-gradient(
-          135deg,
-          #d49743,
-          #b87324
-        );
-
-      color: white;
-
-      text-align: center;
-    }
-
-
-    .cta-content {
-
-      max-width: 800px;
-
-      margin: auto;
-    }
-
-
-    .cta h2 {
-
-      font-size: 42px;
-
-      margin-bottom: 15px;
-    }
-
-
-    .cta p {
-
-      font-size: 19px;
-
-      margin-bottom: 25px;
-    }
-
-
-    .cta-button {
-
-      display: inline-block;
-
-      background: white;
-
-      color: #8b561c;
-
-      padding:
-        15px 28px;
-
-      border-radius: 40px;
-
-      font-weight: bold;
-    }
-
-
-    /* =========================================
-       FOOTER
-    ========================================= */
-
-    footer {
-
-      background: #09271f;
-
-      color: white;
-
-      text-align: center;
-
-      padding: 45px 20px;
-    }
-
-
-    footer h3 {
-
-      font-size: 25px;
-
-      margin-bottom: 8px;
-    }
-
-
-    footer p {
-
-      color: #b7c7c0;
-
-      margin: 5px;
-    }
-
-
-    /* =========================================
-       MOBILE
-    ========================================= */
-
-    @media (max-width: 700px) {
-
-      header {
-
-        padding:
-          15px 20px;
-      }
-
-
-      nav {
-
-        display: none;
-      }
-
-
-      .hero {
-
-        padding-top: 120px;
-      }
-
-
-      .hero h1 {
-
-        font-size: 55px;
-      }
-
-
-      section {
-
-        padding:
-          70px 20px;
-      }
-
-
-      .section-title h2 {
-
-        font-size: 34px;
-      }
-
-
-      .search-section h2 {
-
-        font-size: 34px;
-      }
-
-
-      .search-box {
-
-        border-radius: 18px;
-
-        flex-direction: column;
-
-        padding: 8px;
-      }
-
-
-      .search-box input {
-
-        width: 100%;
-      }
-
-
-      .search-box button {
-
-        padding: 14px;
-
-        margin-top: 5px;
-      }
-
-    }
-
-  </style>
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Patagonia Fly | Pesca con Mosca en Patagonia</title>
+
+<meta name="description"
+content="Encontrá guías, lodges y experiencias de pesca con mosca en Esquel, Trevelin, Parque Nacional Los Alerces y Cholila.">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#071c1a;
+    color:#f3f7f5;
+    line-height:1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(4,20,19,.96);
+    border-bottom:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:16px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:22px;
+    font-weight:800;
+    letter-spacing:1px;
+}
+
+.logo span{
+    color:#74d69b;
+}
+
+.logo-icon{
+    font-size:28px;
+}
+
+nav{
+    display:flex;
+    gap:20px;
+}
+
+nav a{
+    color:#dce9e5;
+    text-decoration:none;
+    font-size:14px;
+    font-weight:600;
+}
+
+nav a:hover{
+    color:#74d69b;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:70px 20px;
+    background:
+        radial-gradient(circle at 50% 20%, rgba(68,150,118,.35), transparent 35%),
+        linear-gradient(180deg,#0c302b 0%,#071c1a 100%);
+    position:relative;
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(78,190,137,.08);
+    top:-200px;
+    left:-100px;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:600px;
+    height:600px;
+    border-radius:50%;
+    background:rgba(42,104,120,.12);
+    right:-200px;
+    bottom:-300px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:900px;
+}
+
+.fishing-icon{
+    font-size:70px;
+    margin-bottom:10px;
+}
+
+.hero h1{
+    font-size:clamp(42px,8vw,82px);
+    line-height:1;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+.hero h1 span{
+    color:#74d69b;
+}
+
+.hero p{
+    max-width:720px;
+    margin:0 auto 30px;
+    color:#c5d8d2;
+    font-size:20px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 24px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.25s;
+}
+
+.btn-primary{
+    background:#74d69b;
+    color:#05201a;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+    background:#8be5ad;
+}
+
+.btn-secondary{
+    border:1px solid rgba(255,255,255,.2);
+    color:white;
+    background:rgba(255,255,255,.05);
+}
+
+.btn-secondary:hover{
+    background:rgba(255,255,255,.1);
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+section{
+    padding:80px 20px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:#9fb4ae;
+}
+
+/* =========================
+   DESTINOS
+========================= */
+
+.destinations{
+    background:#091f1d;
+}
+
+.destination-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.destination{
+    min-height:230px;
+    padding:28px;
+    border-radius:18px;
+    background:
+        linear-gradient(145deg,rgba(67,138,112,.2),rgba(255,255,255,.025));
+    border:1px solid rgba(255,255,255,.08);
+    cursor:pointer;
+    transition:.3s;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-end;
+}
+
+.destination:hover{
+    transform:translateY(-7px);
+    border-color:#74d69b;
+}
+
+.destination-icon{
+    font-size:45px;
+    margin-bottom:auto;
+}
+
+.destination h3{
+    font-size:24px;
+}
+
+.destination p{
+    color:#9fb4ae;
+    font-size:14px;
+}
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.categories{
+    background:#071c1a;
+}
+
+.category-grid{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:14px;
+}
+
+.category{
+    padding:22px 10px;
+    text-align:center;
+    background:#0c2824;
+    border:1px solid rgba(255,255,255,.07);
+    border-radius:15px;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.category:hover{
+    transform:translateY(-4px);
+    border-color:#74d69b;
+}
+
+.category-icon{
+    display:block;
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.category span{
+    font-weight:700;
+    font-size:14px;
+}
+
+/* =========================
+   BUSCADOR
+========================= */
+
+.search-section{
+    background:#0a2522;
+}
+
+.search-box{
+    max-width:850px;
+    margin:auto;
+    position:relative;
+}
+
+.search-box input{
+    width:100%;
+    padding:20px 24px;
+    border:none;
+    outline:none;
+    border-radius:40px;
+    background:#f1f6f4;
+    color:#142521;
+    font-size:17px;
+}
+
+.search-help{
+    text-align:center;
+    color:#8fa8a1;
+    margin-top:14px;
+    font-size:14px;
+}
+
+/* =========================
+   RESULTADOS
+========================= */
+
+.results{
+    background:#071c1a;
+}
+
+.results-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    margin-bottom:25px;
+    flex-wrap:wrap;
+}
+
+.results-info h2{
+    font-size:30px;
+}
+
+.counter{
+    color:#74d69b;
+    font-weight:700;
+}
+
+.filters{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-bottom:30px;
+}
+
+.filter-btn{
+    border:1px solid rgba(255,255,255,.12);
+    background:#0d2925;
+    color:#d7e5e0;
+    padding:10px 16px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+    background:#74d69b;
+    color:#062019;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.card{
+    background:#0b2723;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+    border-color:rgba(116,214,155,.5);
+}
+
+.card-top{
+    height:150px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:55px;
+    background:
+        radial-gradient(circle,rgba(116,214,155,.2),transparent 60%),
+        #0f312b;
+}
+
+.card-body{
+    padding:22px;
+}
+
+.badge{
+    display:inline-block;
+    background:rgba(116,214,155,.12);
+    color:#74d69b;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:800;
+    text-transform:uppercase;
+    margin-bottom:10px;
+}
+
+.card h3{
+    font-size:22px;
+    margin-bottom:6px;
+}
+
+.location{
+    color:#a6bdb6;
+    font-size:14px;
+    margin-bottom:15px;
+}
+
+.card-description{
+    color:#b6c9c3;
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.tags{
+    display:flex;
+    flex-wrap:wrap;
+    gap:6px;
+    margin-bottom:18px;
+}
+
+.tag{
+    font-size:11px;
+    padding:5px 8px;
+    background:#12352f;
+    color:#b9d6cc;
+    border-radius:8px;
+}
+
+.card-actions{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.card-btn{
+    flex:1;
+    min-width:100px;
+    text-align:center;
+    text-decoration:none;
+    padding:10px;
+    border-radius:10px;
+    font-size:13px;
+    font-weight:700;
+}
+
+.card-btn-main{
+    background:#74d69b;
+    color:#062019;
+}
+
+.card-btn-secondary{
+    background:#163832;
+    color:#dcebe5;
+}
+
+.card-btn:hover{
+    opacity:.85;
+}
+
+/* =========================
+   MOSCAS
+========================= */
+
+.flies{
+    background:#0a2522;
+}
+
+.fly-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.fly-card{
+    background:#0d2b26;
+    border-radius:16px;
+    padding:25px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.fly-icon{
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+.fly-card h3{
+    margin-bottom:6px;
+}
+
+.fly-card p{
+    color:#9fb4ae;
+    font-size:14px;
+}
+
+/* =========================
+   INFO
+========================= */
+
+.info{
+    background:#071c1a;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.info-card{
+    padding:30px;
+    background:#0c2824;
+    border-radius:18px;
+    border:1px solid rgba(255,255,255,.07);
+}
+
+.info-card-icon{
+    font-size:35px;
+    margin-bottom:12px;
+}
+
+.info-card h3{
+    margin-bottom:8px;
+}
+
+.info-card p{
+    color:#9fb4ae;
+    font-size:14px;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    padding:90px 20px;
+    text-align:center;
+    background:
+        radial-gradient(circle at center,rgba(116,214,155,.18),transparent 45%),
+        #0b2924;
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    max-width:650px;
+    margin:0 auto 25px;
+    color:#b8cbc5;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#041412;
+    padding:40px 20px;
+}
+
+.footer-content{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.footer-brand{
+    max-width:400px;
+}
+
+.footer-brand h3{
+    font-size:24px;
+    margin-bottom:8px;
+}
+
+.footer-brand p{
+    color:#7f9790;
+    font-size:14px;
+}
+
+.footer-links{
+    display:flex;
+    gap:30px;
+}
+
+.footer-links a{
+    color:#9bb0aa;
+    text-decoration:none;
+    font-size:14px;
+}
+
+.footer-links a:hover{
+    color:#74d69b;
+}
+
+.footer-bottom{
+    max-width:1200px;
+    margin:30px auto 0;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.07);
+    color:#647a74;
+    font-size:12px;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    z-index:2000;
+    padding:20px;
+    align-items:center;
+    justify-content:center;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-content{
+    width:min(700px,100%);
+    max-height:90vh;
+    overflow:auto;
+    background:#0b2723;
+    border:1px solid rgba(255,255,255,.1);
+    border-radius:20px;
+    padding:30px;
+    position:relative;
+}
+
+.close{
+    position:absolute;
+    top:12px;
+    right:18px;
+    background:none;
+    border:none;
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.modal-icon{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.modal-content h2{
+    font-size:32px;
+    margin-bottom:5px;
+}
+
+.modal-location{
+    color:#74d69b;
+    margin-bottom:20px;
+}
+
+.modal-section{
+    margin-top:20px;
+}
+
+.modal-section h3{
+    margin-bottom:7px;
+}
+
+.modal-section p{
+    color:#b5c8c1;
+}
+
+.modal-actions{
+    display:flex;
+    gap:10px;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
+
+/* =========================
+   NO RESULTS
+========================= */
+
+.no-results{
+    text-align:center;
+    padding:50px 20px;
+    color:#91a8a1;
+    display:none;
+}
+
+.no-results strong{
+    display:block;
+    color:white;
+    font-size:22px;
+    margin-bottom:5px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+
+    .destination-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+    .cards{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .fly-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    nav{
+        display:none;
+    }
+
+    .hero{
+        min-height:600px;
+    }
+
+    .hero p{
+        font-size:17px;
+    }
+
+    section{
+        padding:60px 15px;
+    }
+
+    .destination-grid,
+    .cards,
+    .fly-grid,
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .category-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .section-title h2{
+        font-size:30px;
+    }
+
+    .cta h2{
+        font-size:31px;
+    }
+
+}
+
+</style>
 </head>
-
 
 <body>
 
+<!-- =========================
+     HEADER
+========================= -->
 
-  <!-- ========================================
-       HEADER
-  ========================================= -->
+<header>
 
-  <header>
+<div class="navbar">
 
-    <div class="logo">
-      🎣 PATAGONIA FLY
-    </div>
+<div class="logo">
+    <div class="logo-icon">🎣</div>
+    <div>PATAGONIA <span>FLY</span></div>
+</div>
 
-    <nav>
+<nav>
+    <a href="#destinos">Destinos</a>
+    <a href="#experiencias">Experiencias</a>
+    <a href="#guias">Guías</a>
+    <a href="#lodges">Lodges</a>
+    <a href="#buscar">Buscar</a>
+</nav>
 
-      <a href="#destinos">
-        Destinos
-      </a>
+</div>
 
-      <a href="#buscar">
-        Buscar
-      </a>
+</header>
 
-      <a href="#guias">
-        Guías
-      </a>
 
-      <a href="#lodges">
-        Lodges
-      </a>
+<!-- =========================
+     HERO
+========================= -->
 
-    </nav>
+<section class="hero">
 
-  </header>
+<div class="hero-content">
 
+<div class="fishing-icon">🎣</div>
 
+<h1>
+    PATAGONIA <span>FLY</span>
+</h1>
 
-  <!-- ========================================
-       HERO
-  ========================================= -->
+<p>
+    Encontrá tu próxima experiencia de pesca con mosca
+    en Esquel, Trevelin, Los Alerces y Cholila.
+</p>
 
-  <section class="hero">
+<div class="hero-buttons">
 
-    <div class="hero-content">
+<a href="#buscar" class="btn btn-primary">
+    🔎 Buscar una experiencia
+</a>
 
-      <div class="hero-small">
-        Pesca con mosca · Patagonia
-      </div>
+<a href="#destinos" class="btn btn-secondary">
+    🏔️ Explorar destinos
+</a>
 
-      <h1>
-        PATAGONIA FLY
-      </h1>
+</div>
 
-      <p>
-        Encontrá guías, lodges y experiencias
-        de pesca con mosca en el corazón
-        de la Patagonia.
-      </p>
+</div>
 
-      <a
-        href="#destinos"
-        class="hero-button"
-      >
-        EXPLORAR PESCA
-      </a>
+</section>
 
-    </div>
 
-  </section>
+<!-- =========================
+     DESTINOS
+========================= -->
 
+<section class="destinations" id="destinos">
 
+<div class="container">
 
-  <!-- ========================================
-       DESTINOS
-  ========================================= -->
+<div class="section-title">
 
-  <section
-    id="destinos"
-    class="destinations"
-  >
+<h2>Elegí tu destino</h2>
 
-    <div class="section-title">
+<p>
+Cuatro zonas. Infinitas jornadas de pesca.
+</p>
 
-      <h2>
-        Elegí tu destino
-      </h2>
+</div>
 
-      <p>
-        Comenzamos por cuatro zonas
-        fundamentales de la Patagonia.
-      </p>
+<div class="destination-grid">
 
-    </div>
+<div class="destination" onclick="filterDestination('Esquel')">
 
+<div class="destination-icon">🏔️</div>
 
-    <div class="destination-grid">
+<h3>Esquel</h3>
 
+<p>Puerta de entrada a la Patagonia cordillerana.</p>
 
-      <!-- ESQUEL -->
+</div>
 
-      <div class="destination">
 
-        <div class="destination-icon">
-          🏔️
-        </div>
+<div class="destination" onclick="filterDestination('Trevelin')">
 
-        <h3>
-          Esquel
-        </h3>
+<div class="destination-icon">🌲</div>
 
-        <p>
-          Punto de partida para descubrir
-          grandes ambientes de pesca
-          de la región.
-        </p>
+<h3>Trevelin</h3>
 
-        <a
-          href="#guias"
-          class="destination-button"
-        >
-          EXPLORAR
-        </a>
+<p>Ríos, lagos y spring creeks.</p>
 
-      </div>
+</div>
 
 
+<div class="destination" onclick="filterDestination('Los Alerces')">
 
-      <!-- TREVELIN -->
+<div class="destination-icon">🌊</div>
 
-      <div class="destination">
+<h3>Los Alerces</h3>
 
-        <div class="destination-icon">
-          🌲
-        </div>
+<p>Pesca entre bosques y grandes ambientes.</p>
 
-        <h3>
-          Trevelin
-        </h3>
+</div>
 
-        <p>
-          Ríos, lagos y una fuerte tradición
-          de pesca con mosca.
-        </p>
 
-        <a
-          href="#guias"
-          class="destination-button"
-        >
-          EXPLORAR
-        </a>
+<div class="destination" onclick="filterDestination('Cholila')">
 
-      </div>
+<div class="destination-icon">🏕️</div>
 
+<h3>Cholila</h3>
 
+<p>Una de las grandes puertas al norte patagónico.</p>
 
-      <!-- ALERCES -->
+</div>
 
-      <div class="destination">
+</div>
 
-        <div class="destination-icon">
-          🌊
-        </div>
+</div>
 
-        <h3>
-          Los Alerces
-        </h3>
+</section>
 
-        <p>
-          Ambientes naturales únicos
-          para disfrutar de la pesca.
-        </p>
 
-        <a
-          href="#guias"
-          class="destination-button"
-        >
-          EXPLORAR
-        </a>
+<!-- =========================
+     CATEGORIAS
+========================= -->
 
-      </div>
+<section class="categories" id="experiencias">
 
+<div class="container">
 
+<div class="section-title">
 
-      <!-- CHOLILA -->
+<h2>¿Qué estás buscando?</h2>
 
-      <div class="destination">
+<p>
+Todo lo que necesitás para organizar tu salida.
+</p>
 
-        <div class="destination-icon">
-          🏕️
-        </div>
+</div>
 
-        <h3>
-          Cholila
-        </h3>
+<div class="category-grid">
 
-        <p>
-          Lagos, ríos, montaña y
-          experiencias de pesca premium.
-        </p>
+<div class="category" onclick="filterType('Guía')">
+<span class="category-icon">🎣</span>
+<span>Guías</span>
+</div>
 
-        <a
-          href="#lodges"
-          class="destination-button"
-        >
-          EXPLORAR
-        </a>
+<div class="category" onclick="filterType('Lodge')">
+<span class="category-icon">🏕️</span>
+<span>Lodges</span>
+</div>
 
-      </div>
+<div class="category" onclick="document.getElementById('moscas').scrollIntoView()">
+<span class="category-icon">🌊</span>
+<span>Ambientes</span>
+</div>
 
+<div class="category" onclick="document.getElementById('moscas').scrollIntoView()">
+<span class="category-icon">🪰</span>
+<span>Moscas</span>
+</div>
 
-    </div>
+<div class="category" onclick="document.getElementById('reglamento').scrollIntoView()">
+<span class="category-icon">📜</span>
+<span>Reglamento</span>
+</div>
 
-  </section>
+<div class="category" onclick="document.getElementById('permisos').scrollIntoView()">
+<span class="category-icon">🎫</span>
+<span>Permisos</span>
+</div>
 
+</div>
 
+</div>
 
-  <!-- ========================================
-       CATEGORÍAS
-  ========================================= -->
+</section>
 
-  <section class="categories">
 
-    <div class="section-title">
+<!-- =========================
+     BUSCADOR
+========================= -->
 
-      <h2>
-        ¿Qué estás buscando?
-      </h2>
+<section class="search-section" id="buscar">
 
-      <p>
-        Encontrá todo lo necesario para
-        organizar tu próxima salida.
-      </p>
+<div class="container">
 
-    </div>
+<div class="section-title">
 
+<h2>Encontrá tu experiencia</h2>
 
-    <div class="category-grid">
+<p>
+Buscá por nombre, destino, tipo de servicio o modalidad.
+</p>
 
+</div>
 
-      <div class="category">
+<div class="search-box">
 
-        <div class="category-icon">
-          🎣
-        </div>
+<input
+type="text"
+id="searchInput"
+placeholder="Ej: Esquel, Cholila, lodge, guía, vadeo..."
+autocomplete="off"
+>
 
-        <h3>
-          Guías
-        </h3>
+</div>
 
-        <p>
-          Encontrá guías especializados
-          en pesca con mosca.
-        </p>
+<p class="search-help">
+Probá con: <strong>Esquel</strong> · <strong>Trevelin</strong> ·
+<strong>Cholila</strong> · <strong>Lodge</strong> · <strong>Guía</strong>
+</p>
 
-      </div>
+</div>
 
+</section>
 
 
-      <div class="category">
+<!-- =========================
+     RESULTADOS
+========================= -->
 
-        <div class="category-icon">
-          🏕️
-        </div>
+<section class="results" id="resultados">
 
-        <h3>
-          Lodges
-        </h3>
+<div class="container">
 
-        <p>
-          Descubrí alojamientos
-          especializados en pesca.
-        </p>
+<div class="results-info">
 
-      </div>
+<h2>Guías y Lodges</h2>
 
+<div class="counter" id="counter">
+0 resultados
+</div>
 
+</div>
 
-      <div class="category">
+<div class="filters">
 
-        <div class="category-icon">
-          🌊
-        </div>
+<button class="filter-btn active" onclick="setFilter('Todos',this)">
+Todos
+</button>
 
-        <h3>
-          Ambientes
-        </h3>
+<button class="filter-btn" onclick="setFilter('Guía',this)">
+🎣 Guías
+</button>
 
-        <p>
-          Ríos y lagos donde
-          practicar pesca.
-        </p>
+<button class="filter-btn" onclick="setFilter('Lodge',this)">
+🏕️ Lodges
+</button>
 
-      </div>
+<button class="filter-btn" onclick="setFilter('Esquel',this)">
+🏔️ Esquel
+</button>
 
+<button class="filter-btn" onclick="setFilter('Trevelin',this)">
+🌲 Trevelin
+</button>
 
+<button class="filter-btn" onclick="setFilter('Los Alerces',this)">
+🌊 Los Alerces
+</button>
 
-      <div class="category">
+<button class="filter-btn" onclick="setFilter('Cholila',this)">
+🏕️ Cholila
+</button>
 
-        <div class="category-icon">
-          🪰
-        </div>
+</div>
 
-        <h3>
-          Moscas
-        </h3>
+<div class="cards" id="cardsContainer"></div>
 
-        <p>
-          Patrones recomendados
-          según especie y ambiente.
-        </p>
+<div class="no-results" id="noResults">
 
-      </div>
+<strong>No encontramos resultados</strong>
 
+Probá con otro nombre, destino o servicio.
 
+</div>
 
-      <div class="category">
+</div>
 
-        <div class="category-icon">
-          📜
-        </div>
+</section>
 
-        <h3>
-          Reglamento
-        </h3>
 
-        <p>
-          Información sobre
-          temporadas y modalidades.
-        </p>
+<!-- =========================
+     MOSCAS
+========================= -->
 
-      </div>
+<section class="flies" id="moscas">
 
+<div class="container">
 
+<div class="section-title">
 
-      <div class="category">
+<h2>Moscas clásicas</h2>
 
-        <div class="category-icon">
-          🎫
-        </div>
+<p>
+Algunas de las moscas que forman parte del mundo de la pesca patagónica.
+</p>
 
-        <h3>
-          Permisos
-        </h3>
+</div>
 
-        <p>
-          Información para obtener
-          los permisos necesarios.
-        </p>
+<div class="fly-grid">
 
-      </div>
+<div class="fly-card">
 
+<div class="fly-icon">🪰</div>
 
-    </div>
+<h3>Adams</h3>
 
-  </section>
+<p>
+Clásica seca para diferentes situaciones.
+</p>
 
+</div>
 
 
-  <!-- ========================================
-       BUSCADOR
-  ========================================= -->
+<div class="fly-card">
 
-  <section
-    id="buscar"
-    class="search-section"
-  >
+<div class="fly-icon">🪰</div>
 
-    <h2>
-      Encontrá tu próxima salida
-    </h2>
+<h3>Elk Hair Caddis</h3>
 
-    <p>
-      Buscá por destino, guía, lodge
-      o tipo de experiencia.
-    </p>
+<p>
+Una de las grandes clásicas para imitaciones de caddis.
+</p>
 
+</div>
 
-    <div class="search-box">
 
-      <input
-        type="text"
-        id="searchInput"
-        placeholder="Ej: guía en Esquel..."
-      >
+<div class="fly-card">
 
-      <button
-        onclick="buscar()"
-      >
-        BUSCAR
-      </button>
+<div class="fly-icon">🪰</div>
 
-    </div>
+<h3>Woolly Bugger</h3>
 
+<p>
+Streamer extremadamente versátil.
+</p>
 
-    <p
-      id="searchResult"
-      style="
-        margin-top:20px;
-        display:none;
-      "
-    ></p>
+</div>
 
-  </section>
 
+<div class="fly-card">
 
+<div class="fly-icon">🪰</div>
 
-  <!-- ========================================
-       GUIAS
-  ========================================= -->
+<h3>Pheasant Tail</h3>
 
-  <section
-    id="guias"
-    class="featured"
-  >
+<p>
+Ninfa clásica para pescar diferentes capas de agua.
+</p>
 
-    <div class="section-title">
+</div>
 
-      <h2>
-        Guías de pesca
-      </h2>
+</div>
 
-      <p>
-        Próximamente vas a poder descubrir
-        guías especializados de la región.
-      </p>
+</div>
 
-    </div>
+</section>
 
 
-    <div class="featured-grid">
+<!-- =========================
+     INFORMACION
+========================= -->
 
+<section class="info">
 
-      <div class="featured-card">
+<div class="container">
 
-        <div class="featured-image">
-          🎣
-        </div>
+<div class="section-title">
 
-        <div class="featured-content">
+<h2>Información para pescadores</h2>
 
-          <span class="tag">
-            ESQUEL
-          </span>
+<p>
+Antes de salir, tené en cuenta estos puntos.
+</p>
 
-          <h3>
-            Guías de pesca
-          </h3>
+</div>
 
-          <p>
-            Explorá profesionales que
-            trabajan en Esquel y alrededores.
-          </p>
+<div class="info-grid">
 
-          <a
-            href="#"
-            class="featured-link"
-          >
-            VER GUÍAS →
-          </a>
+<div class="info-card">
 
-        </div>
+<div class="info-card-icon">📅</div>
 
-      </div>
+<h3>Temporada</h3>
 
+<p>
+En Trevelin la temporada de pesca deportiva suele comenzar
+en noviembre y extenderse hasta fines de abril.
+Siempre verificá el reglamento vigente antes de pescar.
+</p>
 
+</div>
 
-      <div class="featured-card">
 
-        <div class="featured-image">
-          🌲
-        </div>
+<div class="info-card" id="permisos">
 
-        <div class="featured-content">
+<div class="info-card-icon">🎫</div>
 
-          <span class="tag">
-            TREVELIN
-          </span>
+<h3>Permiso de pesca</h3>
 
-          <h3>
-            Guías de Trevelin
-          </h3>
+<p>
+La pesca deportiva continental requiere contar con
+el permiso de pesca vigente correspondiente.
+</p>
 
-          <p>
-            Encontrá especialistas
-            de los ambientes de la zona.
-          </p>
+</div>
 
-          <a
-            href="#"
-            class="featured-link"
-          >
-            VER GUÍAS →
-          </a>
 
-        </div>
+<div class="info-card" id="reglamento">
 
-      </div>
+<div class="info-card-icon">📜</div>
 
+<h3>Reglamento</h3>
 
+<p>
+Las modalidades, ambientes, temporadas y especies
+habilitadas pueden variar. Consultá siempre la normativa vigente.
+</p>
 
-      <div class="featured-card">
+</div>
 
-        <div class="featured-image">
-          🌊
-        </div>
+</div>
 
-        <div class="featured-content">
+</div>
 
-          <span class="tag">
-            LOS ALERCES
-          </span>
+</section>
 
-          <h3>
-            Pesca en el Parque
-          </h3>
 
-          <p>
-            Guías que trabajan en
-            diferentes ambientes del parque.
-          </p>
+<!-- =========================
+     CTA
+========================= -->
 
-          <a
-            href="#"
-            class="featured-link"
-          >
-            VER GUÍAS →
-          </a>
+<section class="cta">
 
-        </div>
+<div class="container">
 
-      </div>
+<h2>¿Sos guía o tenés un lodge?</h2>
 
+<p>
+Patagonia Fly busca reunir en un solo lugar a los profesionales
+y establecimientos especializados en pesca con mosca de la región.
+</p>
 
-    </div>
+<a href="mailto:patagoniafly.contacto@gmail.com"
+class="btn btn-primary">
+Quiero aparecer en Patagonia Fly
+</a>
 
-  </section>
+</div>
 
+</section>
 
 
-  <!-- ========================================
-       LODGES
-  ========================================= -->
+<!-- =========================
+     FOOTER
+========================= -->
 
-  <section
-    id="lodges"
-    class="destinations"
-  >
+<footer>
 
-    <div class="section-title">
+<div class="footer-content">
 
-      <h2>
-        Lodges de pesca
-      </h2>
+<div class="footer-brand">
 
-      <p>
-        Alojamiento, naturaleza y pesca
-        en una misma experiencia.
-      </p>
+<h3>🎣 PATAGONIA FLY</h3>
 
-    </div>
+<p>
+La plataforma especializada en pesca con mosca
+de Esquel, Trevelin, Los Alerces y Cholila.
+</p>
 
+</div>
 
-    <div class="featured-grid">
+<div class="footer-links">
 
+<a href="#destinos">Destinos</a>
 
-      <div class="featured-card">
+<a href="#buscar">Buscar</a>
 
-        <div class="featured-image">
-          🏕️
-        </div>
+<a href="#moscas">Moscas</a>
 
-        <div class="featured-content">
+<a href="#reglamento">Reglamento</a>
 
-          <span class="tag">
-            TREVELIN
-          </span>
+</div>
 
-          <h3>
-            Lodges de pesca
-          </h3>
+</div>
 
-          <p>
-            Descubrí propuestas de alojamiento
-            especializadas en pesca con mosca.
-          </p>
+<div class="footer-bottom">
 
-          <a
-            href="#"
-            class="featured-link"
-          >
-            VER LODGES →
-          </a>
+© 2026 Patagonia Fly · Proyecto independiente de pesca con mosca en Patagonia.
 
-        </div>
+</div>
 
-      </div>
+</footer>
 
 
+<!-- =========================
+     MODAL
+========================= -->
 
-      <div class="featured-card">
+<div class="modal" id="modal">
 
-        <div class="featured-image">
-          🌲
-        </div>
+<div class="modal-content">
 
-        <div class="featured-content">
+<button class="close" onclick="closeModal()">
+×
+</button>
 
-          <span class="tag">
-            LOS ALERCES
-          </span>
+<div class="modal-icon" id="modalIcon">
+🎣
+</div>
 
-          <h3>
-            Lodges en la naturaleza
-          </h3>
+<h2 id="modalTitle">
+Nombre
+</h2>
 
-          <p>
-            Experiencias de pesca
-            rodeadas de naturaleza.
-          </p>
+<div class="modal-location" id="modalLocation">
+Ubicación
+</div>
 
-          <a
-            href="#"
-            class="featured-link"
-          >
-            VER LODGES →
-          </a>
+<div class="modal-section">
 
-        </div>
+<h3>Sobre la experiencia</h3>
 
-      </div>
+<p id="modalDescription"></p>
 
+</div>
 
+<div class="modal-section">
 
-      <div class="featured-card">
+<h3>Servicios / características</h3>
 
-        <div class="featured-image">
-          🏔️
-        </div>
+<p id="modalServices"></p>
 
-        <div class="featured-content">
+</div>
 
-          <span class="tag">
-            CHOLILA
-          </span>
+<div class="modal-actions" id="modalActions"></div>
 
-          <h3>
-            Experiencias premium
-          </h3>
+</div>
 
-          <p>
-            Lodges y programas de pesca
-            para una experiencia completa.
-          </p>
+</div>
 
-          <a
-            href="#"
-            class="featured-link"
-          >
-            VER LODGES →
-          </a>
 
-        </div>
+<script>
 
-      </div>
+/* =====================================
+   BASE DE DATOS INICIAL
+===================================== */
 
+const providers = [
 
-    </div>
+{
+    id:1,
+    name:"Rumbo Sur Fly Fishing",
+    type:"Guía",
+    destination:"Esquel",
+    icon:"🎣",
+    description:
+    "Operador especializado en pesca con mosca con base en Esquel.",
+    services:
+    "Pesca con mosca · Guía · Excursiones de pesca",
+    phone:"+542945692405",
+    phoneDisplay:"02945 692405"
+},
 
-  </section>
+{
+    id:2,
+    name:"Patagonia Trout Outfitters",
+    type:"Guía",
+    destination:"Esquel",
+    icon:"🎣",
+    description:
+    "Operación especializada en pesca con mosca en Chubut, con programas en Trevelin, Esquel, Los Alerces y Cholila.",
+    services:
+    "Pesca con mosca · Guías · Programas de pesca · Planificación de viajes",
+    phone:"+5492945534311",
+    phoneDisplay:"+54 9 2945 53-4311",
+    website:"https://patagoniatroutoutfitters.com/"
+},
 
+{
+    id:3,
+    name:"Patagonia Trout Outfitters",
+    type:"Guía",
+    destination:"Trevelin",
+    icon:"🎣",
+    description:
+    "Programas de pesca en la zona de Trevelin y ambientes de la región.",
+    services:
+    "Ríos · Lagos · Spring creeks · Pesca con mosca",
+    phone:"+5492945534311",
+    phoneDisplay:"+54 9 2945 53-4311",
+    website:"https://patagoniatroutoutfitters.com/"
+},
 
+{
+    id:4,
+    name:"Patagonia Trout Outfitters",
+    type:"Guía",
+    destination:"Los Alerces",
+    icon:"🎣",
+    description:
+    "Programas de pesca dentro y alrededor del Parque Nacional Los Alerces.",
+    services:
+    "Río Arrayanes · Río Grande/Futaleufú · Pesca con mosca",
+    phone:"+5492945534311",
+    phoneDisplay:"+54 9 2945 53-4311",
+    website:"https://patagoniatroutoutfitters.com/"
+},
 
-  <!-- ========================================
-       MOSCAS
-  ========================================= -->
+{
+    id:5,
+    name:"Patagonia Trout Outfitters",
+    type:"Guía",
+    destination:"Cholila",
+    icon:"🎣",
+    description:
+    "Programas de pesca en Cholila y el sector norte del Parque Nacional Los Alerces.",
+    services:
+    "Río Arrayanes · Río Carrileufú · Truchas · Salmones encerrados",
+    phone:"+5492945534311",
+    phoneDisplay:"+54 9 2945 53-4311",
+    website:"https://patagoniatroutoutfitters.com/"
+},
 
-  <section class="flies">
+{
+    id:6,
+    name:"Challhuaquen Lodge",
+    type:"Lodge",
+    destination:"Trevelin",
+    icon:"🏕️",
+    description:
+    "Lodge ubicado sobre la Ruta 259, con programas de pesca y acceso a distintos ambientes de la región.",
+    services:
+    "Lodge · Pesca deportiva · Río Futaleufú · Flotada · Vadeo · Sala de atado · Restaurante · Spa",
+    phone:"+54294515507882",
+    phoneDisplay:"02945 15507882",
+    website:"https://challhuaquen.com/"
+},
 
-    <div class="section-title">
+{
+    id:7,
+    name:"Lago Rosario Lodge",
+    type:"Lodge",
+    destination:"Trevelin",
+    icon:"🏕️",
+    description:
+    "Lodge de pesca ubicado en Lago Rosario, cerca de Trevelin.",
+    services:
+    "Lodge de pesca · Alojamiento · Excursiones de pesca",
+    phone:"+5492945683873",
+    phoneDisplay:"+54 9 2945 683873"
+},
 
-      <h2>
-        La mosca adecuada
-      </h2>
+{
+    id:8,
+    name:"La Pilarica River & Mountain Lodge",
+    type:"Lodge",
+    destination:"Cholila",
+    icon:"🏕️",
+    description:
+    "Lodge de montaña y pesca ubicado en Villa Lago Rivadavia, zona de Cholila.",
+    services:
+    "Lodge · Pesca con mosca · Vadeo · Pesca embarcada · Alojamiento",
+    phone:"+542944552979",
+    phoneDisplay:"02944 552979",
+    website:"https://lapilaricalodge.com.ar/"
+},
 
-      <p>
-        Una futura herramienta para encontrar
-        patrones según ambiente, época y especie.
-      </p>
+{
+    id:9,
+    name:"Lago Cholila Aero Fishing Lodge",
+    type:"Lodge",
+    destination:"Cholila",
+    icon:"🏕️",
+    description:
+    "Lodge de pesca asociado al entorno del Lago Cholila.",
+    services:
+    "Lodge · Pesca · Alojamiento"
+}
 
-    </div>
+];
 
 
-    <div class="flies-grid">
+/* =====================================
+   ESTADO
+===================================== */
 
+let currentFilter = "Todos";
+let currentSearch = "";
 
-      <div class="fly">
 
-        <div class="fly-icon">
-          🪰
-        </div>
+/* =====================================
+   RENDER
+===================================== */
 
-        <h3>
-          Adams
-        </h3>
+function renderCards(){
 
-        <p>
-          Clásica mosca seca
-          para múltiples situaciones.
-        </p>
+    const container =
+        document.getElementById("cardsContainer");
 
-      </div>
+    const noResults =
+        document.getElementById("noResults");
 
+    let results = providers.filter(provider => {
 
+        const matchesFilter =
+            currentFilter === "Todos" ||
+            provider.type === currentFilter ||
+            provider.destination === currentFilter;
 
-      <div class="fly">
+        const text =
+            (
+                provider.name +
+                " " +
+                provider.type +
+                " " +
+                provider.destination +
+                " " +
+                provider.description +
+                " " +
+                provider.services
+            ).toLowerCase();
 
-        <div class="fly-icon">
-          🪰
-        </div>
+        const matchesSearch =
+            text.includes(currentSearch.toLowerCase());
 
-        <h3>
-          Elk Hair Caddis
-        </h3>
+        return matchesFilter && matchesSearch;
 
-        <p>
-          Una opción versátil
-          para pesca de superficie.
-        </p>
+    });
 
-      </div>
 
+    container.innerHTML = "";
 
+    document.getElementById("counter").textContent =
+        results.length +
+        (results.length === 1 ? " resultado" : " resultados");
 
-      <div class="fly">
 
-        <div class="fly-icon">
-          🪰
-        </div>
+    if(results.length === 0){
 
-        <h3>
-          Woolly Bugger
-        </h3>
-
-        <p>
-          Streamer clásico
-          para distintas especies.
-        </p>
-
-      </div>
-
-
-
-      <div class="fly">
-
-        <div class="fly-icon">
-          🪰
-        </div>
-
-        <h3>
-          Pheasant Tail
-        </h3>
-
-        <p>
-          Ninfa muy utilizada
-          en diferentes ambientes.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ========================================
-       CTA
-  ========================================= -->
-
-  <section class="cta">
-
-    <div class="cta-content">
-
-      <h2>
-        ¿Sos guía o tenés un lodge?
-      </h2>
-
-      <p>
-        Próximamente vas a poder publicar
-        tu servicio y llegar a pescadores
-        de todo el mundo.
-      </p>
-
-      <a
-        href="#"
-        class="cta-button"
-      >
-        QUIERO PUBLICAR
-      </a>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- ========================================
-       FOOTER
-  ========================================= -->
-
-  <footer>
-
-    <h3>
-      🎣 PATAGONIA FLY
-    </h3>
-
-    <p>
-      Pesca con mosca · Esquel · Trevelin ·
-      Los Alerces · Cholila
-    </p>
-
-    <p>
-      © 2026 Patagonia Fly
-    </p>
-
-  </footer>
-
-
-
-  <!-- ========================================
-       JAVASCRIPT
-  ========================================= -->
-
-  <script>
-
-    function buscar() {
-
-      const input =
-        document.getElementById(
-          "searchInput"
-        );
-
-      const result =
-        document.getElementById(
-          "searchResult"
-        );
-
-
-      const texto =
-        input.value.trim();
-
-
-      if (texto === "") {
-
-        result.style.display =
-          "block";
-
-        result.textContent =
-          "Escribí qué estás buscando.";
+        noResults.style.display = "block";
 
         return;
-      }
-
-
-      result.style.display =
-        "block";
-
-      result.textContent =
-        "Estamos preparando los resultados para: "
-        + texto;
 
     }
 
-  </script>
+    noResults.style.display = "none";
 
+
+    results.forEach(provider => {
+
+        const card =
+            document.createElement("article");
+
+        card.className = "card";
+
+        let phoneButton = "";
+
+        if(provider.phone){
+
+            phoneButton = `
+                <a
+                    class="card-btn card-btn-main"
+                    href="https://wa.me/${provider.phone.replace(/\D/g,'')}"
+                    target="_blank"
+                >
+                    💬 WhatsApp
+                </a>
+            `;
+
+        }
+
+
+        let websiteButton = "";
+
+        if(provider.website){
+
+            websiteButton = `
+                <a
+                    class="card-btn card-btn-secondary"
+                    href="${provider.website}"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    🌐 Web
+                </a>
+            `;
+
+        }
+
+
+        card.innerHTML = `
+
+            <div class="card-top">
+                ${provider.icon}
+            </div>
+
+            <div class="card-body">
+
+                <span class="badge">
+                    ${provider.type}
+                </span>
+
+                <h3>
+                    ${provider.name}
+                </h3>
+
+                <div class="location">
+                    📍 ${provider.destination}
+                </div>
+
+                <p class="card-description">
+                    ${provider.description}
+                </p>
+
+                <div class="tags">
+
+                    ${provider.services
+                        .split("·")
+                        .slice(0,4)
+                        .map(service =>
+                            `<span class="tag">${service.trim()}</span>`
+                        )
+                        .join("")
+                    }
+
+                </div>
+
+                <div class="card-actions">
+
+                    <button
+                        class="card-btn card-btn-secondary"
+                        onclick="openModal(${provider.id})"
+                    >
+                        Ver ficha
+                    </button>
+
+                    ${phoneButton}
+
+                    ${websiteButton}
+
+                </div>
+
+            </div>
+        `;
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+/* =====================================
+   BUSQUEDA
+===================================== */
+
+document
+.getElementById("searchInput")
+.addEventListener("input", function(){
+
+    currentSearch = this.value;
+
+    renderCards();
+
+});
+
+
+/* =====================================
+   FILTROS
+===================================== */
+
+function setFilter(filter, button){
+
+    currentFilter = filter;
+
+    document
+    .querySelectorAll(".filter-btn")
+    .forEach(btn => btn.classList.remove("active"));
+
+    if(button){
+        button.classList.add("active");
+    }
+
+    renderCards();
+
+    document
+    .getElementById("resultados")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+function filterDestination(destination){
+
+    currentFilter = destination;
+
+    document
+    .querySelectorAll(".filter-btn")
+    .forEach(btn => {
+
+        btn.classList.remove("active");
+
+        if(btn.textContent.includes(destination)){
+            btn.classList.add("active");
+        }
+
+    });
+
+    renderCards();
+
+    document
+    .getElementById("resultados")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+function filterType(type){
+
+    currentFilter = type;
+
+    document
+    .querySelectorAll(".filter-btn")
+    .forEach(btn => {
+
+        btn.classList.remove("active");
+
+        if(btn.textContent.includes(type)){
+            btn.classList.add("active");
+        }
+
+    });
+
+    renderCards();
+
+    document
+    .getElementById("resultados")
+    .scrollIntoView({
+        behavior:"smooth"
+    });
+
+}
+
+
+/* =====================================
+   MODAL
+===================================== */
+
+function openModal(id){
+
+    const provider =
+        providers.find(p => p.id === id);
+
+    if(!provider) return;
+
+
+    document.getElementById("modalIcon")
+        .textContent = provider.icon;
+
+    document.getElementById("modalTitle")
+        .textContent = provider.name;
+
+    document.getElementById("modalLocation")
+        .textContent =
+        provider.type +
+        " · 📍 " +
+        provider.destination;
+
+    document.getElementById("modalDescription")
+        .textContent = provider.description;
+
+    document.getElementById("modalServices")
+        .textContent = provider.services;
+
+
+    const actions =
+        document.getElementById("modalActions");
+
+    actions.innerHTML = "";
+
+
+    if(provider.phone){
+
+        const whatsapp =
+            document.createElement("a");
+
+        whatsapp.className =
+            "btn btn-primary";
+
+        whatsapp.href =
+            "https://wa.me/" +
+            provider.phone.replace(/\D/g,'');
+
+        whatsapp.target = "_blank";
+
+        whatsapp.textContent =
+            "💬 Contactar por WhatsApp";
+
+        actions.appendChild(whatsapp);
+
+    }
+
+
+    if(provider.website){
+
+        const website =
+            document.createElement("a");
+
+        website.className =
+            "btn btn-secondary";
+
+        website.href =
+            provider.website;
+
+        website.target = "_blank";
+
+        website.rel = "noopener";
+
+        website.textContent =
+            "🌐 Visitar sitio web";
+
+        actions.appendChild(website);
+
+    }
+
+
+    if(provider.phone){
+
+        const phone =
+            document.createElement("a");
+
+        phone.className =
+            "btn btn-secondary";
+
+        phone.href =
+            "tel:" + provider.phone;
+
+        phone.textContent =
+            "📞 " + provider.phoneDisplay;
+
+        actions.appendChild(phone);
+
+    }
+
+
+    document
+    .getElementById("modal")
+    .classList.add("active");
+
+}
+
+
+function closeModal(){
+
+    document
+    .getElementById("modal")
+    .classList.remove("active");
+
+}
+
+
+document
+.getElementById("modal")
+.addEventListener("click", function(event){
+
+    if(event.target === this){
+        closeModal();
+    }
+
+});
+
+
+document.addEventListener("keydown", function(event){
+
+    if(event.key === "Escape"){
+        closeModal();
+    }
+
+});
+
+
+/* =====================================
+   INICIO
+===================================== */
+
+renderCards();
+
+</script>
 
 </body>
-
 </html>
 ```
