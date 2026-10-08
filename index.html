@@ -1,797 +1,612 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Patagonia Lodge | Demo Web</title>
+<title>WEBS PATAGONIA | Diseño y desarrollo web</title>
 
 <meta name="description"
-content="Patagonia Lodge — demo ficticia de un sitio web para alojamiento turístico en Esquel, Patagonia Argentina.">
+content="Diseño y desarrollo de sitios web profesionales para negocios, alojamientos, restaurantes y emprendimientos de Patagonia.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+:root {
+    --dark: #101814;
+    --dark2: #17231d;
+    --green: #294d3b;
+    --green-light: #3d6b52;
+    --cream: #f4f0e7;
+    --white: #ffffff;
+    --gray: #68706b;
+    --border: rgba(255,255,255,.12);
 }
 
-html{
-    scroll-behavior:smooth;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    color:#24332f;
-    background:#f5f3ee;
-    line-height:1.6;
+html {
+    scroll-behavior: smooth;
 }
 
-img{
-    max-width:100%;
-    display:block;
+body {
+    font-family: "DM Sans", sans-serif;
+    background: var(--cream);
+    color: var(--dark);
+    line-height: 1.6;
 }
 
-a{
-    text-decoration:none;
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
-/* =========================
-   DEMO BADGE
-========================= */
-
-.demo-badge{
-    position:fixed;
-    top:78px;
-    left:50%;
-    transform:translateX(-50%);
-    z-index:900;
-    background:#d5b77a;
-    color:#17251f;
-    padding:7px 17px;
-    border-radius:30px;
-    font-size:10px;
-    font-weight:800;
-    letter-spacing:1.5px;
-    text-transform:uppercase;
-    box-shadow:0 4px 15px rgba(0,0,0,.18);
-    white-space:nowrap;
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
 }
 
-/* =========================
-   LANGUAGE SWITCHER
-========================= */
+/* ================= HEADER ================= */
 
-.language-switcher{
-    position:fixed;
-    top:20px;
-    right:25px;
-    z-index:2000;
-    display:flex;
-    gap:4px;
-    background:rgba(20,34,30,.88);
-    padding:4px;
-    border-radius:25px;
-    backdrop-filter:blur(8px);
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(16,24,20,.88);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
 }
 
-.language-switcher button{
-    border:0;
-    background:transparent;
-    color:#d7ded9;
-    padding:6px 10px;
-    border-radius:18px;
-    font-size:11px;
-    font-weight:800;
-    cursor:pointer;
+.nav {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.language-switcher button.active{
-    background:#d5b77a;
-    color:#17251f;
+.logo {
+    color: white;
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
-/* =========================
-   HEADER
-========================= */
-
-header{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-    padding:18px 30px;
-    transition:.3s;
+.logo span {
+    color: #b9cdbd;
 }
 
-header.scrolled{
-    background:rgba(20,34,30,.96);
-    backdrop-filter:blur(12px);
-    padding:12px 30px;
+nav {
+    display: flex;
+    gap: 28px;
 }
 
-.nav{
-    max-width:1200px;
-    margin:auto;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+nav a {
+    color: white;
+    font-size: 14px;
+    opacity: .85;
+    transition: .3s;
 }
 
-.logo{
-    color:white;
-    font-size:21px;
-    font-weight:800;
-    letter-spacing:2px;
+nav a:hover {
+    opacity: 1;
 }
 
-.logo span{
-    color:#d5b77a;
+.nav-button {
+    padding: 11px 18px;
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 30px;
 }
 
-nav{
-    display:flex;
-    gap:28px;
+.menu {
+    display: none;
+    color: white;
+    font-size: 25px;
 }
 
-nav a{
-    color:white;
-    font-size:14px;
-    font-weight:600;
-    transition:.2s;
-}
+/* ================= HERO ================= */
 
-nav a:hover{
-    color:#d5b77a;
-}
-
-.nav-button{
-    padding:10px 18px;
-    border:1px solid rgba(255,255,255,.5);
-    border-radius:30px;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    min-height:100vh;
-    position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:white;
-    overflow:hidden;
-
+.hero {
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    position: relative;
     background:
-        linear-gradient(
-            rgba(12,29,25,.38),
-            rgba(12,29,25,.72)
-        ),
-        url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=2000&q=85")
-        center/cover no-repeat;
-}
-
-.hero-content{
-    max-width:850px;
-    padding:30px;
-    animation:fadeUp 1s ease;
-}
-
-.hero-small{
-    color:#e0c58b;
-    font-size:14px;
-    letter-spacing:4px;
-    text-transform:uppercase;
-    margin-bottom:20px;
-}
-
-.hero h1{
-    font-family:Georgia,serif;
-    font-size:clamp(52px,8vw,100px);
-    line-height:.95;
-    margin-bottom:25px;
-}
-
-.hero p{
-    max-width:650px;
-    margin:auto;
-    color:#f0f2ef;
-    font-size:19px;
-}
-
-.hero-buttons{
-    margin-top:35px;
-    display:flex;
-    justify-content:center;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    display:inline-block;
-    padding:14px 26px;
-    border-radius:4px;
-    font-weight:700;
-    transition:.25s;
-}
-
-.btn-primary{
-    background:#d5b77a;
-    color:#17251f;
-}
-
-.btn-primary:hover{
-    transform:translateY(-3px);
-    background:#e4ca91;
-}
-
-.btn-light{
-    color:white;
-    border:1px solid rgba(255,255,255,.6);
-}
-
-.btn-light:hover{
-    background:white;
-    color:#17251f;
-}
-
-/* =========================
-   GENERAL
-========================= */
-
-section{
-    padding:100px 25px;
-}
-
-.container{
-    max-width:1150px;
-    margin:auto;
-}
-
-.section-label{
-    color:#a1844f;
-    font-size:13px;
-    text-transform:uppercase;
-    letter-spacing:3px;
-    font-weight:700;
-    margin-bottom:12px;
-}
-
-.section-title{
-    font-family:Georgia,serif;
-    font-size:46px;
-    color:#21342e;
-    margin-bottom:18px;
-}
-
-.section-text{
-    color:#69756f;
-    max-width:650px;
-}
-
-/* =========================
-   INTRO
-========================= */
-
-.intro{
-    background:#f5f3ee;
-}
-
-.intro-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    align-items:center;
-}
-
-.intro-image{
-    height:520px;
-    border-radius:3px;
-    background:
-        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85")
+        linear-gradient(rgba(8,15,11,.55), rgba(8,15,11,.78)),
+        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2000&q=85")
         center/cover;
+    color: white;
 }
 
-.features{
-    margin-top:30px;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:20px;
+.hero-content {
+    max-width: 820px;
+    padding-top: 70px;
 }
 
-.feature{
-    padding-top:18px;
-    border-top:1px solid #d8d4ca;
+.badge {
+    display: inline-block;
+    padding: 7px 13px;
+    border: 1px solid rgba(255,255,255,.35);
+    border-radius: 30px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
 }
 
-.feature strong{
-    display:block;
-    margin-bottom:5px;
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(50px, 8vw, 90px);
+    line-height: .98;
+    margin-bottom: 28px;
 }
 
-.feature span{
-    font-size:13px;
-    color:#7c8580;
+.hero h1 span {
+    color: #c8d8cb;
 }
 
-/* =========================
-   ROOMS
-========================= */
-
-.rooms{
-    background:#eae8e0;
+.hero p {
+    font-size: 20px;
+    max-width: 680px;
+    color: rgba(255,255,255,.88);
+    margin-bottom: 35px;
 }
 
-.center{
-    text-align:center;
+.buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
 }
 
-.center .section-text{
-    margin:auto;
+.btn {
+    padding: 14px 23px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: .3s;
+    display: inline-block;
 }
 
-.room-grid{
-    margin-top:50px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:25px;
+.btn-primary {
+    background: white;
+    color: var(--dark);
 }
 
-.room{
-    background:white;
-    overflow:hidden;
-    border-radius:3px;
-    transition:.3s;
+.btn-primary:hover {
+    transform: translateY(-3px);
 }
 
-.room:hover{
-    transform:translateY(-7px);
-    box-shadow:0 15px 35px rgba(0,0,0,.08);
+.btn-outline {
+    border: 1px solid rgba(255,255,255,.5);
+    color: white;
 }
 
-.room-image{
-    height:250px;
-    background-size:cover;
-    background-position:center;
+.btn-outline:hover {
+    background: rgba(255,255,255,.1);
 }
 
-.room-1{
-    background-image:url("https://images.unsplash.com/photo-1601918774946-25832a4be0d6?auto=format&fit=crop&w=1000&q=85");
+/* ================= INTRO ================= */
+
+.intro {
+    padding: 110px 0;
 }
 
-.room-2{
-    background-image:url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1000&q=85");
+.intro-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
 }
 
-.room-3{
-    background-image:url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85");
+.kicker {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--green-light);
+    margin-bottom: 15px;
 }
 
-.room-body{
-    padding:25px;
+h2 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.05;
+    margin-bottom: 22px;
 }
 
-.room-body h3{
-    font-family:Georgia,serif;
-    font-size:25px;
-    margin-bottom:8px;
+.intro p {
+    color: var(--gray);
+    font-size: 18px;
 }
 
-.room-body p{
-    color:#737c77;
-    font-size:14px;
+.intro-card {
+    background: var(--dark);
+    color: white;
+    padding: 45px;
+    border-radius: 25px;
 }
 
-.room-info{
-    margin-top:18px;
-    display:flex;
-    gap:15px;
-    font-size:12px;
-    color:#6d7771;
+.intro-card h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 31px;
+    margin-bottom: 15px;
 }
 
-/* =========================
-   EXPERIENCES
-========================= */
-
-.experiences{
-    background:#172d27;
-    color:white;
+.intro-card p {
+    color: #ccd4ce;
 }
 
-.experiences .section-title{
-    color:white;
+/* ================= SERVICES ================= */
+
+.services {
+    background: var(--dark);
+    color: white;
+    padding: 110px 0;
 }
 
-.experiences .section-text{
-    color:#b7c3be;
+.section-head {
+    max-width: 720px;
+    margin-bottom: 55px;
 }
 
-.experience-grid{
-    margin-top:50px;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:18px;
+.section-head h2 {
+    margin-bottom: 15px;
 }
 
-.experience{
-    min-height:280px;
-    position:relative;
-    overflow:hidden;
-    display:flex;
-    align-items:flex-end;
-    padding:25px;
-    background-size:cover;
-    background-position:center;
+.section-head p {
+    color: #b8c1bb;
+    font-size: 17px;
 }
 
-.experience::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(transparent,rgba(0,0,0,.8));
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
 }
 
-.exp-1{
-    background-image:url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=85");
+.service {
+    padding: 30px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background: rgba(255,255,255,.035);
+    transition: .3s;
 }
 
-.exp-2{
-    background-image:url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=85");
+.service:hover {
+    transform: translateY(-6px);
+    background: rgba(255,255,255,.07);
 }
 
-.exp-3{
-    background-image:url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=85");
+.icon {
+    font-size: 31px;
+    margin-bottom: 20px;
 }
 
-.exp-4{
-    background-image:url("https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=800&q=85");
+.service h3 {
+    margin-bottom: 10px;
 }
 
-.experience-content{
-    position:relative;
-    z-index:2;
+.service p {
+    color: #aeb8b1;
+    font-size: 14px;
 }
 
-.experience h3{
-    font-family:Georgia,serif;
-    font-size:24px;
+/* ================= PORTFOLIO ================= */
+
+.portfolio {
+    padding: 110px 0;
 }
 
-.experience p{
-    font-size:13px;
-    color:#d8dedb;
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
-/* =========================
-   GALLERY
-========================= */
-
-.gallery{
-    background:#f5f3ee;
+.project {
+    position: relative;
+    min-height: 450px;
+    overflow: hidden;
+    border-radius: 25px;
+    color: white;
+    display: flex;
+    align-items: flex-end;
 }
 
-.gallery-grid{
-    margin-top:45px;
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    grid-auto-rows:220px;
-    gap:12px;
+.project-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: .5s;
 }
 
-.gallery-item{
-    background-size:cover;
-    background-position:center;
+.project:hover .project-bg {
+    transform: scale(1.06);
 }
 
-.gallery-item:nth-child(1){
-    grid-column:span 2;
-    grid-row:span 2;
-    background-image:url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1200&q=85");
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 25%, rgba(0,0,0,.9));
 }
 
-.gallery-item:nth-child(2){
-    background-image:url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85");
+.project-content {
+    position: relative;
+    z-index: 2;
+    padding: 35px;
 }
 
-.gallery-item:nth-child(3){
-    background-image:url("https://images.unsplash.com/photo-1473445361085-b9a07f55608b?auto=format&fit=crop&w=900&q=85");
+.demo-label {
+    display: inline-block;
+    font-size: 11px;
+    letter-spacing: 1px;
+    border: 1px solid rgba(255,255,255,.45);
+    border-radius: 20px;
+    padding: 6px 10px;
+    margin-bottom: 15px;
 }
 
-.gallery-item:nth-child(4){
-    background-image:url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=85");
+.project h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
-.gallery-item:nth-child(5){
-    background-image:url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=85");
+.project p {
+    color: #e1e5e2;
+    max-width: 480px;
+    margin-bottom: 20px;
 }
 
-/* =========================
-   REVIEWS
-========================= */
-
-.reviews{
-    background:#eae8e0;
+.project-link {
+    display: inline-block;
+    border-bottom: 1px solid white;
+    padding-bottom: 3px;
+    font-weight: 600;
 }
 
-.review-grid{
-    margin-top:45px;
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
+.project-small {
+    min-height: 300px;
 }
 
-.review{
-    background:white;
-    padding:30px;
+.project-small h3 {
+    font-size: 31px;
 }
 
-.stars{
-    color:#b18a43;
-    letter-spacing:3px;
-    margin-bottom:15px;
+/* ================= PROCESS ================= */
+
+.process {
+    background: #e8e3d8;
+    padding: 110px 0;
 }
 
-.review p{
-    font-family:Georgia,serif;
-    font-size:18px;
-    color:#4d5a54;
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
-.review strong{
-    display:block;
-    margin-top:20px;
-    font-size:13px;
+.step {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
 }
 
-/* =========================
-   LOCATION
-========================= */
-
-.location{
-    background:#f5f3ee;
+.number {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    color: var(--green-light);
+    margin-bottom: 15px;
 }
 
-.location-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:50px;
-    align-items:center;
+.step h3 {
+    margin-bottom: 10px;
 }
 
-.map{
-    min-height:400px;
+.step p {
+    color: var(--gray);
+    font-size: 14px;
+}
+
+/* ================= PRICING ================= */
+
+.pricing {
+    padding: 110px 0;
+}
+
+.price-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.price-card {
+    background: white;
+    padding: 40px;
+    border-radius: 22px;
+    border: 1px solid #dedbd3;
+}
+
+.price-card.featured {
+    background: var(--dark);
+    color: white;
+    transform: translateY(-8px);
+}
+
+.price-card h3 {
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.price {
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+    margin: 18px 0;
+}
+
+.price-card ul {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.price-card li {
+    margin: 10px 0;
+    color: var(--gray);
+}
+
+.featured li {
+    color: #c7d0ca;
+}
+
+.price-note {
+    font-size: 12px;
+    color: var(--gray);
+}
+
+/* ================= CTA ================= */
+
+.cta {
+    padding: 110px 0;
     background:
-        linear-gradient(
-            rgba(20,45,38,.55),
-            rgba(20,45,38,.55)
-        ),
-        url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=85")
+        linear-gradient(rgba(15,24,19,.83), rgba(15,24,19,.9)),
+        url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85")
         center/cover;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:white;
-    text-align:center;
+    color: white;
+    text-align: center;
 }
 
-.map-content{
-    padding:30px;
+.cta-inner {
+    max-width: 760px;
+    margin: auto;
 }
 
-.map-content div{
-    font-size:50px;
-    margin-bottom:10px;
+.cta h2 {
+    font-size: clamp(42px, 6vw, 65px);
 }
 
-.contact-list{
-    margin-top:30px;
-    display:grid;
-    gap:15px;
+.cta p {
+    color: #d0d7d2;
+    font-size: 18px;
+    margin-bottom: 30px;
 }
 
-.contact-item{
-    padding:15px 0;
-    border-bottom:1px solid #d8d4ca;
+/* ================= FOOTER ================= */
+
+footer {
+    background: #0b110e;
+    color: white;
+    padding: 45px 0;
 }
 
-.contact-item strong{
-    display:block;
-    margin-bottom:3px;
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
 }
 
-.contact-item span{
-    color:#727d77;
-    font-size:14px;
+.footer-logo {
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 
-/* =========================
-   CTA
-========================= */
-
-.cta{
-    padding:110px 25px;
-    text-align:center;
-    background:
-        linear-gradient(
-            rgba(17,39,32,.8),
-            rgba(17,39,32,.8)
-        ),
-        url("https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1800&q=85")
-        center/cover;
-    color:white;
+footer p {
+    color: #89938c;
+    font-size: 13px;
 }
 
-.cta h2{
-    font-family:Georgia,serif;
-    font-size:50px;
-    margin-bottom:15px;
+.footer-links {
+    display: flex;
+    gap: 20px;
 }
 
-.cta p{
-    max-width:600px;
-    margin:0 auto 30px;
-    color:#d3ddd8;
+.footer-links a {
+    color: #b8c1ba;
+    font-size: 13px;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* ================= MOBILE ================= */
 
-footer{
-    background:#0d211c;
-    color:white;
-    padding:50px 25px 25px;
-}
+@media (max-width: 900px) {
 
-.footer{
-    max-width:1150px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    gap:30px;
-    flex-wrap:wrap;
-}
-
-.footer h3{
-    letter-spacing:2px;
-}
-
-.footer p{
-    color:#91a39c;
-    font-size:13px;
-    margin-top:8px;
-}
-
-.footer-links{
-    display:flex;
-    gap:20px;
-}
-
-.footer-links a{
-    color:#b8c5c0;
-    font-size:13px;
-}
-
-.copy{
-    max-width:1150px;
-    margin:35px auto 0;
-    padding-top:20px;
-    border-top:1px solid rgba(255,255,255,.1);
-    color:#687c74;
-    font-size:11px;
-}
-
-/* =========================
-   ANIMATION
-========================= */
-
-@keyframes fadeUp{
-
-    from{
-        opacity:0;
-        transform:translateY(30px);
+    nav {
+        display: none;
     }
 
-    to{
-        opacity:1;
-        transform:translateY(0);
+    .menu {
+        display: block;
     }
 
+    .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .service-grid,
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-card.featured {
+        transform: none;
+    }
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+@media (max-width: 600px) {
 
-@media(max-width:900px){
-
-    nav{
-        display:none;
+    .hero {
+        min-height: 90vh;
     }
 
-    .intro-grid,
-    .location-grid{
-        grid-template-columns:1fr;
+    .hero h1 {
+        font-size: 52px;
     }
 
-    .room-grid,
-    .review-grid{
-        grid-template-columns:1fr 1fr;
+    .hero p {
+        font-size: 17px;
     }
 
-    .experience-grid{
-        grid-template-columns:1fr 1fr;
+    .service-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
     }
 
-}
-
-@media(max-width:600px){
-
-    section{
-        padding:70px 18px;
+    .project {
+        min-height: 400px;
     }
 
-    .demo-badge{
-        top:72px;
-        font-size:8px;
-        padding:6px 12px;
+    .project h3 {
+        font-size: 34px;
     }
 
-    .language-switcher{
-        top:14px;
-        right:15px;
+    .intro,
+    .services,
+    .portfolio,
+    .process,
+    .pricing,
+    .cta {
+        padding: 80px 0;
     }
 
-    .hero{
-        padding-top:55px;
-    }
-
-    .hero h1{
-        font-size:52px;
-    }
-
-    .hero p{
-        font-size:16px;
-    }
-
-    .section-title{
-        font-size:36px;
-    }
-
-    .intro-grid,
-    .room-grid,
-    .experience-grid,
-    .review-grid,
-    .location-grid{
-        grid-template-columns:1fr;
-    }
-
-    .intro-image{
-        height:380px;
-    }
-
-    .features{
-        grid-template-columns:1fr;
-    }
-
-    .gallery-grid{
-        grid-template-columns:1fr 1fr;
-        grid-auto-rows:170px;
-    }
-
-    .gallery-item:nth-child(1){
-        grid-column:span 2;
-        grid-row:span 1;
-    }
-
-    .cta h2{
-        font-size:38px;
+    .footer-grid {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
 }
@@ -801,295 +616,345 @@ footer{
 
 <body>
 
-<!-- =========================
-     LANGUAGE
-========================= -->
+<!-- ================= HEADER ================= -->
 
-<div class="language-switcher">
+<header>
 
-<button id="esBtn" class="active" onclick="setLanguage('es')">
-ES
-</button>
-
-<button id="enBtn" onclick="setLanguage('en')">
-EN
-</button>
-
-</div>
-
-
-<!-- =========================
-     DEMO
-========================= -->
-
-<div class="demo-badge" id="demoBadge">
-DEMO · SITIO WEB DE EJEMPLO
-</div>
-
-
-<!-- HEADER -->
-
-<header id="header">
-
-<div class="nav">
+<div class="container nav">
 
 <a href="#" class="logo">
-PATAGONIA <span>LODGE</span>
+WEBS <span>PATAGONIA</span>
 </a>
 
 <nav>
-
-<a href="#nosotros" data-es="Nosotros" data-en="About us">Nosotros</a>
-
-<a href="#habitaciones" data-es="Habitaciones" data-en="Rooms">Habitaciones</a>
-
-<a href="#experiencias" data-es="Experiencias" data-en="Experiences">Experiencias</a>
-
-<a href="#galeria" data-es="Galería" data-en="Gallery">Galería</a>
-
-<a href="#contacto" class="nav-button"
-data-es="Contacto"
-data-en="Contact">
-Contacto
-</a>
-
+<a href="#servicios">Servicios</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#proceso">Cómo trabajamos</a>
+<a href="#precios">Precios</a>
+<a href="#contacto" class="nav-button">Contacto</a>
 </nav>
+
+<div class="menu">☰</div>
 
 </div>
 
 </header>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
+<div class="container">
+
 <div class="hero-content">
 
-<div class="hero-small"
-data-es="Esquel · Patagonia Argentina"
-data-en="Esquel · Patagonia Argentina">
-Esquel · Patagonia Argentina
+<div class="badge">
+DISEÑO · DESARROLLO · PATAGONIA
 </div>
 
 <h1>
-Patagonia<br>Lodge
+Tu negocio merece una web <span>a la altura.</span>
 </h1>
 
-<p
-data-es="Un refugio entre montañas, bosques y lagos. Viví la Patagonia con el confort que merecés."
-data-en="A refuge surrounded by mountains, forests and lakes. Experience Patagonia in comfort.">
-Un refugio entre montañas, bosques y lagos.
-Viví la Patagonia con el confort que merecés.
+<p>
+Diseñamos sitios web modernos, rápidos y profesionales para negocios y emprendimientos de Patagonia.
 </p>
 
-<div class="hero-buttons">
+<div class="buttons">
 
-<a href="#habitaciones"
-class="btn btn-primary"
-data-es="Ver habitaciones"
-data-en="View rooms">
-Ver habitaciones
+<a href="#portfolio" class="btn btn-primary">
+Ver nuestros trabajos
 </a>
 
-<a href="#contacto"
-class="btn btn-light"
-data-es="Consultar disponibilidad"
-data-en="Check availability">
-Consultar disponibilidad
+<a href="#contacto" class="btn btn-outline">
+Quiero una web
 </a>
 
 </div>
 
 </div>
 
+</div>
+
 </section>
 
 
-<!-- NOSOTROS -->
+<!-- ================= INTRO ================= -->
 
-<section class="intro" id="nosotros">
+<section class="intro">
 
-<div class="container">
-
-<div class="intro-grid">
-
-<div class="intro-image"></div>
+<div class="container intro-grid">
 
 <div>
 
-<div class="section-label"
-data-es="El lugar"
-data-en="The place">
-El lugar
+<div class="kicker">
+WEBS PATAGONIA
 </div>
 
-<h2 class="section-title"
-data-es="Tu refugio en la cordillera"
-data-en="Your refuge in the mountains">
-Tu refugio en la cordillera
+<h2>
+Presencia digital que genera confianza.
 </h2>
 
-<p class="section-text"
-data-es="Patagonia Lodge es un alojamiento boutique ficticio inspirado en los paisajes de Esquel y la Cordillera de los Andes. Un espacio pensado para quienes buscan desconectar, respirar aire puro y descubrir una de las regiones más increíbles de Argentina."
-data-en="Patagonia Lodge is a fictional boutique accommodation inspired by the landscapes of Esquel and the Andes Mountains. A place designed for those looking to disconnect, breathe fresh air and discover one of Argentina's most incredible regions.">
-Patagonia Lodge es un alojamiento boutique ficticio
-inspirado en los paisajes de Esquel y la Cordillera de los Andes.
-
-Un espacio pensado para quienes buscan desconectar,
-respirar aire puro y descubrir una de las regiones
-más increíbles de Argentina.
-</p>
-
-<div class="features">
-
-<div class="feature">
-<strong>🏔️ <span data-es="Montañas" data-en="Mountains">Montañas</span></strong>
-<span data-es="Vistas privilegiadas" data-en="Exceptional views">Vistas privilegiadas</span>
-</div>
-
-<div class="feature">
-<strong>🔥 <span data-es="Hogar" data-en="Fireplace">Hogar</span></strong>
-<span data-es="Espacios cálidos" data-en="Warm spaces">Espacios cálidos</span>
-</div>
-
-<div class="feature">
-<strong>🥐 <span data-es="Desayuno" data-en="Breakfast">Desayuno</span></strong>
-<span data-es="Productos regionales" data-en="Local products">Productos regionales</span>
-</div>
-
-<div class="feature">
-<strong>📶 Wi-Fi</strong>
-<span data-es="Conectividad incluida" data-en="Wi-Fi included">Conectividad incluida</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- HABITACIONES -->
-
-<section class="rooms" id="habitaciones">
-
-<div class="container">
-
-<div class="center">
-
-<div class="section-label"
-data-es="Descansá"
-data-en="Relax">
-Descansá
-</div>
-
-<h2 class="section-title"
-data-es="Habitaciones"
-data-en="Rooms">
-Habitaciones
-</h2>
-
-<p class="section-text"
-data-es="Diseñadas para descansar después de un día explorando la Patagonia."
-data-en="Designed for relaxing after a day exploring Patagonia.">
-Diseñadas para descansar después de un día
-explorando la Patagonia.
+<p>
+Creamos páginas pensadas para que tu negocio se vea profesional desde el primer contacto.
 </p>
 
 </div>
 
-<div class="room-grid">
+<div class="intro-card">
 
-<div class="room">
-
-<div class="room-image room-1"></div>
-
-<div class="room-body">
-
-<h3
-data-es="Habitación Bosque"
-data-en="Forest Room">
-Habitación Bosque
+<h3>
+De una idea a una web profesional.
 </h3>
 
-<p
-data-es="Calidez, madera y vistas al bosque. Ideal para una escapada en pareja."
-data-en="Warmth, wood and forest views. Ideal for a romantic getaway.">
-Calidez, madera y vistas al bosque.
-Ideal para una escapada en pareja.
+<p>
+Nos encargamos del diseño, estructura, adaptación a celulares y publicación de tu sitio.
+Vos te enfocás en tu negocio.
 </p>
 
-<div class="room-info">
-<span>🛏️ 2 personas</span>
-<span>🌲 Vista al bosque</span>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="servicios">
+
+<div class="container">
+
+<div class="section-head">
+
+<div class="kicker">
+QUÉ HACEMOS
+</div>
+
+<h2>
+Todo lo necesario para tener presencia online.
+</h2>
+
+<p>
+Creamos soluciones simples, profesionales y adaptadas a cada negocio.
+</p>
+
+</div>
+
+<div class="service-grid">
+
+<div class="service">
+
+<div class="icon">🌐</div>
+
+<h3>Web institucional</h3>
+
+<p>
+Presentá tu empresa, servicios, ubicación y formas de contacto.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="icon">🏨</div>
+
+<h3>Hoteles y cabañas</h3>
+
+<p>
+Mostrá habitaciones, instalaciones, experiencias y formas de reserva.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="icon">🍽️</div>
+
+<h3>Restaurantes</h3>
+
+<p>
+Menú, ubicación, horarios, contacto y una imagen profesional.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="icon">🎣</div>
+
+<h3>Turismo y pesca</h3>
+
+<p>
+Guías, excursiones, experiencias y servicios turísticos.
+</p>
+
 </div>
 
 </div>
 
 </div>
 
+</section>
 
-<div class="room">
 
-<div class="room-image room-2"></div>
+<!-- ================= PORTFOLIO ================= -->
 
-<div class="room-body">
+<section class="portfolio" id="portfolio">
 
-<h3
-data-es="Suite Cordillera"
-data-en="Mountain Suite">
-Suite Cordillera
+<div class="container">
+
+<div class="section-head">
+
+<div class="kicker">
+PORTFOLIO
+</div>
+
+<h2>
+Algunos proyectos que podemos crear.
+</h2>
+
+<p>
+Estos proyectos son demostraciones ficticias creadas para mostrar diferentes estilos de sitios web.
+</p>
+
+</div>
+
+
+<div class="portfolio-grid">
+
+
+<!-- PATAGONIA LODGE -->
+
+<div class="project">
+
+<div
+class="project-bg"
+style="background-image:url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1400&q=85');">
+</div>
+
+<div class="project-overlay"></div>
+
+<div class="project-content">
+
+<div class="demo-label">
+DEMO FICTICIA
+</div>
+
+<h3>
+Patagonia Lodge
 </h3>
 
-<p
-data-es="Amplios espacios y una vista privilegiada hacia las montañas."
-data-en="Spacious interiors and privileged mountain views.">
-Amplios espacios y una vista privilegiada
-hacia las montañas.
+<p>
+Sitio web premium para un alojamiento boutique en Esquel.
 </p>
 
-<div class="room-info">
-<span>🛏️ 2 personas</span>
-<span>🏔️ Vista montaña</span>
-</div>
+<a href="#" class="project-link">
+Ver proyecto →
+</a>
 
 </div>
 
 </div>
 
 
-<div class="room">
+<!-- PATAGONIA FLY -->
 
-<div class="room-image room-3"></div>
+<div class="project">
 
-<div class="room-body">
+<div
+class="project-bg"
+style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1400&q=85');">
+</div>
 
-<h3
-data-es="Suite Familiar"
-data-en="Family Suite">
-Suite Familiar
+<div class="project-overlay"></div>
+
+<div class="project-content">
+
+<div class="demo-label">
+DEMO FICTICIA
+</div>
+
+<h3>
+Patagonia Fly
 </h3>
 
-<p
-data-es="Comodidad y espacio para compartir la Patagonia en familia."
-data-en="Comfort and space to enjoy Patagonia with the whole family.">
-Comodidad y espacio para compartir
-la Patagonia en familia.
+<p>
+Concepto de plataforma para experiencias de pesca con mosca en Patagonia.
 </p>
 
-<div class="room-info">
-<span>🛏️ 4 personas</span>
-<span>🔥 Living</span>
-</div>
+<a href="#" class="project-link">
+Ver proyecto →
+</a>
 
 </div>
 
 </div>
+
+
+<!-- RESTAURANTE -->
+
+<div class="project project-small">
+
+<div
+class="project-bg"
+style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85');">
+</div>
+
+<div class="project-overlay"></div>
+
+<div class="project-content">
+
+<div class="demo-label">
+PRÓXIMAMENTE
+</div>
+
+<h3>
+Restaurante Patagonia
+</h3>
+
+<p>
+Una web moderna para gastronomía.
+</p>
+
+</div>
+
+</div>
+
+
+<!-- CABAÑAS -->
+
+<div class="project project-small">
+
+<div
+class="project-bg"
+style="background-image:url('https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1400&q=85');">
+</div>
+
+<div class="project-overlay"></div>
+
+<div class="project-content">
+
+<div class="demo-label">
+PRÓXIMAMENTE
+</div>
+
+<h3>
+Cabañas del Sur
+</h3>
+
+<p>
+Presentación de alojamiento y reservas.
+</p>
+
+</div>
+
+</div>
+
 
 </div>
 
@@ -1098,70 +963,95 @@ la Patagonia en familia.
 </section>
 
 
-<!-- EXPERIENCIAS -->
+<!-- ================= PROCESS ================= -->
 
-<section class="experiences" id="experiencias">
+<section class="process" id="proceso">
 
 <div class="container">
 
-<div class="section-label"
-data-es="Descubrí"
-data-en="Discover">
-Descubrí
+<div class="section-head">
+
+<div class="kicker">
+EL PROCESO
 </div>
 
-<h2 class="section-title"
-data-es="Experiencias"
-data-en="Experiences">
-Experiencias
+<h2>
+Simple para vos.
+Profesional para tus clientes.
 </h2>
 
-<p class="section-text"
-data-es="La Patagonia empieza cuando salís por la puerta."
-data-en="Patagonia begins when you step outside.">
-La Patagonia empieza cuando salís por la puerta.
+</div>
+
+<div class="process-grid">
+
+
+<div class="step">
+
+<div class="number">
+01
+</div>
+
+<h3>
+Nos contás tu idea
+</h3>
+
+<p>
+Hablamos sobre tu negocio, tus objetivos y qué necesitás mostrar.
 </p>
 
-<div class="experience-grid">
+</div>
 
-<div class="experience exp-1">
-<div class="experience-content">
-<h3>🏔️ <span data-es="Montaña" data-en="Mountains">Montaña</span></h3>
-<p data-es="Senderos y paisajes cordilleranos." data-en="Trails and mountain landscapes.">
-Senderos y paisajes cordilleranos.
+
+<div class="step">
+
+<div class="number">
+02
+</div>
+
+<h3>
+Diseñamos
+</h3>
+
+<p>
+Creamos la estructura visual y definimos la identidad del sitio.
 </p>
-</div>
+
 </div>
 
 
-<div class="experience exp-2">
-<div class="experience-content">
-<h3>🥾 <span data-es="Trekking" data-en="Trekking">Trekking</span></h3>
-<p data-es="Caminatas para todos los niveles." data-en="Hiking routes for every level.">
-Caminatas para todos los niveles.
+<div class="step">
+
+<div class="number">
+03
+</div>
+
+<h3>
+Desarrollamos
+</h3>
+
+<p>
+Construimos la web y la adaptamos para celulares y computadoras.
 </p>
-</div>
+
 </div>
 
 
-<div class="experience exp-3">
-<div class="experience-content">
-<h3>🎣 <span data-es="Pesca" data-en="Fishing">Pesca</span></h3>
-<p data-es="Ríos y lagos de la región." data-en="Rivers and lakes throughout the region.">
-Ríos y lagos de la región.
+<div class="step">
+
+<div class="number">
+04
+</div>
+
+<h3>
+Publicamos
+</h3>
+
+<p>
+Ponemos tu sitio online y te acompañamos con el mantenimiento.
 </p>
-</div>
+
 </div>
 
-
-<div class="experience exp-4">
-<div class="experience-content">
-<h3>🌲 <span data-es="Naturaleza" data-en="Nature">Naturaleza</span></h3>
-<p data-es="Bosques y fauna patagónica." data-en="Patagonian forests and wildlife.">
-Bosques y fauna patagónica.
-</p>
-</div>
-</div>
 
 </div>
 
@@ -1170,31 +1060,114 @@ Bosques y fauna patagónica.
 </section>
 
 
-<!-- GALERIA -->
+<!-- ================= PRICING ================= -->
 
-<section class="gallery" id="galeria">
+<section class="pricing" id="precios">
 
 <div class="container">
 
-<div class="section-label"
-data-es="Galería"
-data-en="Gallery">
-Galería
+<div class="section-head">
+
+<div class="kicker">
+PLANES
 </div>
 
-<h2 class="section-title"
-data-es="La Patagonia te espera"
-data-en="Patagonia is waiting for you">
-La Patagonia te espera
+<h2>
+Una web para cada etapa de tu negocio.
 </h2>
 
-<div class="gallery-grid">
+<p>
+Valores orientativos. Cada proyecto se presupuesta según sus necesidades.
+</p>
 
-<div class="gallery-item"></div>
-<div class="gallery-item"></div>
-<div class="gallery-item"></div>
-<div class="gallery-item"></div>
-<div class="gallery-item"></div>
+</div>
+
+
+<div class="price-grid">
+
+
+<div class="price-card">
+
+<h3>
+Web Inicial
+</h3>
+
+<div class="price">
+Desde $80.000
+</div>
+
+<ul>
+
+<li>✓ Página profesional</li>
+<li>✓ Diseño responsive</li>
+<li>✓ Información del negocio</li>
+<li>✓ Botón de contacto</li>
+<li>✓ Publicación online</li>
+
+</ul>
+
+<a href="#contacto" class="btn btn-outline" style="color:#101814;border-color:#101814;">
+Consultar
+</a>
+
+</div>
+
+
+<div class="price-card featured">
+
+<h3>
+Web Profesional
+</h3>
+
+<div class="price">
+Desde $150.000
+</div>
+
+<ul>
+
+<li>✓ Diseño personalizado</li>
+<li>✓ Varias secciones</li>
+<li>✓ Galería de imágenes</li>
+<li>✓ Formularios/contacto</li>
+<li>✓ Optimización móvil</li>
+<li>✓ Publicación online</li>
+
+</ul>
+
+<a href="#contacto" class="btn btn-primary">
+Consultar
+</a>
+
+</div>
+
+
+<div class="price-card">
+
+<h3>
+Web Premium
+</h3>
+
+<div class="price">
+Desde $250.000
+</div>
+
+<ul>
+
+<li>✓ Diseño avanzado</li>
+<li>✓ Experiencias interactivas</li>
+<li>✓ Integraciones</li>
+<li>✓ Secciones personalizadas</li>
+<li>✓ Optimización avanzada</li>
+<li>✓ Soporte</li>
+
+</ul>
+
+<a href="#contacto" class="btn btn-outline" style="color:#101814;border-color:#101814;">
+Consultar
+</a>
+
+</div>
+
 
 </div>
 
@@ -1203,300 +1176,81 @@ La Patagonia te espera
 </section>
 
 
-<!-- REVIEWS -->
+<!-- ================= CTA ================= -->
 
-<section class="reviews">
-
-<div class="container">
-
-<div class="center">
-
-<div class="section-label"
-data-es="Nuestros huéspedes"
-data-en="Our guests">
-Nuestros huéspedes
-</div>
-
-<h2 class="section-title"
-data-es="Lo que dicen"
-data-en="What they say">
-Lo que dicen
-</h2>
-
-</div>
-
-<div class="review-grid">
-
-<div class="review">
-
-<div class="stars">★★★★★</div>
-
-<p
-data-es='"Un lugar increíble. La tranquilidad, las vistas y la atención hicieron que nuestra estadía fuera perfecta."'
-data-en='"An incredible place. The peaceful atmosphere, views and service made our stay perfect."'>
-"Un lugar increíble. La tranquilidad,
-las vistas y la atención hicieron
-que nuestra estadía fuera perfecta."
-</p>
-
-<strong>— Martín, Buenos Aires</strong>
-
-</div>
-
-
-<div class="review">
-
-<div class="stars">★★★★★</div>
-
-<p
-data-es='"El lugar ideal para desconectar. Volveríamos sin pensarlo."'
-data-en='"The perfect place to disconnect. We would definitely come back."'>
-"El lugar ideal para desconectar.
-Volveríamos sin pensarlo."
-</p>
-
-<strong>— Sofía, Córdoba</strong>
-
-</div>
-
-
-<div class="review">
-
-<div class="stars">★★★★★</div>
-
-<p
-data-es='"Una experiencia hermosa en la Patagonia. Todo cuidado hasta el último detalle."'
-data-en='"A beautiful Patagonia experience. Every detail was carefully considered."'>
-"Una experiencia hermosa en la Patagonia.
-Todo cuidado hasta el último detalle."
-</p>
-
-<strong>— Lucas, Rosario</strong>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- UBICACION -->
-
-<section class="location" id="contacto">
+<section class="cta" id="contacto">
 
 <div class="container">
 
-<div class="location-grid">
+<div class="cta-inner">
 
-<div class="map">
-
-<div class="map-content">
-
-<div>📍</div>
-
-<h3>Esquel</h3>
-
-<p>Chubut · Patagonia Argentina</p>
-
+<div class="kicker" style="color:#c4d4c8;">
+¿TENÉS UN NEGOCIO?
 </div>
 
-</div>
-
-
-<div>
-
-<div class="section-label"
-data-es="Encontranos"
-data-en="Find us">
-Encontranos
-</div>
-
-<h2 class="section-title"
-data-es="Tu próxima aventura comienza acá"
-data-en="Your next adventure starts here">
-Tu próxima aventura comienza acá
+<h2>
+Hagamos que se vea profesional.
 </h2>
 
-<p class="section-text"
-data-es="Este sitio es una demostración de cómo podría verse una página web profesional para un alojamiento turístico de la región."
-data-en="This website is a demonstration of how a professional website could look for a tourism business in the region.">
-Este sitio es una demostración de cómo podría
-verse una página web profesional para un alojamiento
-turístico de la región.
+<p>
+Contanos qué hacés y qué necesitás. Te respondemos con una propuesta para tu proyecto.
 </p>
 
-<div class="contact-list">
-
-<div class="contact-item">
-
-<strong>📍 <span data-es="Ubicación" data-en="Location">Ubicación</span></strong>
-
-<span>Esquel, Chubut, Argentina · DEMO</span>
-
-</div>
-
-<div class="contact-item">
-
-<strong>✉️ <span data-es="Contacto del desarrollador" data-en="Developer contact">Contacto del desarrollador</span></strong>
-
-<span>presufacil1@gmail.com</span>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- CTA -->
-
-<section class="cta">
-
-<div class="container">
-
-<h2
-data-es="¿Querés una web así para tu negocio?"
-data-en="Would you like a website like this for your business?">
-¿Querés una web así para tu negocio?
-</h2>
-
-<p
-data-es="Este sitio es una demo. Si tenés un alojamiento, restaurante, comercio, servicio o emprendimiento y querés una página profesional, escribime."
-data-en="This website is a demo. If you own a hotel, restaurant, shop, service or business and want a professional website, get in touch.">
-Este sitio es una demo. Si tenés un alojamiento,
-restaurante, comercio, servicio o emprendimiento
-y querés una página profesional, escribime.
-</p>
+<div class="buttons" style="justify-content:center;">
 
 <a
 href="mailto:presufacil1@gmail.com?subject=Consulta%20sobre%20desarrollo%20web"
-class="btn btn-primary"
-data-es="✉️ Quiero una web así"
-data-en="✉️ I want a website like this">
-✉️ Quiero una web así
+class="btn btn-primary">
+Quiero mi página web
 </a>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-<div class="footer">
+<div class="container footer-grid">
 
 <div>
 
-<h3>PATAGONIA LODGE</h3>
+<div class="footer-logo">
+WEBS PATAGONIA
+</div>
 
-<p data-es="DEMO · Sitio web de ejemplo"
-data-en="DEMO · Example website">
-DEMO · Sitio web de ejemplo
+<p>
+Diseño y desarrollo web desde Patagonia.
 </p>
-
-<p>Esquel · Patagonia Argentina</p>
 
 </div>
 
 <div class="footer-links">
 
-<a href="#nosotros" data-es="Nosotros" data-en="About us">Nosotros</a>
-
-<a href="#habitaciones" data-es="Habitaciones" data-en="Rooms">Habitaciones</a>
-
-<a href="#experiencias" data-es="Experiencias" data-en="Experiences">Experiencias</a>
-
-<a href="#contacto" data-es="Contacto" data-en="Contact">Contacto</a>
+<a href="#servicios">Servicios</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#contacto">Contacto</a>
 
 </div>
 
 </div>
 
-<div class="copy">
+<div class="container" style="margin-top:35px;border-top:1px solid rgba(255,255,255,.08);padding-top:20px;">
 
-© 2026 Patagonia Lodge · Demo ficticia creada para portfolio.
+<p>
+© 2026 WEBS PATAGONIA · Portfolio de demostración.
+</p>
 
 </div>
 
 </footer>
 
-
-<script>
-
-/* =========================
-   HEADER SCROLL
-========================= */
-
-window.addEventListener("scroll",function(){
-
-const header = document.getElementById("header");
-
-if(window.scrollY > 50){
-
-header.classList.add("scrolled");
-
-}else{
-
-header.classList.remove("scrolled");
-
-}
-
-});
-
-
-/* =========================
-   LANGUAGE SWITCHER
-========================= */
-
-function setLanguage(language){
-
-document.documentElement.lang = language;
-
-const elements = document.querySelectorAll("[data-es]");
-
-elements.forEach(function(element){
-
-element.textContent = element.getAttribute("data-" + language);
-
-});
-
-
-document.getElementById("esBtn").classList.remove("active");
-document.getElementById("enBtn").classList.remove("active");
-
-if(language === "es"){
-
-document.getElementById("esBtn").classList.add("active");
-
-}else{
-
-document.getElementById("enBtn").classList.add("active");
-
-}
-
-if(language === "en"){
-
-document.title = "Patagonia Lodge | Web Demo";
-
-}else{
-
-document.title = "Patagonia Lodge | Demo Web";
-
-}
-
-}
-
-</script>
 
 </body>
 </html>
