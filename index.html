@@ -1,24 +1,34 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <meta
     name="description"
-    content="Descubrí Esquel, Trevelin y Cholila. Naturaleza, pesca con mosca, excursiones, gastronomía y experiencias en la Patagonia."
+    content="Descubrí Esquel: lugares, naturaleza, pesca con mosca, excursiones, gastronomía y experiencias en la Patagonia."
   >
 
-  <meta name="theme-color" content="#0b3028">
+  <meta
+    name="theme-color"
+    content="#0b3028"
+  >
 
-  <title>Descubrí Patagonia | Esquel · Trevelin · Cholila</title>
+  <title>
+    Descubrí Esquel | Patagonia
+  </title>
+
 
   <style>
 
-    /* =========================================================
+    /* =====================================================
        RESET
-    ========================================================= */
+    ===================================================== */
 
     * {
       margin: 0;
@@ -31,19 +41,17 @@
     }
 
     body {
+
       font-family:
         Arial,
         Helvetica,
         sans-serif;
 
       background: #f7f5ef;
-      color: #17352e;
-      line-height: 1.6;
-    }
 
-    img {
-      max-width: 100%;
-      display: block;
+      color: #17352e;
+
+      line-height: 1.6;
     }
 
     a {
@@ -51,35 +59,41 @@
     }
 
 
-    /* =========================================================
-       VARIABLES
-    ========================================================= */
+    /* =====================================================
+       COLORES
+    ===================================================== */
 
     :root {
 
       --verde: #0b3028;
-      --verde-2: #174c3f;
-      --verde-3: #286957;
+
+      --verde-claro: #1c594a;
+
+      --verde-suave: #dce8e2;
 
       --arena: #e8ddc4;
-      --arena-2: #f4efe3;
+
+      --crema: #f5f0e5;
 
       --blanco: #ffffff;
-      --negro: #10211d;
+
+      --texto: #17352e;
 
       --gris: #66736e;
-      --gris-claro: #e8ebe8;
+
+      --borde: #e4e8e5;
 
       --sombra:
-        0 15px 40px rgba(0,0,0,0.10);
+        0 12px 35px
+        rgba(0,0,0,0.09);
 
       --radio: 22px;
     }
 
 
-    /* =========================================================
+    /* =====================================================
        HEADER
-    ========================================================= */
+    ===================================================== */
 
     header {
 
@@ -103,12 +117,10 @@
       color: white;
 
       background:
-        linear-gradient(
-          rgba(7,29,25,0.82),
-          rgba(7,29,25,0.55)
-        );
+        rgba(7, 29, 25, 0.84);
 
-      backdrop-filter: blur(8px);
+      backdrop-filter:
+        blur(10px);
     }
 
     .logo {
@@ -123,16 +135,18 @@
     }
 
     .logo span {
-      color: var(--arena);
+
+      color:
+        var(--arena);
     }
 
     nav {
 
       display: flex;
 
-      align-items: center;
-
       gap: 25px;
+
+      align-items: center;
     }
 
     nav a {
@@ -143,406 +157,558 @@
 
       font-weight: 600;
 
-      transition: 0.25s;
+      transition:
+        0.25s;
     }
 
     nav a:hover {
-      color: var(--arena);
+
+      color:
+        var(--arena);
     }
 
     .nav-button {
 
-      padding: 10px 17px;
+      background:
+        var(--arena);
 
-      border-radius: 999px;
+      color:
+        var(--verde) !important;
 
-      background: var(--arena);
+      padding:
+        10px 17px;
 
-      color: var(--verde) !important;
+      border-radius:
+        999px;
     }
 
 
-    /* =========================================================
+    /* =====================================================
        HERO
-    ========================================================= */
+    ===================================================== */
 
     .hero {
 
-      min-height: 100vh;
+      min-height:
+        100vh;
 
       padding:
-        150px
-        7%
-        90px;
+        150px 7% 90px;
 
-      display: flex;
+      display:
+        flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      position: relative;
+      position:
+        relative;
 
-      overflow: hidden;
+      overflow:
+        hidden;
 
-      color: white;
+      color:
+        white;
 
       background:
 
         linear-gradient(
-          rgba(6,31,27,0.43),
-          rgba(6,31,27,0.82)
+          rgba(6,31,27,0.38),
+          rgba(6,31,27,0.86)
         ),
 
         radial-gradient(
           circle at 75% 25%,
-          #52786d 0%,
-          #244d42 38%,
+          #557c70 0%,
+          #285448 38%,
           #0b3028 78%
         );
     }
 
-    .hero::before {
+    .hero::after {
 
       content: "";
 
-      position: absolute;
+      position:
+        absolute;
 
-      width: 800px;
-      height: 800px;
+      width:
+        850px;
 
-      right: -300px;
-      top: -250px;
+      height:
+        300px;
 
-      border-radius: 50%;
+      right:
+        -180px;
+
+      bottom:
+        -90px;
+
+      border-radius:
+        50%;
 
       background:
-        rgba(255,255,255,0.035);
+        rgba(255,255,255,0.05);
+
+      transform:
+        rotate(-7deg);
     }
 
     .hero-content {
 
-      position: relative;
+      max-width:
+        800px;
 
-      z-index: 2;
+      position:
+        relative;
 
-      max-width: 780px;
+      z-index:
+        2;
     }
 
     .eyebrow {
 
-      margin-bottom: 20px;
+      color:
+        var(--arena);
 
-      color: var(--arena);
+      text-transform:
+        uppercase;
 
-      text-transform: uppercase;
+      letter-spacing:
+        4px;
 
-      letter-spacing: 4px;
+      font-size:
+        0.78rem;
 
-      font-size: 0.78rem;
+      font-weight:
+        800;
 
-      font-weight: 800;
+      margin-bottom:
+        18px;
     }
 
     .hero h1 {
 
       font-size:
         clamp(
-          3.2rem,
+          3.4rem,
           8vw,
           7rem
         );
 
-      line-height: 0.92;
+      line-height:
+        0.9;
 
-      letter-spacing: -3px;
+      letter-spacing:
+        -4px;
 
-      margin-bottom: 30px;
+      margin-bottom:
+        28px;
     }
 
     .hero h1 span {
-      color: var(--arena);
+
+      color:
+        var(--arena);
     }
 
     .hero-description {
 
-      max-width: 650px;
+      max-width:
+        650px;
 
-      font-size: 1.2rem;
+      color:
+        #edf3f0;
 
-      color: #edf2ef;
+      font-size:
+        1.2rem;
 
-      margin-bottom: 35px;
+      margin-bottom:
+        32px;
     }
 
     .hero-buttons {
 
-      display: flex;
+      display:
+        flex;
 
-      flex-wrap: wrap;
+      flex-wrap:
+        wrap;
 
-      gap: 14px;
+      gap:
+        14px;
     }
 
     .button {
 
-      display: inline-flex;
+      display:
+        inline-flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: center;
+      justify-content:
+        center;
 
-      padding: 14px 22px;
+      padding:
+        14px 22px;
 
-      border-radius: 999px;
+      border-radius:
+        999px;
 
-      font-weight: 800;
+      font-weight:
+        800;
 
-      transition: 0.25s;
+      transition:
+        0.25s;
     }
 
     .button:hover {
 
       transform:
         translateY(-3px);
-
     }
 
     .button-primary {
 
-      background: var(--arena);
+      background:
+        var(--arena);
 
-      color: var(--verde);
+      color:
+        var(--verde);
     }
 
     .button-secondary {
 
-      color: white;
+      color:
+        white;
 
       border:
         1px solid
-        rgba(255,255,255,0.45);
+        rgba(255,255,255,0.5);
     }
 
 
-    /* =========================================================
+    /* =====================================================
        SECCIONES
-    ========================================================= */
+    ===================================================== */
 
     section {
-      padding: 90px 7%;
+
+      padding:
+        90px 7%;
     }
 
     .section-header {
 
-      max-width: 750px;
+      max-width:
+        760px;
 
       margin:
         0 auto 50px;
 
-      text-align: center;
+      text-align:
+        center;
     }
 
-    .section-header .small-title {
+    .small-title {
 
-      color: var(--verde-3);
+      color:
+        var(--verde-claro);
 
-      text-transform: uppercase;
+      text-transform:
+        uppercase;
 
-      letter-spacing: 3px;
+      letter-spacing:
+        3px;
 
-      font-size: 0.75rem;
+      font-size:
+        0.75rem;
 
-      font-weight: 800;
+      font-weight:
+        800;
 
-      margin-bottom: 10px;
+      margin-bottom:
+        10px;
     }
 
     .section-header h2 {
 
-      color: var(--verde);
+      color:
+        var(--verde);
 
       font-size:
         clamp(
-          2.1rem,
+          2.2rem,
           5vw,
-          3.7rem
+          3.8rem
         );
 
-      line-height: 1.05;
+      line-height:
+        1.05;
 
-      margin-bottom: 15px;
+      margin-bottom:
+        15px;
     }
 
     .section-header p {
 
-      color: var(--gris);
+      color:
+        var(--gris);
 
-      font-size: 1.05rem;
+      font-size:
+        1.05rem;
     }
 
 
-    /* =========================================================
-       DESTINOS
-    ========================================================= */
+    /* =====================================================
+       DESTINOS / LUGARES
+    ===================================================== */
 
-    .destinos {
+    .lugares {
 
       background:
-        var(--arena-2);
+        var(--crema);
     }
 
-    .destinos-grid {
+    .lugares-grid {
 
-      max-width: 1200px;
+      max-width:
+        1200px;
 
-      margin: auto;
+      margin:
+        auto;
 
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         repeat(3, 1fr);
 
-      gap: 22px;
+      gap:
+        22px;
     }
 
-    .destino {
+    .lugar {
 
-      min-height: 370px;
+      min-height:
+        360px;
 
-      position: relative;
+      padding:
+        28px;
 
-      overflow: hidden;
+      border-radius:
+        var(--radio);
 
-      border-radius: var(--radio);
+      position:
+        relative;
 
-      padding: 30px;
+      overflow:
+        hidden;
 
-      display: flex;
+      display:
+        flex;
 
-      align-items: flex-end;
+      align-items:
+        flex-end;
 
-      color: white;
+      color:
+        white;
 
-      box-shadow: var(--sombra);
+      box-shadow:
+        var(--sombra);
 
-      transition: 0.3s;
+      transition:
+        0.3s;
     }
 
-    .destino:hover {
+    .lugar:hover {
 
       transform:
-        translateY(-8px);
+        translateY(-7px);
     }
 
-    .destino::before {
+    .lugar::before {
 
-      content: "";
+      content:
+        "";
 
-      position: absolute;
+      position:
+        absolute;
 
-      inset: 0;
+      inset:
+        0;
 
       background:
         linear-gradient(
-          transparent 20%,
-          rgba(0,0,0,0.8)
+          transparent 25%,
+          rgba(0,0,0,0.82)
         );
     }
 
-    .destino-esquel {
+    .lugar-content {
+
+      position:
+        relative;
+
+      z-index:
+        2;
+    }
+
+    .lugar-icon {
+
+      font-size:
+        2.5rem;
+
+      margin-bottom:
+        8px;
+    }
+
+    .lugar h3 {
+
+      font-size:
+        1.9rem;
+
+      margin-bottom:
+        6px;
+    }
+
+    .lugar p {
+
+      color:
+        #edf3f0;
+
+      font-size:
+        0.95rem;
+    }
+
+    .lugar-link {
+
+      display:
+        inline-block;
+
+      margin-top:
+        14px;
+
+      color:
+        var(--arena);
+
+      font-weight:
+        800;
+
+      font-size:
+        0.9rem;
+    }
+
+
+    /* Fondos provisionales */
+
+    .trochita {
 
       background:
         linear-gradient(
           145deg,
-          #547b72,
-          #183f36
+          #586d68,
+          #183a34
         );
     }
 
-    .destino-trevelin {
+    .alerces {
 
       background:
         linear-gradient(
           145deg,
-          #78906c,
-          #294833
+          #66826b,
+          #1b4030
         );
     }
 
-    .destino-cholila {
+    .lahoya {
 
       background:
         linear-gradient(
           145deg,
-          #5b8294,
-          #193b48
+          #8095a0,
+          #263f4b
         );
     }
 
-    .destino-content {
+    .lagunazeta {
 
-      position: relative;
-
-      z-index: 2;
+      background:
+        linear-gradient(
+          145deg,
+          #5d8980,
+          #183f39
+        );
     }
 
-    .destino-content .emoji {
+    .piedraparada {
 
-      font-size: 2.5rem;
-
-      margin-bottom: 8px;
+      background:
+        linear-gradient(
+          145deg,
+          #92775e,
+          #44372c
+        );
     }
 
-    .destino h3 {
+    .torrecillas {
 
-      font-size: 2rem;
-
-      margin-bottom: 5px;
+      background:
+        linear-gradient(
+          145deg,
+          #78949b,
+          #263f45
+        );
     }
 
-    .destino p {
 
-      color: #edf3f1;
-    }
-
-
-    /* =========================================================
+    /* =====================================================
        EXPERIENCIAS
-    ========================================================= */
+    ===================================================== */
 
     .experiencias {
 
-      background: white;
+      background:
+        white;
     }
 
     .experiencias-grid {
 
-      max-width: 1200px;
+      max-width:
+        1150px;
 
-      margin: auto;
+      margin:
+        auto;
 
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         repeat(4, 1fr);
 
-      gap: 18px;
+      gap:
+        18px;
     }
 
     .experiencia {
 
-      padding: 30px 22px;
+      padding:
+        30px 20px;
+
+      text-align:
+        center;
 
       border:
         1px solid
-        var(--gris-claro);
+        var(--borde);
 
-      border-radius: 20px;
+      border-radius:
+        20px;
 
-      text-align: center;
-
-      background: white;
-
-      transition: 0.25s;
+      transition:
+        0.25s;
     }
 
     .experiencia:hover {
@@ -551,39 +717,45 @@
         translateY(-5px);
 
       box-shadow:
-        0 12px 30px
-        rgba(0,0,0,0.07);
+        var(--sombra);
     }
 
     .experiencia-icon {
 
-      font-size: 2.8rem;
+      font-size:
+        2.7rem;
 
-      margin-bottom: 15px;
+      margin-bottom:
+        13px;
     }
 
     .experiencia h3 {
 
-      color: var(--verde);
+      color:
+        var(--verde);
 
-      margin-bottom: 8px;
+      margin-bottom:
+        8px;
     }
 
     .experiencia p {
 
-      color: var(--gris);
+      color:
+        var(--gris);
 
-      font-size: 0.93rem;
+      font-size:
+        0.93rem;
     }
 
 
-    /* =========================================================
+    /* =====================================================
        PESCA
-    ========================================================= */
+    ===================================================== */
 
     .pesca {
 
-      color: white;
+      color:
+        white;
 
       background:
         linear-gradient(
@@ -595,67 +767,75 @@
 
     .pesca-container {
 
-      max-width: 1100px;
+      max-width:
+        1100px;
 
-      margin: auto;
+      margin:
+        auto;
 
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         1fr 1fr;
 
-      gap: 60px;
+      gap:
+        60px;
 
-      align-items: center;
+      align-items:
+        center;
     }
 
-    .pesca-text .small-title {
+    .pesca .small-title {
 
-      color: var(--arena);
-
-      text-transform: uppercase;
-
-      letter-spacing: 3px;
-
-      font-size: 0.75rem;
-
-      font-weight: 800;
+      color:
+        var(--arena);
     }
 
-    .pesca-text h2 {
+    .pesca h2 {
+
+      color:
+        white;
 
       font-size:
         clamp(
-          2.5rem,
+          2.6rem,
           5vw,
           4.5rem
         );
 
-      line-height: 1;
+      line-height:
+        1;
 
       margin:
         15px 0 20px;
     }
 
-    .pesca-text p {
+    .pesca-text > p {
 
-      color: #d9e6e1;
+      color:
+        #dce8e3;
 
-      margin-bottom: 25px;
+      margin-bottom:
+        25px;
     }
 
-    .pesca-features {
+    .pesca-list {
 
-      display: grid;
+      display:
+        grid;
 
-      gap: 12px;
+      gap:
+        10px;
     }
 
-    .pesca-feature {
+    .pesca-item {
 
-      padding: 14px 17px;
+      padding:
+        13px 16px;
 
-      border-radius: 13px;
+      border-radius:
+        12px;
 
       background:
         rgba(255,255,255,0.08);
@@ -663,19 +843,26 @@
 
     .pesca-visual {
 
-      min-height: 380px;
+      min-height:
+        380px;
 
-      border-radius: 25px;
+      border-radius:
+        25px;
 
-      display: flex;
+      display:
+        flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: center;
+      justify-content:
+        center;
 
-      text-align: center;
+      text-align:
+        center;
 
-      padding: 30px;
+      padding:
+        30px;
 
       background:
         radial-gradient(
@@ -684,801 +871,82 @@
           #1d5548 45%,
           #092a24 80%
         );
-
-      box-shadow:
-        0 20px 50px
-        rgba(0,0,0,0.25);
     }
 
-    .pesca-visual-content {
+    .pesca-visual strong {
 
-      font-size: 5rem;
+      display:
+        block;
+
+      font-size:
+        6rem;
     }
 
-    .pesca-visual-content p {
+    .pesca-visual p {
 
-      margin-top: 20px;
+      color:
+        #edf5f1;
 
-      color: #edf5f1;
-
-      font-size: 1rem;
+      margin-top:
+        15px;
     }
 
 
-    /* =========================================================
+    /* =====================================================
        INFO
-    ========================================================= */
+    ===================================================== */
 
     .info {
 
       background:
-        var(--arena-2);
+        var(--crema);
     }
 
     .info-grid {
 
-      max-width: 1100px;
+      max-width:
+        1100px;
 
-      margin: auto;
+      margin:
+        auto;
 
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
         repeat(3, 1fr);
 
-      gap: 20px;
+      gap:
+        20px;
     }
 
     .info-card {
 
-      background: white;
+      padding:
+        28px;
 
-      padding: 28px;
+      background:
+        white;
 
-      border-radius: 20px;
+      border-radius:
+        20px;
 
       box-shadow:
         0 8px 25px
         rgba(0,0,0,0.05);
     }
 
-    .info-card .icon {
+    .info-icon {
 
-      font-size: 2rem;
+      font-size:
+        2rem;
 
-      margin-bottom: 10px;
+      margin-bottom:
+        10px;
     }
 
     .info-card h3 {
 
-      color: var(--verde);
-
-      margin-bottom: 8px;
-    }
-
-    .info-card p {
-
-      color: var(--gris);
-
-      font-size: 0.95rem;
-    }
-
-
-    /* =========================================================
-       QR
-    ========================================================= */
-
-    .qr-section {
-
-      background:
-        var(--verde);
-
-      color: white;
-
-      text-align: center;
-    }
-
-    .qr-section .section-header h2 {
-      color: white;
-    }
-
-    .qr-section .section-header p {
-      color: #d7e4df;
-    }
-
-    .qr-box {
-
-      width: 250px;
-
-      height: 250px;
-
-      margin:
-        35px auto 20px;
-
-      padding: 18px;
-
-      background: white;
-
-      border-radius: 20px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-    }
-
-    .qr-placeholder {
-
-      width: 100%;
-
-      height: 100%;
-
-      border:
-        3px dashed
-        #9ba7a2;
-
-      border-radius: 12px;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      color: #68736f;
-
-      font-weight: 800;
-
-      text-align: center;
-
-      padding: 20px;
-    }
-
-    .qr-text {
-
-      color: #dce8e4;
-
-      font-size: 0.95rem;
-    }
-
-
-    /* =========================================================
-       FOOTER
-    ========================================================= */
-
-    footer {
-
-      padding: 35px 7%;
-
-      text-align: center;
-
-      color: #b8c8c3;
-
-      background: #061d19;
-    }
-
-    footer strong {
-      color: white;
-    }
-
-
-    /* =========================================================
-       RESPONSIVE
-    ========================================================= */
-
-    @media (max-width: 900px) {
-
-      nav {
-        display: none;
-      }
-
-      .destinos-grid,
-      .experiencias-grid,
-      .info-grid {
-
-        grid-template-columns:
-          1fr 1fr;
-      }
-
-      .pesca-container {
-
-        grid-template-columns:
-          1fr;
-      }
-    }
-
-
-    @media (max-width: 600px) {
-
-      section {
-        padding:
-          70px 5%;
-      }
-
-      .hero {
-
-        padding:
-          130px 6%
-          70px;
-      }
-
-      .hero h1 {
-
-        letter-spacing:
-          -2px;
-      }
-
-      .destinos-grid,
-      .experiencias-grid,
-      .info-grid {
-
-        grid-template-columns:
-          1fr;
-      }
-
-      .destino {
-
-        min-height:
-          300px;
-      }
-
-      .pesca-visual {
-
-        min-height:
-          280px;
-      }
-
-      .qr-box {
-
-        width: 220px;
-        height: 220px;
-      }
-    }
-
-  </style>
-</head>
-
-
-<body>
-
-
-  <!-- =====================================================
-       HEADER
-  ====================================================== -->
-
-  <header>
-
-    <a href="#" class="logo">
-      🏔️ DESCUBRÍ <span>PATAGONIA</span>
-    </a>
-
-    <nav>
-
-      <a href="#destinos">
-        Destinos
-      </a>
-
-      <a href="#experiencias">
-        Experiencias
-      </a>
-
-      <a href="#pesca">
-        Pesca
-      </a>
-
-      <a href="#app" class="nav-button">
-        La App
-      </a>
-
-    </nav>
-
-  </header>
-
-
-  <!-- =====================================================
-       HERO
-  ====================================================== -->
-
-  <main>
-
-    <section class="hero">
-
-      <div class="hero-content">
-
-        <div class="eyebrow">
-          Esquel · Trevelin · Cholila
-        </div>
-
-        <h1>
-          Descubrí<br>
-          <span>la Patagonia.</span>
-        </h1>
-
-        <p class="hero-description">
-
-          Todo lo que necesitás para disfrutar
-          tu viaje por la cordillera de Chubut:
-          naturaleza, aventura, gastronomía,
-          pesca y lugares increíbles.
-
-        </p>
-
-        <div class="hero-buttons">
-
-          <a
-            href="#destinos"
-            class="button button-primary"
-          >
-            Explorar destinos
-          </a>
-
-          <a
-            href="#app"
-            class="button button-secondary"
-          >
-            📱 Conocé la app
-          </a>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- =================================================
-         DESTINOS
-    ================================================== -->
-
-    <section
-      class="destinos"
-      id="destinos"
-    >
-
-      <div class="section-header">
-
-        <div class="small-title">
-          La región
-        </div>
-
-        <h2>
-          Tres destinos.<br>
-          Una experiencia.
-        </h2>
-
-        <p>
-          Descubrí algunos de los lugares
-          más increíbles de la Patagonia.
-        </p>
-
-      </div>
-
-
-      <div class="destinos-grid">
-
-
-        <article class="destino destino-esquel">
-
-          <div class="destino-content">
-
-            <div class="emoji">
-              🏔️
-            </div>
-
-            <h3>
-              Esquel
-            </h3>
-
-            <p>
-              Montaña, naturaleza,
-              gastronomía y aventura.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="destino destino-trevelin">
-
-          <div class="destino-content">
-
-            <div class="emoji">
-              🌲
-            </div>
-
-            <h3>
-              Trevelin
-            </h3>
-
-            <p>
-              Cultura, paisajes,
-              río y experiencias únicas.
-            </p>
-
-          </div>
-
-        </article>
-
-
-        <article class="destino destino-cholila">
-
-          <div class="destino-content">
-
-            <div class="emoji">
-              🏞️
-            </div>
-
-            <h3>
-              Cholila
-            </h3>
-
-            <p>
-              Lagos, bosques,
-              pesca y naturaleza.
-            </p>
-
-          </div>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- =================================================
-         EXPERIENCIAS
-    ================================================== -->
-
-    <section
-      class="experiencias"
-      id="experiencias"
-    >
-
-      <div class="section-header">
-
-        <div class="small-title">
-          Viví la experiencia
-        </div>
-
-        <h2>
-          ¿Qué estás buscando?
-        </h2>
-
-        <p>
-          Encontrá actividades y lugares
-          para aprovechar al máximo tu viaje.
-        </p>
-
-      </div>
-
-
-      <div class="experiencias-grid">
-
-
-        <article class="experiencia">
-
-          <div class="experiencia-icon">
-            🎣
-          </div>
-
-          <h3>
-            Pesca con mosca
-          </h3>
-
-          <p>
-            Ríos, lagos y experiencias
-            para amantes de la pesca.
-          </p>
-
-        </article>
-
-
-        <article class="experiencia">
-
-          <div class="experiencia-icon">
-            🥾
-          </div>
-
-          <h3>
-            Aventuras
-          </h3>
-
-          <p>
-            Senderos, excursiones
-            y actividades al aire libre.
-          </p>
-
-        </article>
-
-
-        <article class="experiencia">
-
-          <div class="experiencia-icon">
-            🍽️
-          </div>
-
-          <h3>
-            Gastronomía
-          </h3>
-
-          <p>
-            Descubrí lugares para comer
-            y sabores de la región.
-          </p>
-
-        </article>
-
-
-        <article class="experiencia">
-
-          <div class="experiencia-icon">
-            🏕️
-          </div>
-
-          <h3>
-            Alojamiento
-          </h3>
-
-          <p>
-            Encontrá dónde descansar
-            durante tu viaje.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- =================================================
-         PESCA CON MOSCA
-    ================================================== -->
-
-    <section
-      class="pesca"
-      id="pesca"
-    >
-
-      <div class="pesca-container">
-
-
-        <div class="pesca-text">
-
-          <div class="small-title">
-            Una pasión patagónica
-          </div>
-
-          <h2>
-            Pesca<br>
-            con mosca.
-          </h2>
-
-          <p>
-
-            La cordillera ofrece algunos
-            de los escenarios más espectaculares
-            para disfrutar de la pesca con mosca.
-
-          </p>
-
-
-          <div class="pesca-features">
-
-            <div class="pesca-feature">
-              🎣 Lugares de pesca
-            </div>
-
-            <div class="pesca-feature">
-              🌊 Ríos y lagos
-            </div>
-
-            <div class="pesca-feature">
-              🪰 Moscas y recomendaciones
-            </div>
-
-            <div class="pesca-feature">
-              🗺️ Información para turistas
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="pesca-visual">
-
-          <div class="pesca-visual-content">
-
-            🎣
-
-            <p>
-              Próximamente:
-              guía de pesca con mosca
-            </p>
-
-          </div>
-
-        </div>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- =================================================
-         INFORMACIÓN
-    ================================================== -->
-
-    <section class="info">
-
-      <div class="section-header">
-
-        <div class="small-title">
-          Todo en un solo lugar
-        </div>
-
-        <h2>
-          Planeá tu viaje.
-        </h2>
-
-        <p>
-          La idea es que el turista pueda
-          encontrar rápidamente lo que necesita.
-        </p>
-
-      </div>
-
-
-      <div class="info-grid">
-
-
-        <article class="info-card">
-
-          <div class="icon">
-            📍
-          </div>
-
-          <h3>
-            Lugares para conocer
-          </h3>
-
-          <p>
-            Miradores, lagos, ríos,
-            bosques y atractivos turísticos.
-          </p>
-
-        </article>
-
-
-        <article class="info-card">
-
-          <div class="icon">
-            🍴
-          </div>
-
-          <h3>
-            Dónde comer
-          </h3>
-
-          <p>
-            Restaurantes, cervecerías,
-            cafeterías y gastronomía local.
-          </p>
-
-        </article>
-
-
-        <article class="info-card">
-
-          <div class="icon">
-            🛏️
-          </div>
-
-          <h3>
-            Dónde dormir
-          </h3>
-
-          <p>
-            Hoteles, cabañas y alojamientos
-            para diferentes tipos de viajeros.
-          </p>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- =================================================
-         APP / QR
-    ================================================== -->
-
-    <section
-      class="qr-section"
-      id="app"
-    >
-
-      <div class="section-header">
-
-        <div
-          class="small-title"
-          style="color:#e8ddc4;"
-        >
-          Próximamente
-        </div>
-
-        <h2>
-          Tu viaje empieza acá.
-        </h2>
-
-        <p>
-
-          Escaneá el código QR y descubrí
-          todo lo que podés hacer en
-          Esquel, Trevelin y Cholila.
-
-        </p>
-
-      </div>
-
-
-      <div class="qr-box">
-
-        <div class="qr-placeholder">
-
-          QR DE LA APP
-
-          <br><br>
-
-          Lo agregamos
-          cuando publiquemos
-          la aplicación.
-
-        </div>
-
-      </div>
-
-
-      <p class="qr-text">
-
-        📱 Escaneá el QR con la cámara
-        de tu celular.
-
-      </p>
-
-    </section>
-
-  </main>
-
-
-  <!-- =====================================================
-       FOOTER
-  ====================================================== -->
-
-  <footer>
-
-    <strong>
-      🏔️ DESCUBRÍ PATAGONIA
-    </strong>
-
-    <br><br>
-
-    Esquel · Trevelin · Cholila
-
-    <br><br>
-
-    © 2026 · Todos los derechos reservados
-
-  </footer>
-
-
-</body>
-</html>
+      color:
+        va
 ```
