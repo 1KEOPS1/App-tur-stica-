@@ -1,34 +1,22 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <title>Descubrí Esquel | Patagonia Argentina</title>
 
   <meta
     name="description"
-    content="Descubrí Esquel: lugares, naturaleza, pesca con mosca, excursiones, gastronomía y experiencias en la Patagonia."
+    content="Descubrí Esquel: naturaleza, montaña, pesca con mosca, trekking, gastronomía y aventuras en la Patagonia Argentina."
   >
-
-  <meta
-    name="theme-color"
-    content="#0b3028"
-  >
-
-  <title>
-    Descubrí Esquel | Patagonia
-  </title>
-
 
   <style>
 
-    /* =====================================================
-       RESET
-    ===================================================== */
+    /* ==============================
+       CONFIGURACIÓN GENERAL
+    ============================== */
 
     * {
       margin: 0;
@@ -41,912 +29,1025 @@
     }
 
     body {
-
-      font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      background: #f7f5ef;
-
-      color: #17352e;
-
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f1e8;
+      color: #17352c;
       line-height: 1.6;
     }
 
     a {
       text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
     }
 
 
-    /* =====================================================
-       COLORES
-    ===================================================== */
-
-    :root {
-
-      --verde: #0b3028;
-
-      --verde-claro: #1c594a;
-
-      --verde-suave: #dce8e2;
-
-      --arena: #e8ddc4;
-
-      --crema: #f5f0e5;
-
-      --blanco: #ffffff;
-
-      --texto: #17352e;
-
-      --gris: #66736e;
-
-      --borde: #e4e8e5;
-
-      --sombra:
-        0 12px 35px
-        rgba(0,0,0,0.09);
-
-      --radio: 22px;
-    }
-
-
-    /* =====================================================
+    /* ==============================
        HEADER
-    ===================================================== */
+    ============================== */
 
     header {
-
       position: fixed;
-
       top: 0;
       left: 0;
-
       width: 100%;
-
       z-index: 1000;
 
-      padding: 18px 6%;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: space-between;
+      background: rgba(10, 40, 32, 0.95);
+      backdrop-filter: blur(10px);
 
       color: white;
 
-      background:
-        rgba(7, 29, 25, 0.84);
-
-      backdrop-filter:
-        blur(10px);
+      padding: 18px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
     .logo {
-
-      color: white;
-
-      font-size: 1.15rem;
-
-      font-weight: 800;
-
+      font-size: 22px;
+      font-weight: bold;
       letter-spacing: 1px;
     }
 
-    .logo span {
-
-      color:
-        var(--arena);
-    }
-
     nav {
-
       display: flex;
-
       gap: 25px;
-
-      align-items: center;
     }
 
     nav a {
-
       color: white;
-
-      font-size: 0.92rem;
-
-      font-weight: 600;
-
-      transition:
-        0.25s;
+      font-size: 15px;
+      transition: 0.3s;
     }
 
     nav a:hover {
-
-      color:
-        var(--arena);
-    }
-
-    .nav-button {
-
-      background:
-        var(--arena);
-
-      color:
-        var(--verde) !important;
-
-      padding:
-        10px 17px;
-
-      border-radius:
-        999px;
+      color: #e2a65a;
     }
 
 
-    /* =====================================================
+    /* ==============================
        HERO
-    ===================================================== */
+    ============================== */
 
     .hero {
+      min-height: 100vh;
 
-      min-height:
-        100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
-      padding:
-        150px 7% 90px;
+      text-align: center;
 
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      position:
-        relative;
-
-      overflow:
-        hidden;
-
-      color:
-        white;
+      padding: 120px 20px 80px;
 
       background:
-
         linear-gradient(
-          rgba(6,31,27,0.38),
-          rgba(6,31,27,0.86)
+          rgba(9, 38, 31, 0.65),
+          rgba(9, 38, 31, 0.65)
         ),
-
-        radial-gradient(
-          circle at 75% 25%,
-          #557c70 0%,
-          #285448 38%,
-          #0b3028 78%
+        linear-gradient(
+          135deg,
+          #315b4d,
+          #17352c 55%,
+          #102c26
         );
-    }
 
-    .hero::after {
-
-      content: "";
-
-      position:
-        absolute;
-
-      width:
-        850px;
-
-      height:
-        300px;
-
-      right:
-        -180px;
-
-      bottom:
-        -90px;
-
-      border-radius:
-        50%;
-
-      background:
-        rgba(255,255,255,0.05);
-
-      transform:
-        rotate(-7deg);
+      color: white;
     }
 
     .hero-content {
-
-      max-width:
-        800px;
-
-      position:
-        relative;
-
-      z-index:
-        2;
-    }
-
-    .eyebrow {
-
-      color:
-        var(--arena);
-
-      text-transform:
-        uppercase;
-
-      letter-spacing:
-        4px;
-
-      font-size:
-        0.78rem;
-
-      font-weight:
-        800;
-
-      margin-bottom:
-        18px;
+      max-width: 900px;
     }
 
     .hero h1 {
-
-      font-size:
-        clamp(
-          3.4rem,
-          8vw,
-          7rem
-        );
-
-      line-height:
-        0.9;
-
-      letter-spacing:
-        -4px;
-
-      margin-bottom:
-        28px;
+      font-size: clamp(48px, 8vw, 90px);
+      margin-bottom: 20px;
+      letter-spacing: -2px;
     }
 
-    .hero h1 span {
-
-      color:
-        var(--arena);
+    .hero p {
+      font-size: clamp(19px, 3vw, 28px);
+      margin-bottom: 35px;
+      color: #f1eee5;
     }
 
-    .hero-description {
+    .hero-button {
+      display: inline-block;
 
-      max-width:
-        650px;
+      background: #d89b45;
+      color: white;
 
-      color:
-        #edf3f0;
+      padding: 16px 30px;
 
-      font-size:
-        1.2rem;
+      border-radius: 50px;
 
-      margin-bottom:
-        32px;
+      font-weight: bold;
+
+      transition: 0.3s;
     }
 
-    .hero-buttons {
-
-      display:
-        flex;
-
-      flex-wrap:
-        wrap;
-
-      gap:
-        14px;
-    }
-
-    .button {
-
-      display:
-        inline-flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      padding:
-        14px 22px;
-
-      border-radius:
-        999px;
-
-      font-weight:
-        800;
-
-      transition:
-        0.25s;
-    }
-
-    .button:hover {
-
-      transform:
-        translateY(-3px);
-    }
-
-    .button-primary {
-
-      background:
-        var(--arena);
-
-      color:
-        var(--verde);
-    }
-
-    .button-secondary {
-
-      color:
-        white;
-
-      border:
-        1px solid
-        rgba(255,255,255,0.5);
+    .hero-button:hover {
+      transform: translateY(-3px);
+      background: #c98b36;
     }
 
 
-    /* =====================================================
+    /* ==============================
        SECCIONES
-    ===================================================== */
+    ============================== */
 
     section {
-
-      padding:
-        90px 7%;
+      padding: 90px 7%;
     }
 
-    .section-header {
-
-      max-width:
-        760px;
-
-      margin:
-        0 auto 50px;
-
-      text-align:
-        center;
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
     }
 
-    .small-title {
-
-      color:
-        var(--verde-claro);
-
-      text-transform:
-        uppercase;
-
-      letter-spacing:
-        3px;
-
-      font-size:
-        0.75rem;
-
-      font-weight:
-        800;
-
-      margin-bottom:
-        10px;
+    .section-title h2 {
+      font-size: 42px;
+      margin-bottom: 12px;
     }
 
-    .section-header h2 {
-
-      color:
-        var(--verde);
-
-      font-size:
-        clamp(
-          2.2rem,
-          5vw,
-          3.8rem
-        );
-
-      line-height:
-        1.05;
-
-      margin-bottom:
-        15px;
-    }
-
-    .section-header p {
-
-      color:
-        var(--gris);
-
-      font-size:
-        1.05rem;
+    .section-title p {
+      color: #5d6a64;
+      font-size: 18px;
     }
 
 
-    /* =====================================================
-       DESTINOS / LUGARES
-    ===================================================== */
+    /* ==============================
+       CARDS
+    ============================== */
 
-    .lugares {
-
-      background:
-        var(--crema);
-    }
-
-    .lugares-grid {
-
-      max-width:
-        1200px;
-
-      margin:
-        auto;
-
-      display:
-        grid;
+    .cards {
+      display: grid;
 
       grid-template-columns:
-        repeat(3, 1fr);
+        repeat(auto-fit, minmax(250px, 1fr));
 
-      gap:
-        22px;
+      gap: 25px;
+
+      max-width: 1200px;
+
+      margin: auto;
     }
 
-    .lugar {
+    .card {
+      background: white;
 
-      min-height:
-        360px;
+      border-radius: 18px;
 
-      padding:
-        28px;
-
-      border-radius:
-        var(--radio);
-
-      position:
-        relative;
-
-      overflow:
-        hidden;
-
-      display:
-        flex;
-
-      align-items:
-        flex-end;
-
-      color:
-        white;
+      overflow: hidden;
 
       box-shadow:
-        var(--sombra);
+        0 10px 30px rgba(0,0,0,0.08);
 
-      transition:
-        0.3s;
+      transition: 0.3s;
     }
 
-    .lugar:hover {
-
-      transform:
-        translateY(-7px);
-    }
-
-    .lugar::before {
-
-      content:
-        "";
-
-      position:
-        absolute;
-
-      inset:
-        0;
-
-      background:
-        linear-gradient(
-          transparent 25%,
-          rgba(0,0,0,0.82)
-        );
-    }
-
-    .lugar-content {
-
-      position:
-        relative;
-
-      z-index:
-        2;
-    }
-
-    .lugar-icon {
-
-      font-size:
-        2.5rem;
-
-      margin-bottom:
-        8px;
-    }
-
-    .lugar h3 {
-
-      font-size:
-        1.9rem;
-
-      margin-bottom:
-        6px;
-    }
-
-    .lugar p {
-
-      color:
-        #edf3f0;
-
-      font-size:
-        0.95rem;
-    }
-
-    .lugar-link {
-
-      display:
-        inline-block;
-
-      margin-top:
-        14px;
-
-      color:
-        var(--arena);
-
-      font-weight:
-        800;
-
-      font-size:
-        0.9rem;
-    }
-
-
-    /* Fondos provisionales */
-
-    .trochita {
-
-      background:
-        linear-gradient(
-          145deg,
-          #586d68,
-          #183a34
-        );
-    }
-
-    .alerces {
-
-      background:
-        linear-gradient(
-          145deg,
-          #66826b,
-          #1b4030
-        );
-    }
-
-    .lahoya {
-
-      background:
-        linear-gradient(
-          145deg,
-          #8095a0,
-          #263f4b
-        );
-    }
-
-    .lagunazeta {
-
-      background:
-        linear-gradient(
-          145deg,
-          #5d8980,
-          #183f39
-        );
-    }
-
-    .piedraparada {
-
-      background:
-        linear-gradient(
-          145deg,
-          #92775e,
-          #44372c
-        );
-    }
-
-    .torrecillas {
-
-      background:
-        linear-gradient(
-          145deg,
-          #78949b,
-          #263f45
-        );
-    }
-
-
-    /* =====================================================
-       EXPERIENCIAS
-    ===================================================== */
-
-    .experiencias {
-
-      background:
-        white;
-    }
-
-    .experiencias-grid {
-
-      max-width:
-        1150px;
-
-      margin:
-        auto;
-
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
-      gap:
-        18px;
-    }
-
-    .experiencia {
-
-      padding:
-        30px 20px;
-
-      text-align:
-        center;
-
-      border:
-        1px solid
-        var(--borde);
-
-      border-radius:
-        20px;
-
-      transition:
-        0.25s;
-    }
-
-    .experiencia:hover {
-
-      transform:
-        translateY(-5px);
+    .card:hover {
+      transform: translateY(-7px);
 
       box-shadow:
-        var(--sombra);
+        0 18px 40px rgba(0,0,0,0.14);
     }
 
-    .experiencia-icon {
+    .card-image {
+      height: 190px;
 
-      font-size:
-        2.7rem;
+      display: flex;
 
-      margin-bottom:
-        13px;
-    }
+      align-items: center;
+      justify-content: center;
 
-    .experiencia h3 {
-
-      color:
-        var(--verde);
-
-      margin-bottom:
-        8px;
-    }
-
-    .experiencia p {
-
-      color:
-        var(--gris);
-
-      font-size:
-        0.93rem;
-    }
-
-
-    /* =====================================================
-       PESCA
-    ===================================================== */
-
-    .pesca {
-
-      color:
-        white;
+      font-size: 60px;
 
       background:
         linear-gradient(
           135deg,
-          #092a24,
-          #1d5548
+          #477566,
+          #203f36
         );
+
+      color: white;
     }
 
-    .pesca-container {
+    .card-content {
+      padding: 25px;
+    }
 
-      max-width:
-        1100px;
+    .card-content h3 {
+      font-size: 23px;
+      margin-bottom: 10px;
+    }
 
-      margin:
-        auto;
+    .card-content p {
+      color: #66736d;
+      margin-bottom: 18px;
+    }
 
-      display:
-        grid;
+    .card-link {
+      color: #b06d1d;
+      font-weight: bold;
+    }
+
+
+    /* ==============================
+       EXPERIENCIAS
+    ============================== */
+
+    .experiences {
+      background: #e9e5d9;
+    }
+
+    .experience-card {
+      padding: 35px 25px;
+
+      text-align: center;
+
+      background: white;
+
+      border-radius: 18px;
+
+      transition: 0.3s;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .experience-icon {
+      font-size: 50px;
+      margin-bottom: 15px;
+    }
+
+    .experience-card h3 {
+      margin-bottom: 10px;
+      font-size: 23px;
+    }
+
+    .experience-card p {
+      color: #68736e;
+    }
+
+
+    /* ==============================
+       PESCA CON MOSCA
+    ============================== */
+
+    .fly-fishing {
+      background:
+        linear-gradient(
+          135deg,
+          #123d32,
+          #1e5546
+        );
+
+      color: white;
+
+      text-align: center;
+    }
+
+    .fly-fishing-content {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .fly-fishing h2 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .fly-fishing p {
+      font-size: 20px;
+      color: #e5eee9;
+      margin-bottom: 30px;
+    }
+
+    .fly-icon {
+      font-size: 75px;
+      margin-bottom: 20px;
+    }
+
+
+    /* ==============================
+       INFORMACIÓN
+    ============================== */
+
+    .info-box {
+      max-width: 1100px;
+      margin: auto;
+
+      display: grid;
 
       grid-template-columns:
-        1fr 1fr;
+        repeat(auto-fit, minmax(250px, 1fr));
 
-      gap:
-        60px;
-
-      align-items:
-        center;
-    }
-
-    .pesca .small-title {
-
-      color:
-        var(--arena);
-    }
-
-    .pesca h2 {
-
-      color:
-        white;
-
-      font-size:
-        clamp(
-          2.6rem,
-          5vw,
-          4.5rem
-        );
-
-      line-height:
-        1;
-
-      margin:
-        15px 0 20px;
-    }
-
-    .pesca-text > p {
-
-      color:
-        #dce8e3;
-
-      margin-bottom:
-        25px;
-    }
-
-    .pesca-list {
-
-      display:
-        grid;
-
-      gap:
-        10px;
-    }
-
-    .pesca-item {
-
-      padding:
-        13px 16px;
-
-      border-radius:
-        12px;
-
-      background:
-        rgba(255,255,255,0.08);
-    }
-
-    .pesca-visual {
-
-      min-height:
-        380px;
-
-      border-radius:
-        25px;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      text-align:
-        center;
-
-      padding:
-        30px;
-
-      background:
-        radial-gradient(
-          circle at 50% 30%,
-          #73978c,
-          #1d5548 45%,
-          #092a24 80%
-        );
-    }
-
-    .pesca-visual strong {
-
-      display:
-        block;
-
-      font-size:
-        6rem;
-    }
-
-    .pesca-visual p {
-
-      color:
-        #edf5f1;
-
-      margin-top:
-        15px;
-    }
-
-
-    /* =====================================================
-       INFO
-    ===================================================== */
-
-    .info {
-
-      background:
-        var(--crema);
-    }
-
-    .info-grid {
-
-      max-width:
-        1100px;
-
-      margin:
-        auto;
-
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap:
-        20px;
+      gap: 25px;
     }
 
     .info-card {
+      background: white;
 
-      padding:
-        28px;
+      padding: 30px;
 
-      background:
-        white;
-
-      border-radius:
-        20px;
+      border-radius: 18px;
 
       box-shadow:
-        0 8px 25px
-        rgba(0,0,0,0.05);
-    }
-
-    .info-icon {
-
-      font-size:
-        2rem;
-
-      margin-bottom:
-        10px;
+        0 8px 25px rgba(0,0,0,0.07);
     }
 
     .info-card h3 {
+      margin-bottom: 12px;
+      font-size: 24px;
+    }
 
-      color:
-        va
+    .info-card p {
+      color: #68736e;
+    }
+
+
+    /* ==============================
+       QR / APP
+    ============================== */
+
+    .app-section {
+      background: #dfe5dd;
+
+      text-align: center;
+    }
+
+    .app-container {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .app-container h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .app-container p {
+      font-size: 19px;
+      color: #59645f;
+      margin-bottom: 30px;
+    }
+
+    .qr-box {
+      width: 190px;
+      height: 190px;
+
+      margin: 30px auto;
+
+      background: white;
+
+      border-radius: 15px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      box-shadow:
+        0 10px 25px rgba(0,0,0,0.1);
+
+      font-size: 18px;
+
+      color: #777;
+    }
+
+
+    /* ==============================
+       FOOTER
+    ============================== */
+
+    footer {
+      background: #102c26;
+
+      color: white;
+
+      text-align: center;
+
+      padding: 40px 20px;
+    }
+
+    footer h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    footer p {
+      color: #b9c8c2;
+    }
+
+
+    /* ==============================
+       RESPONSIVE
+    ============================== */
+
+    @media (max-width: 700px) {
+
+      header {
+        padding: 15px 20px;
+      }
+
+      nav {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 52px;
+      }
+
+      .hero p {
+        font-size: 19px;
+      }
+
+      section {
+        padding: 70px 20px;
+      }
+
+      .section-title h2 {
+        font-size: 34px;
+      }
+
+      .fly-fishing h2 {
+        font-size: 36px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- ==============================
+       HEADER
+  ============================== -->
+
+  <header>
+
+    <div class="logo">
+      🏔️ DESCUBRÍ ESQUEL
+    </div>
+
+    <nav>
+      <a href="#lugares">Lugares</a>
+      <a href="#experiencias">Experiencias</a>
+      <a href="#pesca">Pesca</a>
+      <a href="#informacion">Información</a>
+    </nav>
+
+  </header>
+
+
+
+  <!-- ==============================
+       HERO
+  ============================== -->
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <h1>
+        Descubrí Esquel
+      </h1>
+
+      <p>
+        Montañas, lagos, bosques, aventura
+        y la esencia de la Patagonia.
+      </p>
+
+      <a
+        class="hero-button"
+        href="#lugares"
+      >
+        EXPLORAR ESQUEL
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==============================
+       LUGARES
+  ============================== -->
+
+  <section id="lugares">
+
+    <div class="section-title">
+
+      <h2>
+        Qué conocer en Esquel
+      </h2>
+
+      <p>
+        Algunos de los lugares más increíbles
+        para descubrir en la región.
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+      <!-- TROCHITA -->
+
+      <div class="card">
+
+        <div class="card-image">
+          🚂
+        </div>
+
+        <div class="card-content">
+
+          <h3>
+            La Trochita
+          </h3>
+
+          <p>
+            Un viaje en uno de los trenes
+            históricos más famosos de la Patagonia.
+          </p>
+
+          <a
+            class="card-link"
+            href="#"
+          >
+            VER MÁS →
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ALERCES -->
+
+      <div class="card">
+
+        <div class="card-image">
+          🌲
+        </div>
+
+        <div class="card-content">
+
+          <h3>
+            Parque Nacional Los Alerces
+          </h3>
+
+          <p>
+            Bosques milenarios, lagos cristalinos,
+            senderos y paisajes únicos.
+          </p>
+
+          <a
+            class="card-link"
+            href="#"
+          >
+            VER MÁS →
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- LA HOYA -->
+
+      <div class="card">
+
+        <div class="card-image">
+          🎿
+        </div>
+
+        <div class="card-content">
+
+          <h3>
+            La Hoya
+          </h3>
+
+          <p>
+            Montaña, nieve, esquí y aventuras
+            durante todo el año.
+          </p>
+
+          <a
+            class="card-link"
+            href="#"
+          >
+            VER MÁS →
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- LAGUNA LA ZETA -->
+
+      <div class="card">
+
+        <div class="card-image">
+          🏞️
+        </div>
+
+        <div class="card-content">
+
+          <h3>
+            Laguna La Zeta
+          </h3>
+
+          <p>
+            Un lugar ideal para caminar,
+            relajarse y disfrutar de la naturaleza.
+          </p>
+
+          <a
+            class="card-link"
+            href="#"
+          >
+            VER MÁS →
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- PIEDRA PARADA -->
+
+      <div class="card">
+
+        <div class="card-image">
+          🪨
+        </div>
+
+        <div class="card-content">
+
+          <h3>
+            Piedra Parada
+          </h3>
+
+          <p>
+            Formaciones volcánicas, trekking,
+            escalada y paisajes extraordinarios.
+          </p>
+
+          <a
+            class="card-link"
+            href="#"
+          >
+            VER MÁS →
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- GLACIAR -->
+
+      <div class="card">
+
+        <div class="card-image">
+          🧊
+        </div>
+
+        <div class="card-content">
+
+          <h3>
+            Glaciar Torrecillas
+          </h3>
+
+          <p>
+            Una de las grandes maravillas naturales
+            del Parque Nacional Los Alerces.
+          </p>
+
+          <a
+            class="card-link"
+            href="#"
+          >
+            VER MÁS →
+          </a>
+
+        </div>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==============================
+       EXPERIENCIAS
+  ============================== -->
+
+  <section
+    id="experiencias"
+    class="experiences"
+  >
+
+    <div class="section-title">
+
+      <h2>
+        ¿Qué querés hacer?
+      </h2>
+
+      <p>
+        Elegí tu próxima aventura.
+      </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+      <div class="experience-card">
+
+        <div class="experience-icon">
+          🎣
+        </div>
+
+        <h3>
+          Pesca con mosca
+        </h3>
+
+        <p>
+          Ríos, lagos y ambientes únicos
+          para disfrutar de la pesca.
+        </p>
+
+      </div>
+
+
+
+      <div class="experience-card">
+
+        <div class="experience-icon">
+          🥾
+        </div>
+
+        <h3>
+          Trekking
+        </h3>
+
+        <p>
+          Senderos y montañas para
+          todos los niveles.
+        </p>
+
+      </div>
+
+
+
+      <div class="experience-card">
+
+        <div class="experience-icon">
+          🍽️
+        </div>
+
+        <h3>
+          Gastronomía
+        </h3>
+
+        <p>
+          Descubrí sabores y productos
+          típicos de la Patagonia.
+        </p>
+
+      </div>
+
+
+
+      <div class="experience-card">
+
+        <div class="experience-icon">
+          🛏️
+        </div>
+
+        <h3>
+          Alojamiento
+        </h3>
+
+        <p>
+          Encontrá dónde descansar
+          durante tu estadía.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==============================
+       PESCA CON MOSCA
+  ============================== -->
+
+  <section
+    id="pesca"
+    class="fly-fishing"
+  >
+
+    <div class="fly-fishing-content">
+
+      <div class="fly-icon">
+        🎣
+      </div>
+
+      <h2>
+        Pesca con mosca
+      </h2>
+
+      <p>
+        Esquel y sus alrededores ofrecen
+        ambientes increíbles para los amantes
+        de la pesca con mosca.
+      </p>
+
+      <p>
+        Ríos, lagos, truchas y paisajes
+        patagónicos hacen de esta región
+        un destino especial.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==============================
+       INFORMACIÓN
+  ============================== -->
+
+  <section id="informacion">
+
+    <div class="section-title">
+
+      <h2>
+        Planificá tu viaje
+      </h2>
+
+      <p>
+        Todo lo que necesitás para disfrutar Esquel.
+      </p>
+
+    </div>
+
+
+    <div class="info-box">
+
+
+      <div class="info-card">
+
+        <h3>
+          📍 Lugares
+        </h3>
+
+        <p>
+          Descubrí atractivos naturales,
+          excursiones y lugares imperdibles.
+        </p>
+
+      </div>
+
+
+
+      <div class="info-card">
+
+        <h3>
+          🍴 Dónde comer
+        </h3>
+
+        <p>
+          Próximamente vas a poder encontrar
+          restaurantes y propuestas gastronómicas.
+        </p>
+
+      </div>
+
+
+
+      <div class="info-card">
+
+        <h3>
+          🏨 Dónde dormir
+        </h3>
+
+        <p>
+          Hoteles, cabañas, hosterías y
+          alojamientos para tu estadía.
+        </p>
+
+      </div>
+
+
+
+      <div class="info-card">
+
+        <h3>
+          🗺️ Excursiones
+        </h3>
+
+        <p>
+          Organizá tus actividades y descubrí
+          nuevas aventuras en la región.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==============================
+       APP / QR
+  ============================== -->
+
+  <section class="app-section">
+
+    <div class="app-container">
+
+      <h2>
+        📱 Descubrí Esquel
+      </h2>
+
+      <p>
+        Próximamente vas a poder acceder
+        rápidamente a toda la información
+        turística desde tu celular.
+      </p>
+
+      <div class="qr-box">
+
+        QR
+
+      </div>
+
+      <p>
+        Escaneá y descubrí Esquel.
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ==============================
+       FOOTER
+  ============================== -->
+
+  <footer>
+
+    <h3>
+      🏔️ DESCUBRÍ ESQUEL
+    </h3>
+
+    <p>
+      Patagonia Argentina
+    </p>
+
+    <p>
+      Naturaleza · Aventura · Montaña · Pesca
+    </p>
+
+  </footer>
+
+
+</body>
+
+</html>
 ```
