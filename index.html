@@ -534,6 +534,90 @@ footer p {
     font-size: 13px;
 }
 
+/* ================= REDES SOCIALES ================= */
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.social-icon {
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255,255,255,.18);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,.04);
+}
+
+.social-icon svg {
+    width: 21px;
+    height: 21px;
+    fill: #d0d8d2;
+}
+
+/* ================= MODAL CONTACTO ================= */
+
+.contact-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.65);
+    backdrop-filter: blur(6px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    padding: 20px;
+}
+
+.contact-modal.active {
+    display: flex;
+}
+
+.contact-box {
+    background: var(--cream);
+    color: var(--dark);
+    width: min(430px, 100%);
+    padding: 40px;
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 20px 70px rgba(0,0,0,.35);
+}
+
+.contact-box h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.contact-box p {
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+.contact-email {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--green);
+    word-break: break-word;
+}
+
+.close-contact {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--gray);
+}
+
 /* ================= MOBILE ================= */
 
 @media (max-width: 900px) {
@@ -637,10 +721,7 @@ WEBS <span>PATAGONIA</span>
 
 <a href="#precios">Precios</a>
 
-<a
-href="https://mail.google.com/mail/?view=cm&fs=1&to=presufacil1@gmail.com&su=Consulta%20sobre%20desarrollo%20web"
-target="_blank"
-class="nav-button">
+<a href="#" class="nav-button" onclick="abrirContacto(event)">
 Contacto
 </a>
 
@@ -679,10 +760,7 @@ Diseñamos sitios web modernos, rápidos y profesionales para negocios y emprend
 Ver nuestros trabajos
 </a>
 
-<a
-href="https://mail.google.com/mail/?view=cm&fs=1&to=presufacil1@gmail.com&su=Consulta%20sobre%20desarrollo%20web"
-target="_blank"
-class="btn btn-outline">
+<a href="#" onclick="abrirContacto(event)" class="btn btn-outline">
 Quiero una web
 </a>
 
@@ -1126,8 +1204,8 @@ Desde $80.000
 </ul>
 
 <a
-href="https://mail.google.com/mail/?view=cm&fs=1&to=presufacil1@gmail.com&su=Consulta%20sobre%20Web%20Inicial"
-target="_blank"
+href="#"
+onclick="abrirContacto(event)"
 class="btn btn-outline"
 style="color:#101814;border-color:#101814;">
 Consultar
@@ -1163,8 +1241,8 @@ Desde $150.000
 </ul>
 
 <a
-href="https://mail.google.com/mail/?view=cm&fs=1&to=presufacil1@gmail.com&su=Consulta%20sobre%20Web%20Profesional"
-target="_blank"
+href="#"
+onclick="abrirContacto(event)"
 class="btn btn-primary">
 Consultar
 </a>
@@ -1199,8 +1277,8 @@ Desde $250.000
 </ul>
 
 <a
-href="https://mail.google.com/mail/?view=cm&fs=1&to=presufacil1@gmail.com&su=Consulta%20sobre%20Web%20Premium"
-target="_blank"
+href="#"
+onclick="abrirContacto(event)"
 class="btn btn-outline"
 style="color:#101814;border-color:#101814;">
 Consultar
@@ -1239,8 +1317,8 @@ Contanos qué hacés y qué necesitás. Te respondemos con una propuesta para tu
 <div class="buttons" style="justify-content:center;">
 
 <a
-href="https://mail.google.com/mail/?view=cm&fs=1&to=presufacil1@gmail.com&su=Consulta%20sobre%20desarrollo%20web"
-target="_blank"
+href="#"
+onclick="abrirContacto(event)"
 class="btn btn-primary">
 Quiero mi página web
 </a>
@@ -1274,6 +1352,41 @@ Diseño y desarrollo web desde Patagonia.
 Contacto: presufacil1@gmail.com
 </p>
 
+
+<!-- REDES SOCIALES VISIBLES -->
+
+<div class="social-icons">
+
+<!-- INSTAGRAM -->
+
+<div class="social-icon" title="Instagram">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<rect x="3" y="3" width="18" height="18" rx="5"
+fill="none"
+stroke="#d0d8d2"
+stroke-width="2"/>
+<circle cx="12" cy="12" r="4.2"
+fill="none"
+stroke="#d0d8d2"
+stroke-width="2"/>
+<circle cx="17.5" cy="6.7" r="1.2"
+fill="#d0d8d2"/>
+</svg>
+</div>
+
+
+<!-- FACEBOOK -->
+
+<div class="social-icon" title="Facebook">
+<svg viewBox="0 0 24 24" aria-hidden="true">
+<path
+d="M14.2 8.2h2.3V4.7c-.4-.1-1.7-.2-3.2-.2-3.2 0-5.4 1.9-5.4 5.5v3.1H4.4v3.9h3.5v7h4.3v-7h3.5l.6-3.9h-4.1V10.4c0-1.1.3-2.2 2-2.2z"
+fill="#d0d8d2"/>
+</svg>
+</div>
+
+</div>
+
 </div>
 
 <div class="footer-links">
@@ -1282,7 +1395,7 @@ Contacto: presufacil1@gmail.com
 
 <a href="#portfolio">Portfolio</a>
 
-<a href="#contacto">Contacto</a>
+<a href="#" onclick="abrirContacto(event)">Contacto</a>
 
 </div>
 
@@ -1298,6 +1411,70 @@ style="margin-top:35px;border-top:1px solid rgba(255,255,255,.08);padding-top:20
 </div>
 
 </footer>
+
+
+<!-- ================= MODAL CONTACTO ================= -->
+
+<div class="contact-modal" id="contactModal" onclick="cerrarContacto(event)">
+
+<div class="contact-box" onclick="event.stopPropagation()">
+
+<button class="close-contact" onclick="cerrarContacto(event)">
+×
+</button>
+
+<h3>
+Contacto
+</h3>
+
+<p>
+Podés comunicarte con nosotros a través de nuestro email:
+</p>
+
+<div class="contact-email">
+presufacil1@gmail.com
+</div>
+
+</div>
+
+</div>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+function abrirContacto(event) {
+
+    if (event) {
+        event.preventDefault();
+    }
+
+    document
+        .getElementById("contactModal")
+        .classList.add("active");
+}
+
+function cerrarContacto(event) {
+
+    if (event) {
+        event.preventDefault();
+    }
+
+    document
+        .getElementById("contactModal")
+        .classList.remove("active");
+}
+
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+        cerrarContacto(event);
+    }
+
+});
+
+</script>
 
 
 </body>
