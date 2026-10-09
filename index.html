@@ -35,10 +35,10 @@ nav a:hover{opacity:1}
 .hero h1 span{color:#c8d8cb}
 .hero p{font-size:20px;max-width:680px;color:rgba(255,255,255,.88);margin-bottom:35px}
 .buttons{display:flex;gap:14px;flex-wrap:wrap}
-.btn{padding:14px 23px;border-radius:30px;font-weight:600;transition:.3s;display:inline-block;cursor:pointer}
-.btn-primary{background:#fff;color:var(--dark)}
+.btn{padding:14px 23px;border-radius:30px;font-weight:600;transition:.3s;display:inline-block;cursor:pointer;text-align:center}
+.btn-primary{background:#fff;color:var(--dark);border:1px solid #fff}
 .btn-primary:hover{transform:translateY(-3px)}
-.btn-outline{border:1px solid rgba(255,255,255,.5);color:#fff}
+.btn-outline{border:1px solid rgba(255,255,255,.5);color:#fff;background:transparent}
 .btn-outline:hover{background:rgba(255,255,255,.1)}
 .intro{padding:110px 0}
 .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
@@ -77,18 +77,22 @@ h2{font-family:"Playfair Display",serif;font-size:clamp(38px,5vw,58px);line-heig
 .number{font-family:"Playfair Display",serif;font-size:40px;color:var(--green-light);margin-bottom:15px}
 .step h3{margin-bottom:10px}
 .step p{color:var(--gray);font-size:14px}
-.pricing{padding:110px 0}
-.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.price-card{background:#fff;padding:40px;border-radius:22px;border:1px solid #dedbd3}
-.price-card.featured{background:var(--dark);color:#fff;transform:translateY(-8px)}
-.price-card h3{font-size:21px;margin-bottom:12px}
-.price{font-family:"Playfair Display",serif;font-size:clamp(30px,3vw,40px);margin:18px 0;white-space:nowrap}
-.price-card ul{list-style:none;margin:25px 0}
-.price-card li{margin:10px 0;color:var(--gray)}
-.featured li{color:#c7d0ca}
-.price-note{font-size:12px;color:var(--gray)}
-.price-card .btn-outline{color:var(--dark);border-color:var(--dark)}
-.price-card.featured .btn-primary{color:var(--dark)}
+.plans{padding:110px 0}
+.plan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px;max-width:900px;margin:auto}
+.plan-card{background:#fff;padding:40px;border-radius:22px;border:1px solid #dedbd3;display:flex;flex-direction:column;align-items:flex-start}
+.plan-card.featured{background:var(--dark);color:#fff;border-color:var(--dark)}
+.plan-icon{font-size:32px;margin-bottom:18px}
+.plan-card h3{font-family:"Playfair Display",serif;font-size:29px;margin-bottom:14px}
+.plan-card>p{color:var(--gray);margin-bottom:20px}
+.plan-card.featured>p{color:#c7d0ca}
+.plan-card ul{list-style:none;margin:0 0 28px}
+.plan-card li{margin:12px 0;color:var(--gray)}
+.plan-card.featured li{color:#c7d0ca}
+.plan-card li::first-letter{color:var(--green-light)}
+.plan-card .btn{margin-top:auto}
+.plan-card .btn-outline{color:var(--dark);border-color:var(--dark)}
+.plan-card.featured .btn-primary{color:var(--dark)}
+.plan-note{margin:30px auto 0;max-width:720px;text-align:center;color:var(--gray);font-size:14px}
 .cta{padding:110px 0;background:linear-gradient(rgba(15,24,19,.83),rgba(15,24,19,.9)),url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85") center/cover;color:#fff;text-align:center}
 .cta-inner{max-width:760px;margin:auto}
 .cta h2{font-size:clamp(42px,6vw,65px)}
@@ -120,9 +124,7 @@ nav .nav-button{text-align:center;margin-top:8px}
 .intro-grid{grid-template-columns:1fr;gap:40px}
 .service-grid,.process-grid{grid-template-columns:repeat(2,1fr)}
 .portfolio-grid{grid-template-columns:1fr}
-.price-grid{grid-template-columns:1fr}
-.price-card.featured{transform:none}
-.price{font-size:40px}
+.plan-grid{grid-template-columns:1fr;max-width:560px}
 }
 @media(max-width:600px){
 .hero{min-height:90vh}
@@ -132,8 +134,8 @@ nav .nav-button{text-align:center;margin-top:8px}
 .project{min-height:400px}
 .project-content{padding:25px}
 .project h3{font-size:34px}
-.intro,.services,.portfolio,.process,.pricing,.cta{padding:80px 0}
-.intro-card,.price-card{padding:28px}
+.intro,.services,.portfolio,.process,.plans,.cta{padding:80px 0}
+.intro-card,.plan-card{padding:28px}
 .footer-grid{flex-direction:column;align-items:flex-start}
 .footer-links{gap:16px}
 .contact-box{padding:35px 24px}
@@ -149,7 +151,7 @@ nav .nav-button{text-align:center;margin-top:8px}
 <a href="#servicios">Servicios</a>
 <a href="#portfolio">Portfolio</a>
 <a href="#proceso">Cómo trabajamos</a>
-<a href="#precios">Precios</a>
+<a href="#planes">Planes</a>
 <a href="#contacto" class="nav-button" onclick="abrirContacto(event)">Contacto</a>
 </nav>
 <button class="menu" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false">☰</button>
@@ -260,34 +262,43 @@ nav .nav-button{text-align:center;margin-top:8px}
 </div>
 </div>
 </section>
-<section class="pricing" id="precios">
+<section class="plans" id="planes">
 <div class="container">
 <div class="section-head">
-<div class="kicker">PLANES</div>
-<h2>Una web para cada etapa de tu negocio.</h2>
-<p>Valores orientativos en pesos argentinos. Cada proyecto se presupuesta según sus necesidades.</p>
+<div class="kicker">NUESTROS SERVICIOS</div>
+<h2>Elegimos juntos la web ideal para tu negocio.</h2>
+<p>Cada proyecto es diferente. Contanos tu idea y te preparamos una propuesta adaptada a tus necesidades.</p>
 </div>
-<div class="price-grid">
-<div class="price-card">
-<h3>Web Inicial</h3>
-<div class="price">Desde $80.000</div>
-<ul><li>✓ Página profesional</li><li>✓ Diseño responsive</li><li>✓ Información del negocio</li><li>✓ Botón de contacto</li><li>✓ Publicación online</li></ul>
-<a href="#contacto" onclick="abrirContacto(event)" class="btn btn-outline">Consultar</a>
+<div class="plan-grid">
+<div class="plan-card">
+<div class="plan-icon">🌐</div>
+<h3>Web Simple</h3>
+<p>Ideal para emprendimientos y negocios que quieren tener presencia profesional en internet.</p>
+<ul>
+<li>✓ Página moderna y profesional</li>
+<li>✓ Diseño adaptable a celulares</li>
+<li>✓ Información de tu negocio</li>
+<li>✓ Botones de contacto</li>
+<li>✓ Publicación online</li>
+</ul>
+<a href="mailto:presufacil1@gmail.com?subject=Consulta%20por%20Web%20Simple%20-%20KEOPS%20WEBS" class="btn btn-outline">Solicitar presupuesto</a>
 </div>
-<div class="price-card featured">
+<div class="plan-card featured">
+<div class="plan-icon">✦</div>
 <h3>Web Profesional</h3>
-<div class="price">Desde $150.000</div>
-<ul><li>✓ Diseño personalizado</li><li>✓ Varias secciones</li><li>✓ Galería de imágenes</li><li>✓ Formularios y contacto</li><li>✓ Optimización móvil</li><li>✓ Publicación online</li></ul>
-<a href="#contacto" onclick="abrirContacto(event)" class="btn btn-primary">Consultar</a>
+<p>Para negocios que buscan una presencia digital más completa, personalizada y atractiva.</p>
+<ul>
+<li>✓ Diseño personalizado</li>
+<li>✓ Varias secciones</li>
+<li>✓ Galería de imágenes</li>
+<li>✓ Formularios y opciones de contacto</li>
+<li>✓ Optimización para celulares</li>
+<li>✓ Publicación online</li>
+</ul>
+<a href="mailto:presufacil1@gmail.com?subject=Consulta%20por%20Web%20Profesional%20-%20KEOPS%20WEBS" class="btn btn-primary">Solicitar presupuesto</a>
 </div>
-<div class="price-card">
-<h3>Web Premium</h3>
-<div class="price">Desde $250.000</div>
-<ul><li>✓ Diseño avanzado</li><li>✓ Experiencias interactivas</li><li>✓ Integraciones</li><li>✓ Secciones personalizadas</li><li>✓ Optimización avanzada</li><li>✓ Soporte según acuerdo</li></ul>
-<a href="#contacto" onclick="abrirContacto(event)" class="btn btn-outline">Consultar</a>
 </div>
-</div>
-<p class="price-note" style="margin-top:20px">Los precios finales dependen del alcance del proyecto. Dominio, hosting, mantenimiento y servicios externos pueden tener costos adicionales.</p>
+<p class="plan-note">¿No sabés cuál elegir? Escribinos y evaluamos juntos qué necesita tu negocio. El presupuesto se prepara según las características de cada proyecto.</p>
 </div>
 </section>
 <section class="cta" id="contacto">
@@ -297,7 +308,7 @@ nav .nav-button{text-align:center;margin-top:8px}
 <h2>Hagamos que se vea profesional.</h2>
 <p>Contanos qué hacés y qué necesitás. Te respondemos con una propuesta para tu proyecto.</p>
 <div class="buttons" style="justify-content:center">
-<a href="mailto:presufacil1@gmail.com?subject=Consulta%20por%20una%20p%C3%A1gina%20web" class="btn btn-primary">Escribinos por email</a>
+<a href="mailto:presufacil1@gmail.com?subject=Consulta%20por%20una%20p%C3%A1gina%20web%20-%20KEOPS%20WEBS" class="btn btn-primary">Solicitar presupuesto</a>
 <button type="button" onclick="abrirContacto()" class="btn btn-outline">Ver contacto</button>
 </div>
 </div>
@@ -323,7 +334,7 @@ nav .nav-button{text-align:center;margin-top:8px}
 <div class="footer-links">
 <a href="#servicios">Servicios</a>
 <a href="#portfolio">Portfolio</a>
-<a href="#precios">Precios</a>
+<a href="#planes">Planes</a>
 <a href="#contacto">Contacto</a>
 </div>
 </div>
@@ -334,11 +345,11 @@ nav .nav-button{text-align:center;margin-top:8px}
 <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contactTitle" onclick="cerrarContacto(event)">
 <div class="contact-box" onclick="event.stopPropagation()">
 <button class="close-contact" type="button" onclick="cerrarContacto()" aria-label="Cerrar ventana de contacto">×</button>
-<h3 id="contactTitle">Contacto</h3>
-<p>Podés comunicarte por correo electrónico. Al tocar la dirección, se abrirá tu aplicación de email.</p>
-<a class="contact-email" href="mailto:presufacil1@gmail.com?subject=Consulta%20por%20una%20p%C3%A1gina%20web">presufacil1@gmail.com</a>
+<h3 id="contactTitle">Hablemos de tu proyecto</h3>
+<p>Contanos qué tipo de web necesitás. Te responderemos para conversar sobre tu idea y preparar un presupuesto personalizado.</p>
+<a class="contact-email" href="mailto:presufacil1@gmail.com?subject=Consulta%20por%20una%20p%C3%A1gina%20web%20-%20KEOPS%20WEBS">presufacil1@gmail.com</a>
 <br>
-<a class="contact-mail-btn" href="mailto:presufacil1@gmail.com?subject=Consulta%20por%20una%20p%C3%A1gina%20web">Enviar email</a>
+<a class="contact-mail-btn" href="mailto:presufacil1@gmail.com?subject=Consulta%20por%20una%20p%C3%A1gina%20web%20-%20KEOPS%20WEBS">Enviar email</a>
 </div>
 </div>
 <script>
@@ -349,7 +360,7 @@ function cerrarMenu(){mainNav.classList.remove("open");menuToggle.setAttribute("
 menuToggle.addEventListener("click",function(){const isOpen=mainNav.classList.toggle("open");menuToggle.setAttribute("aria-expanded",String(isOpen));menuToggle.setAttribute("aria-label",isOpen?"Cerrar menú":"Abrir menú");menuToggle.textContent=isOpen?"×":"☰";document.body.classList.toggle("menu-open",isOpen)});
 mainNav.querySelectorAll("a").forEach(function(link){link.addEventListener("click",cerrarMenu)});
 function abrirContacto(event){if(event)event.preventDefault();cerrarMenu();contactModal.classList.add("active");contactModal.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";const closeButton=contactModal.querySelector(".close-contact");if(closeButton)closeButton.focus()}
-function cerrarContacto(event){if(event){if(event.target!==contactModal&& !event.target.classList.contains("close-contact"))return;if(event.cancelable)event.preventDefault()}contactModal.classList.remove("active");contactModal.setAttribute("aria-hidden","true");document.body.style.overflow=""; }
+function cerrarContacto(event){if(event){if(event.target!==contactModal&&!event.target.classList.contains("close-contact"))return;if(event.cancelable)event.preventDefault()}contactModal.classList.remove("active");contactModal.setAttribute("aria-hidden","true");document.body.style.overflow=""}
 document.addEventListener("keydown",function(event){if(event.key==="Escape"){cerrarContacto();cerrarMenu()}});
 document.getElementById("currentYear").textContent=new Date().getFullYear();
 </script>
