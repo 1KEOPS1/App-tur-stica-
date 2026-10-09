@@ -1,0 +1,71 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="silver" x1="0" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#fff"></stop>
+      <stop offset=".5" stop-color="#d8d8d8"></stop>
+      <stop offset="1" stop-color="#fff"></stop>
+    </linearGradient>
+    <clipPath id="circle">
+      <circle cx="256" cy="256" r="239"></circle>
+    </clipPath>
+  </defs>
+
+  <!-- Fondo circular; exterior transparente -->
+  <circle cx="256" cy="256" r="239" fill="#000"></circle>
+  <circle cx="256" cy="256" r="239" fill="none" stroke="#fff" stroke-width="5"></circle>
+  <circle cx="256" cy="256" r="226" fill="none" stroke="#fff" stroke-width="2"></circle>
+
+  <g clip-path="url(#circle)">
+    <!-- Arcos decorativos -->
+    <path d="M49 233 A211 211 0 0 1 226 48" fill="none" stroke="#fff" stroke-width="2"></path>
+    <path d="M463 278 A211 211 0 0 1 286 464" fill="none" stroke="#fff" stroke-width="2"></path>
+
+    <!-- Estrellas -->
+    <g fill="url(#silver)" stroke="#777" stroke-width="1">
+      <path d="M256 91 L265 119 L294 128 L265 137 L256 166 L247 137 L218 128 L247 119 Z"></path>
+      <path d="M198 126 L204 145 L224 151 L204 157 L198 177 L192 157 L172 151 L192 145 Z"></path>
+      <path d="M314 126 L320 145 L340 151 L320 157 L314 177 L308 157 L288 151 L308 145 Z"></path>
+      <path d="M128 154 L133 168 L148 173 L133 178 L128 193 L123 178 L108 173 L123 168 Z"></path>
+      <path d="M384 154 L389 168 L404 173 L389 178 L384 193 L379 178 L364 173 L379 168 Z"></path>
+    </g>
+
+    <!-- Barra superior -->
+    <path d="M43 214 Q75 199 104 199 H408 Q437 199 469 214
+             L449 228 H63 Z" fill="url(#silver)" stroke="#000" stroke-width="3"></path>
+
+    <!-- Alas izquierdas -->
+    <g fill="url(#silver)" stroke="#000" stroke-width="3">
+      <path d="M40 236 H174 L153 256 H58 Z"></path>
+      <path d="M54 259 H163 L145 277 H70 Z"></path>
+      <path d="M72 281 H151 L135 298 H88 Z"></path>
+      <path d="M91 302 H137 L124 316 H103 Z"></path>
+    </g>
+
+    <!-- Alas derechas -->
+    <g fill="url(#silver)" stroke="#000" stroke-width="3">
+      <path d="M472 236 H338 L359 256 H454 Z"></path>
+      <path d="M458 259 H349 L367 277 H442 Z"></path>
+      <path d="M440 281 H361 L377 298 H424 Z"></path>
+      <path d="M421 302 H375 L388 316 H409 Z"></path>
+    </g>
+
+    <!-- KEOPS grande -->
+    <text x="256" y="294" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="67" font-weight="900" letter-spacing="-3" textLength="303" lengthAdjust="spacingAndGlyphs" fill="#fff" stroke="#000" stroke-width="3" paint-order="stroke">KEOPS</text>
+
+    <!-- Triángulo central -->
+    <path d="M239 294 L256 264 L273 294 Z" fill="#000"></path>
+    <path d="M245 291 L256 273 L267 291 Z" fill="#fff"></path>
+
+    <!-- Barra inferior -->
+    <path d="M79 310 H433 L412 329 H100 Z" fill="url(#silver)" stroke="#000" stroke-width="3"></path>
+
+    <!-- Líneas inferiores -->
+    <path d="M127 345 H226 M286 345 H385" stroke="#fff" stroke-width="5"></path>
+    <path d="M151 358 H226 M286 358 H361" stroke="#aaa" stroke-width="3"></path>
+
+    <!-- Punta geométrica -->
+    <path d="M256 321 L286 374 L256 357 L226 374 Z" fill="url(#silver)" stroke="#000" stroke-width="3"></path>
+    <path d="M256 337 L269 363 L256 355 L243 363 Z" fill="#000"></path>
+  </g>
+</svg>
