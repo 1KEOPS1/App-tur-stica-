@@ -54,7 +54,7 @@ gtag('config','G-VEGZKJMEXG');
 }
 </script>
 
-<link rel="icon" href="/webs-patagonia/keops.png?v=3" type="image/png" sizes="any">
+<link rel="icon" href="/webs-patagonia/keops.png?v=3" type="image/png">
 <link rel="shortcut icon" href="/webs-patagonia/keops.png?v=3" type="image/png">
 <link rel="icon" href="/webs-patagonia/keops.svg?v=3" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/webs-patagonia/keops.png?v=3">
@@ -75,13 +75,12 @@ body.menu-open{overflow:hidden}
 a{text-decoration:none;color:inherit}
 button{font:inherit}
 .container{width:min(1180px,92%);margin:auto}
-header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(16,24,20,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(16,24,20,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
 .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{color:#fff;font-size:23px;font-weight:700;letter-spacing:2px;white-space:nowrap;display:flex;align-items:center;gap:12px}
+.logo{color:#fff;font-size:25px;font-weight:700;letter-spacing:3px;white-space:nowrap;display:flex;align-items:center;gap:12px}
 .logo img{width:52px;height:52px;object-fit:contain;border-radius:50%;display:block;flex-shrink:0;background:#fff}
-.logo span{color:#b9cdbd}
 nav{display:flex;gap:28px;align-items:center}
-nav a{color:#fff;font-size:14px;opacity:.88;transition:.3s}
+nav a{color:#fff;font-size:14px;opacity:.88;transition:opacity .25s}
 nav a:hover{opacity:1}
 .nav-button{padding:11px 18px;border:1px solid rgba(255,255,255,.35);border-radius:30px}
 .menu{display:none;border:1px solid rgba(255,255,255,.25);background:transparent;color:#fff;font-size:25px;width:44px;height:44px;border-radius:10px;cursor:pointer;align-items:center;justify-content:center}
@@ -92,7 +91,7 @@ nav a:hover{opacity:1}
 .hero h1 span{color:#c8d8cb}
 .hero p{font-size:20px;max-width:680px;color:rgba(255,255,255,.88);margin-bottom:35px}
 .buttons{display:flex;gap:14px;flex-wrap:wrap}
-.btn{padding:14px 23px;border-radius:30px;font-weight:600;transition:.3s;display:inline-block;cursor:pointer;text-align:center}
+.btn{padding:14px 23px;border-radius:30px;font-weight:600;transition:transform .25s,background .25s;display:inline-block;cursor:pointer;text-align:center}
 .btn-primary{background:#fff;color:var(--dark);border:1px solid #fff}
 .btn-primary:hover{transform:translateY(-3px)}
 .btn-outline{border:1px solid rgba(255,255,255,.5);color:#fff;background:transparent}
@@ -114,7 +113,7 @@ h2{font-family:"Playfair Display",serif;font-size:clamp(38px,5vw,58px);line-heig
 .section-head h2{margin-bottom:15px}
 .section-head p{color:#b8c1bb;font-size:17px}
 .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.service{padding:30px;border:1px solid var(--border);border-radius:20px;background:rgba(255,255,255,.035);transition:.3s}
+.service{padding:30px;border:1px solid var(--border);border-radius:20px;background:rgba(255,255,255,.035);transition:transform .25s,background .25s}
 .service:hover{transform:translateY(-6px);background:rgba(255,255,255,.07)}
 .icon{font-size:31px;margin-bottom:20px}
 .service h3{margin-bottom:10px}
@@ -122,7 +121,7 @@ h2{font-family:"Playfair Display",serif;font-size:clamp(38px,5vw,58px);line-heig
 .portfolio{padding:110px 0}
 .portfolio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
 .project{position:relative;min-height:500px;overflow:hidden;border-radius:25px;color:#fff;display:flex;align-items:flex-end;isolation:isolate}
-.project-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:.5s;z-index:-2}
+.project-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .5s;z-index:-2}
 .project:hover .project-bg{transform:scale(1.06)}
 .project-overlay{position:absolute;inset:0;background:linear-gradient(transparent 5%,rgba(0,0,0,.88));z-index:-1}
 .project-content{position:relative;padding:35px;width:100%}
@@ -130,7 +129,7 @@ h2{font-family:"Playfair Display",serif;font-size:clamp(38px,5vw,58px);line-heig
 .project h3{font-family:"Playfair Display",serif;font-size:40px;margin-bottom:10px}
 .project p{color:#e1e5e2;max-width:480px;margin-bottom:20px}
 .project-actions{display:flex;gap:10px;flex-wrap:wrap}
-.project-link{display:inline-block;padding:11px 17px;border:1px solid rgba(255,255,255,.65);border-radius:25px;font-weight:600;font-size:14px;color:#fff;background:rgba(255,255,255,.08);cursor:pointer;transition:.25s}
+.project-link{display:inline-block;padding:11px 17px;border:1px solid rgba(255,255,255,.65);border-radius:25px;font-weight:600;font-size:14px;color:#fff;background:rgba(255,255,255,.08);cursor:pointer;transition:background .25s,color .25s}
 .project-link:hover{background:#fff;color:var(--dark)}
 .project-small{min-height:300px}
 .project-small h3{font-size:31px}
@@ -141,20 +140,31 @@ h2{font-family:"Playfair Display",serif;font-size:clamp(38px,5vw,58px);line-heig
 .step h3{margin-bottom:10px}
 .step p{color:var(--gray);font-size:14px}
 .plans{padding:110px 0}
-.plan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px;max-width:900px;margin:auto}
-.plan-card{background:#fff;padding:40px;border-radius:22px;border:1px solid #dedbd3;display:flex;flex-direction:column;align-items:flex-start}
-.plan-card.featured{background:var(--dark);color:#fff;border-color:var(--dark)}
-.plan-icon{font-size:32px;margin-bottom:18px}
+.plan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:25px;max-width:960px;margin:auto;align-items:stretch}
+.plan-card{background:#fff;padding:40px;border-radius:22px;border:1px solid #dedbd3;display:flex;flex-direction:column;align-items:flex-start;overflow:hidden}
 .plan-card h3{font-family:"Playfair Display",serif;font-size:29px;margin-bottom:14px}
+.plan-icon{font-size:32px;margin-bottom:18px}
 .plan-card>p{color:var(--gray);margin-bottom:20px}
-.plan-card.featured>p{color:#c7d0ca}
 .plan-card ul{list-style:none;margin:0 0 28px}
 .plan-card li{margin:12px 0;color:var(--gray)}
-.plan-card.featured li{color:#c7d0ca}
 .plan-card li::first-letter{color:var(--green-light)}
 .plan-card .btn{margin-top:auto}
 .plan-card .btn-outline{color:var(--dark);border-color:var(--dark)}
-.plan-card.featured .btn-primary{color:var(--dark)}
+.plan-card.featured{padding:0;background:linear-gradient(150deg,#17251d 0%,#101814 65%,#203a2b 100%);color:#fff;border:1px solid #355443;box-shadow:0 18px 45px rgba(16,24,20,.16);position:relative}
+.plan-visual{width:100%;height:190px;position:relative;overflow:hidden;background:#203a2b}
+.plan-visual img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 55%}
+.plan-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(16,24,20,.92),rgba(16,24,20,.02) 85%)}
+.plan-visual-label{position:absolute;z-index:1;left:25px;bottom:18px;color:#fff;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+.plan-prof-content{width:100%;padding:30px 36px 36px;display:flex;flex-direction:column;align-items:flex-start;flex:1}
+.plan-tag{display:inline-block;background:#d7e5d9;color:#183725;border-radius:30px;padding:6px 12px;font-size:11px;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:15px}
+.plan-card.featured h3{font-size:32px;margin-bottom:10px}
+.plan-card.featured>p,.plan-prof-content>p{color:#c7d0ca;margin-bottom:18px}
+.plan-card.featured ul{width:100%;margin:0 0 26px}
+.plan-card.featured li{color:#e0e7e1;border-bottom:1px solid rgba(255,255,255,.09);padding:0 0 11px;margin:11px 0}
+.plan-card.featured li::first-letter{color:#b9d8c1}
+.plan-prof-content .btn{width:100%;padding:15px 18px}
+.plan-card.featured .btn-primary{background:#d7e5d9;color:#14231a;border-color:#d7e5d9}
+.plan-card.featured .btn-primary:hover{background:#fff}
 .plan-note{margin:30px auto 0;max-width:720px;text-align:center;color:var(--gray);font-size:14px}
 .cta{padding:110px 0;background:linear-gradient(rgba(15,24,19,.83),rgba(15,24,19,.9)),url("https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1800&q=85") center/cover;color:#fff;text-align:center}
 .cta-inner{max-width:760px;margin:auto}
@@ -183,8 +193,6 @@ footer p{color:#89938c;font-size:13px}
 .contact-email{display:block;font-weight:700;font-size:16px;color:var(--dark);overflow-wrap:anywhere}
 .contact-phone{display:inline-block;margin-top:6px;font-weight:700;font-size:20px;color:var(--green);text-decoration:underline;text-underline-offset:4px}
 .close-contact{position:absolute;top:12px;right:18px;border:none;background:transparent;font-size:28px;cursor:pointer;color:var(--gray)}
-
-/* VENTANA DE DEMOSTRACIONES */
 .demo-modal{position:fixed;inset:0;z-index:4000;background:rgba(4,9,6,.88);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:18px}
 .demo-modal.active{display:flex}
 .demo-window{width:min(1200px,100%);height:min(900px,94vh);background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 25px 90px rgba(0,0,0,.45)}
@@ -206,7 +214,7 @@ nav .nav-button{text-align:center;margin-top:8px}
 }
 @media(max-width:600px){
 .nav{min-height:72px;gap:10px}
-.logo{font-size:19px;gap:8px;letter-spacing:1.5px}
+.logo{font-size:21px;gap:8px;letter-spacing:2px}
 .logo img{width:42px;height:42px}
 nav{top:72px;max-height:calc(100vh - 72px)}
 .hero{min-height:90vh}
@@ -220,7 +228,10 @@ nav{top:72px;max-height:calc(100vh - 72px)}
 .intro,.services,.portfolio,.process,.plans,.cta{padding:80px 0}
 .local-seo{padding-bottom:65px}
 .local-seo-inner{padding:25px}
-.intro-card,.plan-card{padding:28px}
+.intro-card,.plan-card:not(.featured){padding:28px}
+.plan-visual{height:165px}
+.plan-prof-content{padding:25px 24px 27px}
+.plan-card.featured h3{font-size:29px}
 .footer-grid{flex-direction:column;align-items:flex-start}
 .footer-links{gap:16px}
 .contact-box{padding:35px 24px}
@@ -228,6 +239,16 @@ nav{top:72px;max-height:calc(100vh - 72px)}
 .demo-window{height:96vh;border-radius:12px}
 .demo-toolbar{padding:8px 12px}
 .demo-toolbar span{display:none}
+}
+@media(max-width:380px){
+.logo{font-size:19px;letter-spacing:1.5px}
+.logo img{width:38px;height:38px}
+.plan-prof-content{padding:22px 19px 24px}
+}
+@media(max-width:600px){
+header,.contact-modal,.demo-modal{-webkit-backdrop-filter:none;backdrop-filter:none}
+.service,.step,.plan-card,.project-bg,.btn,.project-link{transition:none}
+.service:hover,.project:hover .project-bg,.btn-primary:hover{transform:none}
 }
 @media(prefers-reduced-motion:reduce){
 html{scroll-behavior:auto}
@@ -238,9 +259,9 @@ html{scroll-behavior:auto}
 <body>
 <header>
 <div class="container nav">
-<a href="#inicio" class="logo" aria-label="KEOPS WEBS, inicio">
-<img src="./keops.png" alt="Logo de KEOPS WEBS">
-<span>KEOPS <span>WEBS</span></span>
+<a href="#inicio" class="logo" aria-label="KEOPS, inicio">
+<img src="./keops.png" alt="Logo de KEOPS">
+<span>KEOPS</span>
 </a>
 <nav id="mainNav" aria-label="Navegación principal">
 <a href="#servicios">Servicios</a>
@@ -324,9 +345,7 @@ html{scroll-behavior:auto}
 <div class="demo-label">DEMO · DISEÑO SIMPLE</div>
 <h3>Café del Bosque</h3>
 <p>Una página cálida y directa para presentar una cafetería, sus especialidades y las formas de contacto.</p>
-<div class="project-actions">
-<button type="button" class="project-link" onclick="abrirDemo('simple')">Ver demo completa ↗</button>
-</div>
+<div class="project-actions"><button type="button" class="project-link" onclick="abrirDemo('simple')">Ver demo completa ↗</button></div>
 </div>
 </article>
 <article class="project">
@@ -336,9 +355,7 @@ html{scroll-behavior:auto}
 <div class="demo-label">DEMO · DISEÑO PROFESIONAL</div>
 <h3>Café del Bosque</h3>
 <p>Una propuesta más elaborada, con presentación de marca, especialidades, galería y más secciones para recorrer.</p>
-<div class="project-actions">
-<button type="button" class="project-link" onclick="abrirDemo('profesional')">Ver demo completa ↗</button>
-</div>
+<div class="project-actions"><button type="button" class="project-link" onclick="abrirDemo('profesional')">Ver demo completa ↗</button></div>
 </div>
 </article>
 </div>
@@ -382,19 +399,26 @@ html{scroll-behavior:auto}
 </ul>
 <a href="https://wa.me/5492945541024?text=Hola%2C%20quiero%20consultar%20por%20una%20Web%20Simple%20de%20KEOPS%20WEBS." target="_blank" rel="noopener noreferrer" class="btn btn-outline">Consultar por este plan</a>
 </div>
+
 <div class="plan-card featured">
-<div class="plan-icon">✦</div>
+<div class="plan-visual">
+<img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1100&q=80" alt="Interior cálido de una cafetería para ilustrar el plan profesional" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1100&q=80'">
+<div class="plan-visual-label">Una presencia digital más completa</div>
+</div>
+<div class="plan-prof-content">
+<div class="plan-tag">Más posibilidades para tu negocio</div>
 <h3>Web Profesional</h3>
-<p>Una propuesta más completa para negocios que necesitan organizar y presentar más contenido.</p>
+<p>Una propuesta más completa, con diseño personalizado y espacio para mostrar todo lo que hace especial a tu negocio.</p>
 <ul>
-<li>✓ Estructura y diseño personalizados</li>
+<li>✓ Diseño visual personalizado</li>
 <li>✓ Varias secciones informativas</li>
 <li>✓ Galería de imágenes</li>
 <li>✓ Botones y opciones de contacto acordadas</li>
 <li>✓ Funciones adicionales, si se definen en el presupuesto</li>
 <li>✓ Publicación online, según lo acordado</li>
 </ul>
-<a href="https://wa.me/5492945541024?text=Hola%2C%20quiero%20consultar%20por%20una%20Web%20Profesional%20de%20KEOPS%20WEBS." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Consultar por este plan</a>
+<a href="https://wa.me/5492945541024?text=Hola%2C%20quiero%20consultar%20por%20una%20Web%20Profesional%20de%20KEOPS%20WEBS." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Consultar por este plan ↗</a>
+</div>
 </div>
 </div>
 <p class="plan-note">¿No sabés cuál elegir? Escribinos y evaluamos juntos las necesidades de tu negocio. El alcance, las funciones y el presupuesto se acuerdan antes de comenzar.</p>
@@ -425,9 +449,7 @@ html{scroll-behavior:auto}
 </div>
 <p>Diseño web para negocios y emprendimientos de Argentina, desde la Patagonia.</p>
 <p class="footer-contact">Correo: <span>presufacil1@gmail.com</span></p>
-<p class="footer-contact">WhatsApp:
-<a class="whatsapp-link" href="https://wa.me/5492945541024" target="_blank" rel="noopener noreferrer">2945 541024</a>
-</p>
+<p class="footer-contact">WhatsApp: <a class="whatsapp-link" href="https://wa.me/5492945541024" target="_blank" rel="noopener noreferrer">2945 541024</a></p>
 <div class="social-icons" aria-label="Redes sociales">
 <div class="social-icon" title="Instagram próximamente" aria-label="Instagram próximamente">
 <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#d0d8d2" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="#d0d8d2" stroke-width="2"/><circle cx="17.5" cy="6.7" r="1.2" fill="#d0d8d2"/></svg>
@@ -450,14 +472,10 @@ html{scroll-behavior:auto}
 </div>
 </footer>
 
-<!-- VENTANA PARA VER LAS DEMOS -->
 <div class="demo-modal" id="demoModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="demoTitle">
 <div class="demo-window">
 <div class="demo-toolbar">
-<div>
-<strong id="demoTitle">Demo de KEOPS WEBS</strong><br>
-<span>Ejemplo ficticio · Vista previa</span>
-</div>
+<div><strong id="demoTitle">Demo de KEOPS WEBS</strong><br><span>Ejemplo ficticio · Vista previa</span></div>
 <button class="demo-close" type="button" onclick="cerrarDemo()" aria-label="Cerrar demostración">×</button>
 </div>
 <iframe class="demo-frame" id="demoFrame" title="Vista previa de la página web de ejemplo" loading="lazy"></iframe>
@@ -521,11 +539,10 @@ if(event&&event.target!==contactModal)return;
 if(!contactModal.classList.contains("active"))return;
 contactModal.classList.remove("active");
 contactModal.setAttribute("aria-hidden","true");
-document.body.style.overflow="";
+document.body.style.overflow=demoModal.classList.contains("active")?"hidden":"";
 if(previousFocus&&typeof previousFocus.focus==="function")previousFocus.focus();
 }
 
-/* DEMOSTRACIONES: TODO EL CONTENIDO DE EJEMPLO ESTÁ EN ESPAÑOL */
 const estiloDemo=`
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -576,7 +593,7 @@ const demoSimple=`
 <!DOCTYPE html><html lang="es-AR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Café del Bosque | Demo Web Simple</title><style>${estiloDemo}</style></head><body>
 <header class="demo-nav"><div class="demo-brand">☕ Café del Bosque</div><nav class="demo-navlinks"><a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a><a href="#especialidades">Especialidades</a><a href="#contacto">Contacto</a></nav></header>
 <section class="demo-hero" id="inicio" style="background-image:linear-gradient(90deg,rgba(16,30,20,.83),rgba(16,30,20,.24)),url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1400&q=85')"><div><div class="demo-kicker">Un rincón para disfrutar</div><h1>Un buen café, un momento para vos.</h1><p>Sabores artesanales, café recién preparado y un ambiente cálido para compartir algo rico en cualquier momento del día.</p><a class="demo-button" href="#contacto">Encontranos</a></div></section>
-<section class="demo-section" id="nosotros"><div class="demo-columns"><div><div class="demo-kicker">Nuestra historia</div><h2>Hecho con cariño, servido con una sonrisa.</h2><p>Somos una cafetería de barrio que disfruta de las cosas simples: buenos ingredientes, aromas irresistibles y una mesa siempre lista para recibirte.</p><a class="demo-button" href="#especialidades">Conocé nuestras especialidades</a></div><img class="demo-photo" src="https://images.unsplash.com/photo-1445116572660-acca5b5b5c?auto=format&fit=crop&w=1000&q=85" alt="Cafetería acogedora" onerror="this.src='https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=85'"></div></section>
+<section class="demo-section" id="nosotros"><div class="demo-columns"><div><div class="demo-kicker">Nuestra historia</div><h2>Hecho con cariño, servido con una sonrisa.</h2><p>Somos una cafetería de barrio que disfruta de las cosas simples: buenos ingredientes, aromas irresistibles y una mesa siempre lista para recibirte.</p><a class="demo-button" href="#especialidades">Conocé nuestras especialidades</a></div><img class="demo-photo" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=85" alt="Interior acogedor de una cafetería" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=85'"></div></section>
 <section class="demo-section" id="especialidades" style="background:#faf8f2"><div class="demo-kicker">Para disfrutar</div><h2>Nuestras especialidades</h2><p>Una selección preparada para acompañar tus mejores momentos.</p><div class="demo-list"><article class="demo-item"><h3>☕ Café de especialidad</h3><p>Aromático, recién molido y preparado en el momento.</p></article><article class="demo-item"><h3>🥐 Pastelería artesanal</h3><p>Delicias dulces para disfrutar en cada visita.</p></article><article class="demo-item"><h3>🥪 Desayunos y meriendas</h3><p>Opciones ricas para empezar o terminar el día.</p></article></div></section>
 <section class="demo-contact" id="contacto"><div class="demo-kicker">Te esperamos</div><h2>Tu próxima pausa está acá.</h2><p>Vení a conocernos o escribinos para consultar.</p><a class="demo-button" href="https://wa.me/5492945541024?text=Hola%2C%20quiero%20consultar%20por%20una%20p%C3%A1gina%20web%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer">Consultar por una web similar</a></section>
 <footer class="demo-footer"><div><strong>Café del Bosque</strong><p>Un rincón para disfrutar.</p></div><div><strong>Contacto</strong><p>Ejemplo ficticio · Datos ilustrativos</p><p>Dirección y horarios a definir</p></div></footer>
@@ -594,9 +611,16 @@ const demoProfesional=`
 </style></head><body>
 <header class="demo-nav"><div class="demo-brand">CAFÉ DEL BOSQUE</div><nav class="demo-navlinks"><a href="#inicio">Inicio</a><a href="#historia">Nuestra historia</a><a href="#carta">La carta</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a></nav></header>
 <section class="demo-hero pro-hero" id="inicio" style="background-image:linear-gradient(90deg,rgba(13,25,17,.86),rgba(13,25,17,.25)),url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1800&q=85')"><div><div class="demo-kicker">Cafetería · Pastelería artesanal</div><h1>El placer de bajar un cambio.</h1><p>Un espacio para encontrarte con los sabores, las charlas y esos pequeños momentos que hacen bien.</p><a class="demo-button" href="#carta">Descubrí nuestras especialidades</a></div></section>
-<section class="demo-section" id="historia"><div class="pro-intro"><div class="demo-kicker">Bienvenidos a nuestra casa</div><h2>Más que café, momentos para recordar.</h2><p>En Café del Bosque creemos que las mejores historias empiezan alrededor de una mesa. Por eso cuidamos cada detalle: desde la selección de nuestros ingredientes hasta la forma en que te recibimos.</p></div><div class="demo-columns" style="margin-top:35px"><img class="demo-photo" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=85" alt="Interior cálido de una cafetería"><div><div class="demo-kicker">Nuestra esencia</div><h2>Calidad, calidez y sabor.</h2><p>Preparamos cada café en el momento, acompañamos las tardes con pastelería artesanal y creamos un lugar donde siempre hay tiempo para disfrutar.</p><p>Un concepto pensado para quienes valoran los buenos productos y los espacios acogedores.</p></div></div></section>
+<section class="demo-section" id="historia"><div class="pro-intro"><div class="demo-kicker">Bienvenidos a nuestra casa</div><h2>Más que café, momentos para recordar.</h2><p>En Café del Bosque creemos que las mejores historias empiezan alrededor de una mesa. Por eso cuidamos cada detalle: desde la selección de nuestros ingredientes hasta la forma en que te recibimos.</p></div><div class="demo-columns" style="margin-top:35px"><img class="demo-photo" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=85" alt="Interior cálido de una cafetería" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=85'"><div><div class="demo-kicker">Nuestra esencia</div><h2>Calidad, calidez y sabor.</h2><p>Preparamos cada café en el momento, acompañamos las tardes con pastelería artesanal y creamos un lugar donde siempre hay tiempo para disfrutar.</p><p>Un concepto pensado para quienes valoran los buenos productos y los espacios acogedores.</p></div></div></section>
 <section class="demo-section pro-special" id="carta"><div class="demo-kicker">Una pausa deliciosa</div><h2>Descubrí nuestra carta</h2><p>Opciones preparadas para acompañar cada momento del día.</p><div class="demo-list"><article class="demo-item"><h3>Cafés especiales</h3><p>Espresso, capuchino, café con leche y otras preparaciones para los amantes del buen café.</p></article><article class="demo-item"><h3>Pastelería artesanal</h3><p>Tortas, budines, medialunas y delicias elaboradas para acompañar tu bebida favorita.</p></article><article class="demo-item"><h3>Opciones saladas</h3><p>Tostados, sándwiches y propuestas ricas para compartir un almuerzo liviano.</p></article></div></section>
-<section class="demo-section" id="galeria"><div class="demo-kicker">Un vistazo a nuestro mundo</div><h2>Momentos de Café del Bosque</h2><p>Un ambiente cálido, sabores para disfrutar y rincones que invitan a quedarse un rato más.</p><div class="demo-gallery"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80" alt="Café recién preparado"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80" alt="Taza de café"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" alt="Interior de cafetería"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=700&q=80" alt="Mesas de cafetería"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" alt="Pastelería artesanal"><img src="https://images.unsplash.com/photo-1445116572660-acca5b5b5c?auto=format&fit=crop&w=700&q=80" alt="Barra de cafetería"></div></section>
+<section class="demo-section" id="galeria"><div class="demo-kicker">Un vistazo a nuestro mundo</div><h2>Momentos de Café del Bosque</h2><p>Un ambiente cálido, sabores para disfrutar y rincones que invitan a quedarse un rato más.</p><div class="demo-gallery">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80" alt="Café recién preparado" loading="lazy">
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80" alt="Taza de café" loading="lazy">
+<img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" alt="Interior de cafetería" loading="lazy">
+<img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=700&q=80" alt="Mesas de cafetería" loading="lazy">
+<img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" alt="Pastelería artesanal" loading="lazy">
+<img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" alt="Barra e interior de cafetería" loading="lazy">
+</div></section>
 <section class="demo-quote">“Los mejores momentos suelen venir acompañados de algo rico.”</section>
 <section class="demo-contact" id="contacto"><div class="demo-kicker">Nos encantaría recibirte</div><h2>Hagamos un lugar para vos.</h2><p>Acercate a conocernos o escribinos para consultar horarios y ubicación.</p><a class="demo-button" href="https://wa.me/5492945541024?text=Hola%2C%20quiero%20consultar%20por%20una%20p%C3%A1gina%20web%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer">Consultar por una web similar</a></section>
 <footer class="demo-footer"><div><strong>CAFÉ DEL BOSQUE</strong><p>Una pausa para disfrutar.</p></div><div><strong>Encontranos</strong><p>Ejemplo ficticio · Datos ilustrativos</p><p>Dirección y horarios a definir</p></div><div><strong>Seguinos</strong><p>Redes sociales a definir</p></div></footer>
@@ -634,9 +658,7 @@ cerrarMenu();
 }
 
 document.addEventListener("keydown",function(event){
-if(event.key==="Escape"){
-cerrarTodasLasVentanas();
-}
+if(event.key==="Escape")cerrarTodasLasVentanas();
 });
 
 document.getElementById("currentYear").textContent=new Date().getFullYear();
