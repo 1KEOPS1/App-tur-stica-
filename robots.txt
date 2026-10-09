@@ -1,0 +1,5 @@
+
+User-agent: *
+Allow: /
+
+Sitemap: https://1keops1.github.io/webs-patagonia/sitemap.xml
