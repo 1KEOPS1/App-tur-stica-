@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#101814">
 <title>KEOPS WEBS | Diseño y desarrollo web</title>
 <meta name="description" content="Diseño y desarrollo de sitios web profesionales para negocios, alojamientos, restaurantes y emprendimientos de Patagonia.">
-<link rel="icon" type="image/svg+xml" href="keops.svg">
+<link rel="icon" type="image/svg+xml" href="./keops.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -24,6 +24,7 @@ header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(16,24,20,.94
 .logo{color:#fff;font-size:19px;font-weight:700;letter-spacing:2px;white-space:nowrap;display:flex;align-items:center;gap:12px}
 .logo img{width:46px;height:46px;object-fit:contain;display:block}
 .logo span{color:#b9cdbd}
+.logo span span{color:#b9cdbd}
 nav{display:flex;gap:28px;align-items:center}
 nav a{color:#fff;font-size:14px;opacity:.88;transition:.3s}
 nav a:hover{opacity:1}
@@ -152,7 +153,7 @@ nav .nav-button{text-align:center;margin-top:8px}
 <header>
 <div class="container nav">
 <a href="#inicio" class="logo" aria-label="KEOPS WEBS, inicio">
-<img src="keops.svg" alt="Logo de KEOPS WEBS">
+<img src="./keops.png" alt="Logo de KEOPS WEBS">
 <span>KEOPS <span>WEBS</span></span>
 </a>
 <nav id="mainNav" aria-label="Navegación principal">
@@ -327,7 +328,7 @@ nav .nav-button{text-align:center;margin-top:8px}
 <div class="container footer-grid">
 <div>
 <div class="footer-brand">
-<img src="keops.svg" alt="" class="footer-logo-img">
+<img src="./keops.png" alt="Logo de KEOPS WEBS" class="footer-logo-img">
 <div class="footer-logo">KEOPS WEBS</div>
 </div>
 <p>Diseño y desarrollo web desde Patagonia.</p>
@@ -367,12 +368,56 @@ nav .nav-button{text-align:center;margin-top:8px}
 const menuToggle=document.getElementById("menuToggle");
 const mainNav=document.getElementById("mainNav");
 const contactModal=document.getElementById("contactModal");
-function cerrarMenu(){mainNav.classList.remove("open");menuToggle.setAttribute("aria-expanded","false");menuToggle.setAttribute("aria-label","Abrir menú");menuToggle.textContent="☰";document.body.classList.remove("menu-open")}
-menuToggle.addEventListener("click",function(){const isOpen=mainNav.classList.toggle("open");menuToggle.setAttribute("aria-expanded",String(isOpen));menuToggle.setAttribute("aria-label",isOpen?"Cerrar menú":"Abrir menú");menuToggle.textContent=isOpen?"×":"☰";document.body.classList.toggle("menu-open",isOpen)});
-mainNav.querySelectorAll("a").forEach(function(link){link.addEventListener("click",cerrarMenu)});
-function abrirContacto(event){if(event)event.preventDefault();cerrarMenu();contactModal.classList.add("active");contactModal.setAttribute("aria-hidden","false");document.body.style.overflow="hidden";const closeButton=contactModal.querySelector(".close-contact");if(closeButton)closeButton.focus()}
-function cerrarContacto(event){if(event){if(event.target!==contactModal&&!event.target.classList.contains("close-contact"))return;if(event.cancelable)event.preventDefault()}contactModal.classList.remove("active");contactModal.setAttribute("aria-hidden","true");document.body.style.overflow=""}
-document.addEventListener("keydown",function(event){if(event.key==="Escape"){cerrarContacto();cerrarMenu()}});
+let previousFocus=null;
+
+function cerrarMenu(){
+mainNav.classList.remove("open");
+menuToggle.setAttribute("aria-expanded","false");
+menuToggle.setAttribute("aria-label","Abrir menú");
+menuToggle.textContent="☰";
+document.body.classList.remove("menu-open");
+}
+
+menuToggle.addEventListener("click",function(){
+const isOpen=mainNav.classList.toggle("open");
+menuToggle.setAttribute("aria-expanded",String(isOpen));
+menuToggle.setAttribute("aria-label",isOpen?"Cerrar menú":"Abrir menú");
+menuToggle.textContent=isOpen?"×":"☰";
+document.body.classList.toggle("menu-open",isOpen);
+});
+
+mainNav.querySelectorAll("a").forEach(function(link){
+link.addEventListener("click",cerrarMenu);
+});
+
+function abrirContacto(event){
+if(event)event.preventDefault();
+cerrarMenu();
+previousFocus=document.activeElement;
+contactModal.classList.add("active");
+contactModal.setAttribute("aria-hidden","false");
+document.body.style.overflow="hidden";
+const closeButton=contactModal.querySelector(".close-contact");
+if(closeButton)closeButton.focus();
+}
+
+function cerrarContacto(event){
+if(event && event.target!==contactModal && !event.target.classList.contains("close-contact"))return;
+if(event && event.cancelable)event.preventDefault();
+if(!contactModal.classList.contains("active"))return;
+contactModal.classList.remove("active");
+contactModal.setAttribute("aria-hidden","true");
+document.body.style.overflow="";
+if(previousFocus && typeof previousFocus.focus==="function")previousFocus.focus();
+}
+
+document.addEventListener("keydown",function(event){
+if(event.key==="Escape"){
+cerrarContacto();
+cerrarMenu();
+}
+});
+
 document.getElementById("currentYear").textContent=new Date().getFullYear();
 </script>
 </body>
