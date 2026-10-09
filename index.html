@@ -10,7 +10,6 @@
 <meta name="author" content="KEOPS WEBS">
 <meta name="application-name" content="KEOPS WEBS">
 <link rel="canonical" href="https://1keops1.github.io/webs-patagonia/">
-
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
 <meta property="og:site_name" content="KEOPS WEBS">
@@ -23,7 +22,6 @@
 <meta name="twitter:description" content="Páginas web para negocios y emprendimientos. Consultá por tu proyecto.">
 <meta name="twitter:image" content="https://1keops1.github.io/webs-patagonia/keops.png">
 
-<!-- GOOGLE ANALYTICS 4 -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEGZKJMEXG"></script>
 <script>
 window.dataLayer=window.dataLayer||[];
@@ -32,39 +30,30 @@ gtag('js',new Date());
 gtag('config','G-VEGZKJMEXG');
 </script>
 
-<!-- DATOS ESTRUCTURADOS -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"ProfessionalService",
-  "@id":"https://1keops1.github.io/webs-patagonia/#negocio",
-  "name":"KEOPS WEBS",
-  "url":"https://1keops1.github.io/webs-patagonia/",
-  "logo":"https://1keops1.github.io/webs-patagonia/keops.png",
-  "image":"https://1keops1.github.io/webs-patagonia/keops.png",
-  "description":"Diseño de páginas web para negocios, comercios, alojamientos y emprendimientos de Argentina.",
-  "email":"presufacil1@gmail.com",
-  "telephone":"+5492945541024",
-  "areaServed":[
-    {"@type":"Country","name":"Argentina"},
-    {"@type":"City","name":"Esquel"},
-    {"@type":"City","name":"Trevelin"},
-    {"@type":"City","name":"Cholila"},
-    {"@type":"AdministrativeArea","name":"Patagonia, Argentina"}
-  ],
-  "knowsAbout":[
-    "Diseño web",
-    "Desarrollo web",
-    "Sitios web para alojamientos",
-    "Sitios web para restaurantes",
-    "Sitios web para turismo",
-    "Sitios web para pesca con mosca"
-  ],
-  "availableLanguage":"Spanish"
+"@context":"https://schema.org",
+"@type":"ProfessionalService",
+"@id":"https://1keops1.github.io/webs-patagonia/#negocio",
+"name":"KEOPS WEBS",
+"url":"https://1keops1.github.io/webs-patagonia/",
+"logo":"https://1keops1.github.io/webs-patagonia/keops.png",
+"image":"https://1keops1.github.io/webs-patagonia/keops.png",
+"description":"Diseño de páginas web para negocios, comercios, alojamientos y emprendimientos de Argentina.",
+"email":"presufacil1@gmail.com",
+"telephone":"+5492945541024",
+"areaServed":[
+{"@type":"Country","name":"Argentina"},
+{"@type":"City","name":"Esquel"},
+{"@type":"City","name":"Trevelin"},
+{"@type":"City","name":"Cholila"},
+{"@type":"AdministrativeArea","name":"Patagonia, Argentina"}
+],
+"knowsAbout":["Diseño web","Desarrollo web","Sitios web para alojamientos","Sitios web para restaurantes","Sitios web para turismo","Sitios web para pesca con mosca"],
+"availableLanguage":"Spanish"
 }
 </script>
 
-<!-- FAVICON -->
 <link rel="icon" href="/webs-patagonia/keops.png?v=3" type="image/png" sizes="any">
 <link rel="shortcut icon" href="/webs-patagonia/keops.png?v=3" type="image/png">
 <link rel="icon" href="/webs-patagonia/keops.svg?v=3" type="image/svg+xml">
@@ -132,15 +121,17 @@ h2{font-family:"Playfair Display",serif;font-size:clamp(38px,5vw,58px);line-heig
 .service p{color:#aeb8b1;font-size:14px}
 .portfolio{padding:110px 0}
 .portfolio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
-.project{position:relative;min-height:450px;overflow:hidden;border-radius:25px;color:#fff;display:flex;align-items:flex-end}
-.project-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:.5s}
+.project{position:relative;min-height:500px;overflow:hidden;border-radius:25px;color:#fff;display:flex;align-items:flex-end;isolation:isolate}
+.project-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:.5s;z-index:-2}
 .project:hover .project-bg{transform:scale(1.06)}
-.project-overlay{position:absolute;inset:0;background:linear-gradient(transparent 25%,rgba(0,0,0,.9))}
-.project-content{position:relative;z-index:2;padding:35px}
-.demo-label{display:inline-block;font-size:11px;letter-spacing:1px;border:1px solid rgba(255,255,255,.45);border-radius:20px;padding:6px 10px;margin-bottom:15px}
+.project-overlay{position:absolute;inset:0;background:linear-gradient(transparent 5%,rgba(0,0,0,.88));z-index:-1}
+.project-content{position:relative;padding:35px;width:100%}
+.demo-label{display:inline-block;font-size:11px;letter-spacing:1px;border:1px solid rgba(255,255,255,.55);border-radius:20px;padding:6px 10px;margin-bottom:15px}
 .project h3{font-family:"Playfair Display",serif;font-size:40px;margin-bottom:10px}
 .project p{color:#e1e5e2;max-width:480px;margin-bottom:20px}
-.project-link{display:inline-block;border-bottom:1px solid rgba(255,255,255,.7);padding-bottom:3px;font-weight:600;font-size:14px;color:#fff}
+.project-actions{display:flex;gap:10px;flex-wrap:wrap}
+.project-link{display:inline-block;padding:11px 17px;border:1px solid rgba(255,255,255,.65);border-radius:25px;font-weight:600;font-size:14px;color:#fff;background:rgba(255,255,255,.08);cursor:pointer;transition:.25s}
+.project-link:hover{background:#fff;color:var(--dark)}
 .project-small{min-height:300px}
 .project-small h3{font-size:31px}
 .process{background:#e8e3d8;padding:110px 0}
@@ -192,6 +183,16 @@ footer p{color:#89938c;font-size:13px}
 .contact-email{display:block;font-weight:700;font-size:16px;color:var(--dark);overflow-wrap:anywhere}
 .contact-phone{display:inline-block;margin-top:6px;font-weight:700;font-size:20px;color:var(--green);text-decoration:underline;text-underline-offset:4px}
 .close-contact{position:absolute;top:12px;right:18px;border:none;background:transparent;font-size:28px;cursor:pointer;color:var(--gray)}
+
+/* VENTANA DE DEMOSTRACIONES */
+.demo-modal{position:fixed;inset:0;z-index:4000;background:rgba(4,9,6,.88);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:18px}
+.demo-modal.active{display:flex}
+.demo-window{width:min(1200px,100%);height:min(900px,94vh);background:#fff;border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 25px 90px rgba(0,0,0,.45)}
+.demo-toolbar{min-height:58px;background:#101814;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px}
+.demo-toolbar strong{font-size:14px}
+.demo-toolbar span{font-size:12px;color:#b9cdbd}
+.demo-close{width:38px;height:38px;border:1px solid rgba(255,255,255,.25);border-radius:50%;background:transparent;color:#fff;font-size:25px;cursor:pointer;flex-shrink:0}
+.demo-frame{width:100%;height:100%;border:0;background:#fff;flex:1}
 @media(max-width:900px){
 .menu{display:flex}
 nav{display:none;position:absolute;top:82px;left:0;right:0;padding:22px 4%;background:rgba(16,24,20,.98);border-bottom:1px solid var(--border);flex-direction:column;align-items:stretch;gap:0;max-height:calc(100vh - 82px);overflow-y:auto}
@@ -213,7 +214,7 @@ nav{top:72px;max-height:calc(100vh - 72px)}
 .hero h1{font-size:clamp(39px,10vw,50px)}
 .hero p{font-size:17px}
 .service-grid,.process-grid{grid-template-columns:1fr}
-.project{min-height:400px}
+.project{min-height:420px}
 .project-content{padding:25px}
 .project h3{font-size:34px}
 .intro,.services,.portfolio,.process,.plans,.cta{padding:80px 0}
@@ -223,6 +224,10 @@ nav{top:72px;max-height:calc(100vh - 72px)}
 .footer-grid{flex-direction:column;align-items:flex-start}
 .footer-links{gap:16px}
 .contact-box{padding:35px 24px}
+.demo-modal{padding:6px}
+.demo-window{height:96vh;border-radius:12px}
+.demo-toolbar{padding:8px 12px}
+.demo-toolbar span{display:none}
 }
 @media(prefers-reduced-motion:reduce){
 html{scroll-behavior:auto}
@@ -308,49 +313,36 @@ html{scroll-behavior:auto}
 <div class="container">
 <div class="section-head">
 <div class="kicker">PORTFOLIO</div>
-<h2>Ideas de páginas web que podemos crear.</h2>
-<p>Estos son conceptos visuales ficticios para mostrar ejemplos de estilos y rubros. No representan clientes ni sitios publicados.</p>
+<h2>Conocé cómo podría verse tu página web.</h2>
+<p>Explorá dos ejemplos ficticios del mismo negocio para comparar un diseño simple con una propuesta más completa. Son demostraciones visuales, no sitios de clientes reales.</p>
 </div>
 <div class="portfolio-grid">
-<div class="project">
-<div class="project-bg" style="background-image:url('https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=1400&q=85')"></div>
+<article class="project">
+<div class="project-bg" style="background-image:url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1400&q=85')"></div>
 <div class="project-overlay"></div>
 <div class="project-content">
-<div class="demo-label">DEMO FICTICIA</div>
-<h3>Patagonia Lodge</h3>
-<p>Concepto visual para la presentación de un alojamiento turístico en Esquel.</p>
-<span class="project-link">Concepto visual · No es un sitio publicado</span>
+<div class="demo-label">DEMO · DISEÑO SIMPLE</div>
+<h3>Café del Bosque</h3>
+<p>Una página cálida y directa para presentar una cafetería, sus especialidades y las formas de contacto.</p>
+<div class="project-actions">
+<button type="button" class="project-link" onclick="abrirDemo('simple')">Ver demo completa ↗</button>
 </div>
 </div>
-<div class="project">
-<div class="project-bg" style="background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1400&q=85')"></div>
+</article>
+<article class="project">
+<div class="project-bg" style="background-image:url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1400&q=85')"></div>
 <div class="project-overlay"></div>
 <div class="project-content">
-<div class="demo-label">DEMO FICTICIA</div>
-<h3>Patagonia Fly</h3>
-<p>Concepto visual para experiencias de pesca con mosca en la Patagonia.</p>
-<span class="project-link">Concepto visual · No es un sitio publicado</span>
+<div class="demo-label">DEMO · DISEÑO PROFESIONAL</div>
+<h3>Café del Bosque</h3>
+<p>Una propuesta más elaborada, con presentación de marca, especialidades, galería y más secciones para recorrer.</p>
+<div class="project-actions">
+<button type="button" class="project-link" onclick="abrirDemo('profesional')">Ver demo completa ↗</button>
 </div>
 </div>
-<div class="project project-small">
-<div class="project-bg" style="background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=85')"></div>
-<div class="project-overlay"></div>
-<div class="project-content">
-<div class="demo-label">CONCEPTO VISUAL</div>
-<h3>Restaurante Patagonia</h3>
-<p>Idea de presentación web para un negocio gastronómico.</p>
+</article>
 </div>
-</div>
-<div class="project project-small">
-<div class="project-bg" style="background-image:url('https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?auto=format&fit=crop&w=1400&q=85')"></div>
-<div class="project-overlay"></div>
-<div class="project-content">
-<div class="demo-label">CONCEPTO VISUAL</div>
-<h3>Cabañas del Sur</h3>
-<p>Idea de presentación para un alojamiento turístico.</p>
-</div>
-</div>
-</div>
+<p class="plan-note">Los nombres, textos y negocios de las demos son ficticios. Las imágenes son ilustrativas. Cada proyecto real se adapta a la identidad y necesidades de su negocio.</p>
 </div>
 </section>
 
@@ -458,6 +450,20 @@ html{scroll-behavior:auto}
 </div>
 </footer>
 
+<!-- VENTANA PARA VER LAS DEMOS -->
+<div class="demo-modal" id="demoModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="demoTitle">
+<div class="demo-window">
+<div class="demo-toolbar">
+<div>
+<strong id="demoTitle">Demo de KEOPS WEBS</strong><br>
+<span>Ejemplo ficticio · Vista previa</span>
+</div>
+<button class="demo-close" type="button" onclick="cerrarDemo()" aria-label="Cerrar demostración">×</button>
+</div>
+<iframe class="demo-frame" id="demoFrame" title="Vista previa de la página web de ejemplo" loading="lazy"></iframe>
+</div>
+</div>
+
 <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contactTitle" onclick="cerrarContacto(event)">
 <div class="contact-box" onclick="event.stopPropagation()">
 <button class="close-contact" type="button" onclick="cerrarContacto()" aria-label="Cerrar ventana de contacto">×</button>
@@ -474,7 +480,10 @@ html{scroll-behavior:auto}
 const menuToggle=document.getElementById("menuToggle");
 const mainNav=document.getElementById("mainNav");
 const contactModal=document.getElementById("contactModal");
+const demoModal=document.getElementById("demoModal");
+const demoFrame=document.getElementById("demoFrame");
 let previousFocus=null;
+let previousDemoFocus=null;
 
 function cerrarMenu(){
 mainNav.classList.remove("open");
@@ -516,10 +525,117 @@ document.body.style.overflow="";
 if(previousFocus&&typeof previousFocus.focus==="function")previousFocus.focus();
 }
 
-document.addEventListener("keydown",function(event){
-if(event.key==="Escape"){
+/* DEMOSTRACIONES: TODO EL CONTENIDO DE EJEMPLO ESTÁ EN ESPAÑOL */
+const estiloDemo=`
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;color:#24352a;line-height:1.6}
+a{text-decoration:none;color:inherit}
+img{display:block;width:100%;object-fit:cover}
+.demo-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 7%;background:#fff}
+.demo-brand{font-family:Georgia,serif;font-size:22px;font-weight:bold;letter-spacing:.5px}
+.demo-navlinks{display:flex;gap:20px;font-size:13px;flex-wrap:wrap}
+.demo-button{display:inline-block;background:#304f3c;color:white;padding:12px 20px;border-radius:3px;font-size:13px;font-weight:bold}
+.demo-kicker{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:bold;margin-bottom:15px}
+.demo-section{padding:65px 8%}
+.demo-section h2{font-family:Georgia,serif;font-size:clamp(30px,5vw,46px);line-height:1.12;margin:0 0 18px}
+.demo-section p{color:#69736b}
+.demo-hero{min-height:390px;display:flex;align-items:center;padding:65px 8%;background-size:cover;background-position:center;color:#fff}
+.demo-hero h1{font-family:Georgia,serif;font-size:clamp(40px,7vw,68px);line-height:1.04;margin:0 0 20px;max-width:680px}
+.demo-hero p{max-width:520px;color:#f1f1eb;margin-bottom:25px}
+.demo-columns{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+.demo-photo{min-height:230px;height:100%;border-radius:5px}
+.demo-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:25px}
+.demo-item{background:#f3f0e8;padding:22px;border-radius:4px}
+.demo-item h3{font-family:Georgia,serif;margin:0 0 8px}
+.demo-item p{font-size:13px;margin-bottom:0}
+.demo-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:25px}
+.demo-gallery img{height:170px;border-radius:4px}
+.demo-quote{background:#edf0e9;text-align:center;padding:45px 8%;font-family:Georgia,serif;font-size:23px}
+.demo-footer{background:#18271d;color:#fff;padding:32px 8%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.demo-footer p{color:#d0d8d0;font-size:13px;margin:5px 0}
+.demo-contact{background:#304f3c;color:#fff;padding:48px 8%;text-align:center}
+.demo-contact p{color:#e0e8e0}
+.demo-contact h2{font-family:Georgia,serif;font-size:35px;margin:0 0 10px}
+.demo-contact .demo-button{background:#fff;color:#24352a}
+@media(max-width:650px){
+.demo-nav{padding:15px 5%;align-items:flex-start;flex-direction:column}
+.demo-navlinks{gap:12px;font-size:12px}
+.demo-hero{min-height:380px;padding:45px 6%}
+.demo-section{padding:45px 6%}
+.demo-columns{grid-template-columns:1fr}
+.demo-photo{min-height:220px}
+.demo-list{grid-template-columns:1fr}
+.demo-gallery{grid-template-columns:1fr 1fr}
+.demo-gallery img{height:140px}
+.demo-footer{flex-direction:column}
+}
+`;
+
+const demoSimple=`
+<!DOCTYPE html><html lang="es-AR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Café del Bosque | Demo Web Simple</title><style>${estiloDemo}</style></head><body>
+<header class="demo-nav"><div class="demo-brand">☕ Café del Bosque</div><nav class="demo-navlinks"><a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a><a href="#especialidades">Especialidades</a><a href="#contacto">Contacto</a></nav></header>
+<section class="demo-hero" id="inicio" style="background-image:linear-gradient(90deg,rgba(16,30,20,.83),rgba(16,30,20,.24)),url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1400&q=85')"><div><div class="demo-kicker">Un rincón para disfrutar</div><h1>Un buen café, un momento para vos.</h1><p>Sabores artesanales, café recién preparado y un ambiente cálido para compartir algo rico en cualquier momento del día.</p><a class="demo-button" href="#contacto">Encontranos</a></div></section>
+<section class="demo-section" id="nosotros"><div class="demo-columns"><div><div class="demo-kicker">Nuestra historia</div><h2>Hecho con cariño, servido con una sonrisa.</h2><p>Somos una cafetería de barrio que disfruta de las cosas simples: buenos ingredientes, aromas irresistibles y una mesa siempre lista para recibirte.</p><a class="demo-button" href="#especialidades">Conocé nuestras especialidades</a></div><img class="demo-photo" src="https://images.unsplash.com/photo-1445116572660-acca5b5b5c?auto=format&fit=crop&w=1000&q=85" alt="Cafetería acogedora" onerror="this.src='https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=85'"></div></section>
+<section class="demo-section" id="especialidades" style="background:#faf8f2"><div class="demo-kicker">Para disfrutar</div><h2>Nuestras especialidades</h2><p>Una selección preparada para acompañar tus mejores momentos.</p><div class="demo-list"><article class="demo-item"><h3>☕ Café de especialidad</h3><p>Aromático, recién molido y preparado en el momento.</p></article><article class="demo-item"><h3>🥐 Pastelería artesanal</h3><p>Delicias dulces para disfrutar en cada visita.</p></article><article class="demo-item"><h3>🥪 Desayunos y meriendas</h3><p>Opciones ricas para empezar o terminar el día.</p></article></div></section>
+<section class="demo-contact" id="contacto"><div class="demo-kicker">Te esperamos</div><h2>Tu próxima pausa está acá.</h2><p>Vení a conocernos o escribinos para consultar.</p><a class="demo-button" href="https://wa.me/5492945541024?text=Hola%2C%20quiero%20consultar%20por%20una%20p%C3%A1gina%20web%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer">Consultar por una web similar</a></section>
+<footer class="demo-footer"><div><strong>Café del Bosque</strong><p>Un rincón para disfrutar.</p></div><div><strong>Contacto</strong><p>Ejemplo ficticio · Datos ilustrativos</p><p>Dirección y horarios a definir</p></div></footer>
+</body></html>`;
+
+const demoProfesional=`
+<!DOCTYPE html><html lang="es-AR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Café del Bosque | Demo Web Profesional</title><style>${estiloDemo}
+.pro-hero{min-height:480px}
+.pro-hero h1{max-width:720px}
+.pro-intro{text-align:center;max-width:800px;margin:auto}
+.pro-special{background:#f3f0e8}
+.pro-special .demo-item{background:#fff}
+.pro-banner{background:#1b2d21;color:#fff}
+.pro-banner p{color:#d5ddd5}
+</style></head><body>
+<header class="demo-nav"><div class="demo-brand">CAFÉ DEL BOSQUE</div><nav class="demo-navlinks"><a href="#inicio">Inicio</a><a href="#historia">Nuestra historia</a><a href="#carta">La carta</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a></nav></header>
+<section class="demo-hero pro-hero" id="inicio" style="background-image:linear-gradient(90deg,rgba(13,25,17,.86),rgba(13,25,17,.25)),url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1800&q=85')"><div><div class="demo-kicker">Cafetería · Pastelería artesanal</div><h1>El placer de bajar un cambio.</h1><p>Un espacio para encontrarte con los sabores, las charlas y esos pequeños momentos que hacen bien.</p><a class="demo-button" href="#carta">Descubrí nuestras especialidades</a></div></section>
+<section class="demo-section" id="historia"><div class="pro-intro"><div class="demo-kicker">Bienvenidos a nuestra casa</div><h2>Más que café, momentos para recordar.</h2><p>En Café del Bosque creemos que las mejores historias empiezan alrededor de una mesa. Por eso cuidamos cada detalle: desde la selección de nuestros ingredientes hasta la forma en que te recibimos.</p></div><div class="demo-columns" style="margin-top:35px"><img class="demo-photo" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=85" alt="Interior cálido de una cafetería"><div><div class="demo-kicker">Nuestra esencia</div><h2>Calidad, calidez y sabor.</h2><p>Preparamos cada café en el momento, acompañamos las tardes con pastelería artesanal y creamos un lugar donde siempre hay tiempo para disfrutar.</p><p>Un concepto pensado para quienes valoran los buenos productos y los espacios acogedores.</p></div></div></section>
+<section class="demo-section pro-special" id="carta"><div class="demo-kicker">Una pausa deliciosa</div><h2>Descubrí nuestra carta</h2><p>Opciones preparadas para acompañar cada momento del día.</p><div class="demo-list"><article class="demo-item"><h3>Cafés especiales</h3><p>Espresso, capuchino, café con leche y otras preparaciones para los amantes del buen café.</p></article><article class="demo-item"><h3>Pastelería artesanal</h3><p>Tortas, budines, medialunas y delicias elaboradas para acompañar tu bebida favorita.</p></article><article class="demo-item"><h3>Opciones saladas</h3><p>Tostados, sándwiches y propuestas ricas para compartir un almuerzo liviano.</p></article></div></section>
+<section class="demo-section" id="galeria"><div class="demo-kicker">Un vistazo a nuestro mundo</div><h2>Momentos de Café del Bosque</h2><p>Un ambiente cálido, sabores para disfrutar y rincones que invitan a quedarse un rato más.</p><div class="demo-gallery"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80" alt="Café recién preparado"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80" alt="Taza de café"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" alt="Interior de cafetería"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=700&q=80" alt="Mesas de cafetería"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" alt="Pastelería artesanal"><img src="https://images.unsplash.com/photo-1445116572660-acca5b5b5c?auto=format&fit=crop&w=700&q=80" alt="Barra de cafetería"></div></section>
+<section class="demo-quote">“Los mejores momentos suelen venir acompañados de algo rico.”</section>
+<section class="demo-contact" id="contacto"><div class="demo-kicker">Nos encantaría recibirte</div><h2>Hagamos un lugar para vos.</h2><p>Acercate a conocernos o escribinos para consultar horarios y ubicación.</p><a class="demo-button" href="https://wa.me/5492945541024?text=Hola%2C%20quiero%20consultar%20por%20una%20p%C3%A1gina%20web%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer">Consultar por una web similar</a></section>
+<footer class="demo-footer"><div><strong>CAFÉ DEL BOSQUE</strong><p>Una pausa para disfrutar.</p></div><div><strong>Encontranos</strong><p>Ejemplo ficticio · Datos ilustrativos</p><p>Dirección y horarios a definir</p></div><div><strong>Seguinos</strong><p>Redes sociales a definir</p></div></footer>
+</body></html>`;
+
+function abrirDemo(tipo){
+cerrarMenu();
+previousDemoFocus=document.activeElement;
+const titulo=tipo==="simple"?"Vista previa · Web Simple":"Vista previa · Web Profesional";
+document.getElementById("demoTitle").textContent=titulo;
+demoFrame.srcdoc=tipo==="simple"?demoSimple:demoProfesional;
+demoModal.classList.add("active");
+demoModal.setAttribute("aria-hidden","false");
+document.body.style.overflow="hidden";
+demoModal.querySelector(".demo-close").focus();
+}
+
+function cerrarDemo(){
+if(!demoModal.classList.contains("active"))return;
+demoModal.classList.remove("active");
+demoModal.setAttribute("aria-hidden","true");
+demoFrame.srcdoc="";
+document.body.style.overflow=contactModal.classList.contains("active")?"hidden":"";
+if(previousDemoFocus&&typeof previousDemoFocus.focus==="function")previousDemoFocus.focus();
+}
+
+demoModal.addEventListener("click",function(event){
+if(event.target===demoModal)cerrarDemo();
+});
+
+function cerrarTodasLasVentanas(){
+cerrarDemo();
 cerrarContacto();
 cerrarMenu();
+}
+
+document.addEventListener("keydown",function(event){
+if(event.key==="Escape"){
+cerrarTodasLasVentanas();
 }
 });
 
