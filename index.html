@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,6 +6,7 @@
 <meta name="theme-color" content="#101814">
 <title>KEOPS WEBS | Diseño y desarrollo web</title>
 <meta name="description" content="Diseño y desarrollo de sitios web profesionales para negocios, alojamientos, restaurantes y emprendimientos de Patagonia.">
+<link rel="icon" type="image/svg+xml" href="keops.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -21,7 +21,8 @@ button{font:inherit}
 .container{width:min(1180px,92%);margin:auto}
 header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(16,24,20,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
 .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.logo{color:#fff;font-size:19px;font-weight:700;letter-spacing:2px;white-space:nowrap}
+.logo{color:#fff;font-size:19px;font-weight:700;letter-spacing:2px;white-space:nowrap;display:flex;align-items:center;gap:12px}
+.logo img{width:46px;height:46px;object-fit:contain;display:block}
 .logo span{color:#b9cdbd}
 nav{display:flex;gap:28px;align-items:center}
 nav a{color:#fff;font-size:14px;opacity:.88;transition:.3s}
@@ -99,7 +100,9 @@ h2{font-family:"Playfair Display",serif;font-size:clamp(38px,5vw,58px);line-heig
 .cta p{color:#d0d7d2;font-size:18px;margin-bottom:30px}
 footer{background:#0b110e;color:#fff;padding:45px 0}
 .footer-grid{display:flex;justify-content:space-between;gap:30px;align-items:center}
-.footer-logo{font-weight:700;letter-spacing:2px;margin-bottom:5px}
+.footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:5px}
+.footer-logo-img{width:40px;height:40px;object-fit:contain;display:block}
+.footer-logo{font-weight:700;letter-spacing:2px}
 footer p{color:#89938c;font-size:13px}
 .footer-links{display:flex;gap:20px;flex-wrap:wrap}
 .footer-links a{color:#b8c1ba;font-size:13px}
@@ -127,6 +130,8 @@ nav .nav-button{text-align:center;margin-top:8px}
 .plan-grid{grid-template-columns:1fr;max-width:560px}
 }
 @media(max-width:600px){
+.logo{font-size:16px;gap:8px;letter-spacing:1.5px}
+.logo img{width:38px;height:38px}
 .hero{min-height:90vh}
 .hero h1{font-size:clamp(43px,12vw,52px)}
 .hero p{font-size:17px}
@@ -146,7 +151,10 @@ nav .nav-button{text-align:center;margin-top:8px}
 <body>
 <header>
 <div class="container nav">
-<a href="#inicio" class="logo" aria-label="KEOPS WEBS, inicio">KEOPS <span>WEBS</span></a>
+<a href="#inicio" class="logo" aria-label="KEOPS WEBS, inicio">
+<img src="keops.svg" alt="Logo de KEOPS WEBS">
+<span>KEOPS <span>WEBS</span></span>
+</a>
 <nav id="mainNav" aria-label="Navegación principal">
 <a href="#servicios">Servicios</a>
 <a href="#portfolio">Portfolio</a>
@@ -318,7 +326,10 @@ nav .nav-button{text-align:center;margin-top:8px}
 <footer>
 <div class="container footer-grid">
 <div>
+<div class="footer-brand">
+<img src="keops.svg" alt="" class="footer-logo-img">
 <div class="footer-logo">KEOPS WEBS</div>
+</div>
 <p>Diseño y desarrollo web desde Patagonia.</p>
 <p style="margin-top:8px">Contacto: <a href="mailto:presufacil1@gmail.com">presufacil1@gmail.com</a></p>
 <div class="social-icons" aria-label="Redes sociales">
