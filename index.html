@@ -220,6 +220,10 @@ footer p{color:#89938c;font-size:13px}
 .social-icon svg{width:21px;height:21px}
 .social-note{margin-top:8px;font-size:11px}
 
+.footer-contact{margin-top:8px}
+.whatsapp-link{color:#b9cdbd;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.whatsapp-link:hover{color:#fff}
+
 .contact-modal{
   position:fixed;
   inset:0;
@@ -236,9 +240,9 @@ footer p{color:#89938c;font-size:13px}
 .contact-box{background:var(--cream);color:var(--dark);width:min(430px,100%);padding:40px;border-radius:25px;text-align:center;position:relative;box-shadow:0 20px 70px rgba(0,0,0,.35)}
 .contact-box h3{font-family:"Playfair Display",serif;font-size:32px;margin-bottom:12px}
 .contact-box p{color:var(--gray);margin-bottom:20px}
-.contact-email{display:inline-block;font-weight:700;font-size:17px;color:var(--green);word-break:break-word}
+.contact-email{display:block;font-weight:700;font-size:16px;color:var(--dark);overflow-wrap:anywhere}
+.contact-phone{display:inline-block;margin-top:6px;font-weight:700;font-size:20px;color:var(--green);text-decoration:underline;text-underline-offset:4px}
 .close-contact{position:absolute;top:12px;right:18px;border:none;background:transparent;font-size:28px;cursor:pointer;color:var(--gray)}
-.contact-mail-btn{display:inline-block;margin-top:22px;padding:12px 20px;background:var(--green);color:#fff;border-radius:30px;font-weight:600}
 
 @media(max-width:900px){
   .menu{display:flex}
@@ -446,7 +450,7 @@ footer p{color:#89938c;font-size:13px}
             <li>✓ Botones de contacto</li>
             <li>✓ Publicación online</li>
           </ul>
-          <a href="mailto:presufacil1@gmail.com?subject=Consulta%20por%20Web%20Simple%20-%20KEOPS%20WEBS" class="btn btn-outline">Solicitar presupuesto</a>
+          <a href="https://wa.me/5492945541024?text=Hola%2C%20quiero%20consultar%20por%20una%20Web%20Simple%20de%20KEOPS%20WEBS." target="_blank" rel="noopener noreferrer" class="btn btn-outline">Solicitar presupuesto</a>
         </div>
 
         <div class="plan-card featured">
@@ -461,7 +465,7 @@ footer p{color:#89938c;font-size:13px}
             <li>✓ Optimización para celulares</li>
             <li>✓ Publicación online</li>
           </ul>
-          <a href="mailto:presufacil1@gmail.com?subject=Consulta%20por%20Web%20Profesional%20-%20KEOPS%20WEBS" class="btn btn-primary">Solicitar presupuesto</a>
+          <a href="https://wa.me/5492945541024?text=Hola%2C%20quiero%20consultar%20por%20una%20Web%20Profesional%20de%20KEOPS%20WEBS." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Solicitar presupuesto</a>
         </div>
       </div>
 
@@ -476,7 +480,7 @@ footer p{color:#89938c;font-size:13px}
         <h2>Hagamos que se vea profesional.</h2>
         <p>Contanos qué hacés y qué necesitás. Te respondemos con una propuesta para tu proyecto.</p>
         <div class="buttons" style="justify-content:center">
-          <a href="mailto:presufacil1@gmail.com?subject=Consulta%20por%20una%20p%C3%A1gina%20web%20-%20KEOPS%20WEBS" class="btn btn-primary">Solicitar presupuesto</a>
+          <a href="https://wa.me/5492945541024?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20una%20p%C3%A1gina%20web%20con%20KEOPS%20WEBS." target="_blank" rel="noopener noreferrer" class="btn btn-primary">Solicitar presupuesto</a>
           <button type="button" onclick="abrirContacto()" class="btn btn-outline">Ver contacto</button>
         </div>
       </div>
@@ -492,7 +496,10 @@ footer p{color:#89938c;font-size:13px}
         <div class="footer-logo">KEOPS WEBS</div>
       </div>
       <p>Diseño y desarrollo web desde Patagonia.</p>
-      <p style="margin-top:8px">Contacto: <a href="mailto:presufacil1@gmail.com">presufacil1@gmail.com</a></p>
+      <p class="footer-contact">Correo: <span>presufacil1@gmail.com</span></p>
+      <p class="footer-contact">WhatsApp:
+        <a class="whatsapp-link" href="https://wa.me/5492945541024" target="_blank" rel="noopener noreferrer">2945 541024</a>
+      </p>
 
       <div class="social-icons" aria-label="Redes sociales">
         <div class="social-icon" title="Instagram próximamente" aria-label="Instagram próximamente">
@@ -523,9 +530,12 @@ footer p{color:#89938c;font-size:13px}
     <button class="close-contact" type="button" onclick="cerrarContacto()" aria-label="Cerrar ventana de contacto">×</button>
     <h3 id="contactTitle">Hablemos de tu proyecto</h3>
     <p>Contanos qué tipo de web necesitás. Te responderemos para conversar sobre tu idea y preparar un presupuesto personalizado.</p>
-    <a class="contact-email" href="mailto:presufacil1@gmail.com?subject=Consulta%20por%20una%20p%C3%A1gina%20web%20-%20KEOPS%20WEBS">presufacil1@gmail.com</a>
-    <br>
-    <a class="contact-mail-btn" href="mailto:presufacil1@gmail.com?subject=Consulta%20por%20una%20p%C3%A1gina%20web%20-%20KEOPS%20WEBS">Enviar email</a>
+
+    <p style="margin-bottom:5px">Correo electrónico</p>
+    <span class="contact-email">presufacil1@gmail.com</span>
+
+    <p style="margin-top:20px;margin-bottom:5px">WhatsApp</p>
+    <a class="contact-phone" href="https://wa.me/5492945541024" target="_blank" rel="noopener noreferrer">2945 541024</a>
   </div>
 </div>
 
