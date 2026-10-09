@@ -1,1623 +1,781 @@
 <!DOCTYPE html>
-
 <html lang="es-AR">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
 <meta name="theme-color" content="#000000">
-
 <title>Diseño de Páginas Web en Argentina | KEOPS</title>
-
 <meta name="description" content="Diseño de páginas web para comercios, profesionales, alojamientos, restaurantes y emprendimientos en Argentina. Consultá por tu proyecto con KEOPS.">
-
 <meta name="robots" content="index, follow">
-
 <meta name="author" content="KEOPS">
-
 <link rel="canonical" href="https://1keops1.github.io/webs-patagonia/">
-
 <meta property="og:type" content="website">
-
 <meta property="og:locale" content="es_AR">
-
 <meta property="og:site_name" content="KEOPS">
-
 <meta property="og:title" content="Diseño de Páginas Web en Argentina | KEOPS">
-
 <meta property="og:description" content="Creamos páginas web para negocios y emprendimientos. Contanos tu idea y solicitá un presupuesto personalizado.">
-
 <meta property="og:url" content="https://1keops1.github.io/webs-patagonia/">
-
 <meta property="og:image" content="https://1keops1.github.io/webs-patagonia/keops.png">
-
 <meta name="twitter:card" content="summary">
-
 <meta name="twitter:title" content="Diseño de Páginas Web en Argentina | KEOPS">
-
 <meta name="twitter:description" content="Páginas web para negocios y emprendimientos. Consultá por tu proyecto.">
-
 <meta name="twitter:image" content="https://1keops1.github.io/webs-patagonia/keops.png">
 
-
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-VEGZKJMEXG"></script>
-
 <script>
-
 window.dataLayer=window.dataLayer||[];
-
 function gtag(){dataLayer.push(arguments)}
-
 gtag('js',new Date());
-
 gtag('config','G-VEGZKJMEXG');
-
 </script>
-
-
 
 <script type="application/ld+json">
-
 {"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://1keops1.github.io/webs-patagonia/#negocio","name":"KEOPS","url":"https://1keops1.github.io/webs-patagonia/","logo":"https://1keops1.github.io/webs-patagonia/keops.png","image":"https://1keops1.github.io/webs-patagonia/keops.png","description":"Diseño de páginas web para negocios, comercios, alojamientos y emprendimientos de Argentina.","email":"presufacil1@gmail.com","telephone":"+5492945541024","areaServed":[{"@type":"Country","name":"Argentina"},{"@type":"City","name":"Esquel"},{"@type":"City","name":"Trevelin"},{"@type":"City","name":"Cholila"},{"@type":"AdministrativeArea","name":"Patagonia, Argentina"}],"knowsAbout":["Diseño web","Desarrollo web","Sitios web para alojamientos","Sitios web para restaurantes","Sitios web para turismo","Sitios web para pesca con mosca"],"availableLanguage":"Spanish"}
-
 </script>
 
-
-
 <link rel="icon" href="./keops.png?v=4" type="image/png">
-
 <link rel="apple-touch-icon" href="./keops.png?v=4">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
-
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
-
-
 <style>
-
 :root{
-
-\--black:#000;
-
-\--white:#fff;
-
-\--muted:#b7b7b7;
-
-\--line:rgba(255,255,255,.17);
-
-\--panel:rgba(9,9,9,.82);
-
-\--silver:#d9d9d9;
-
-\--ease:cubic-bezier(.2,.75,.25,1)
-
+--black:#000;
+--white:#fff;
+--muted:#b7b7b7;
+--line:rgba(255,255,255,.17);
+--panel:rgba(9,9,9,.82);
+--silver:#d9d9d9;
+--ease:cubic-bezier(.2,.75,.25,1)
 }
-
 *{margin:0;padding:0;box-sizing:border-box}
-
 html{scroll-behavior:smooth;scroll-padding-top:90px;background:#000}
-
 body{font-family:"DM Sans",sans-serif;background:#000;color:#fff;line-height:1.65;min-height:100vh;overflow-x:hidden}
-
 body.menu-open{overflow:hidden}
-
 a{text-decoration:none;color:inherit}
-
 button{font:inherit}
-
 button,a{-webkit-tap-highlight-color:transparent}
-
 .container{width:min(1180px,92%);margin:auto}
-
 ::selection{background:#fff;color:#000}
 
-
-
 /* FONDO TOPOGRÁFICO: RELIEVES ORGÁNICOS EN TODA LA PÁGINA */
-
-\#topo-background{
-
+#topo-background{
 position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;
-
-background:#fff;isolation:isolate
-
+background:#000;isolation:isolate
 }
-
-\#topo-background:after{
-
+#topo-background:after{
 content:"";position:absolute;inset:0;
-
-background:radial-gradient(ellipse at center,transparent 35%,rgba(255,255,255,.10) 100%)
-
+background:radial-gradient(ellipse at center,transparent 15%,rgba(0,0,0,.18) 65%,rgba(0,0,0,.55) 100%)
 }
-
-\#topo-background svg{position:absolute;width:120%;height:120%;left:-10%;top:-10%;display:block}
-
-.topo-lines{fill:none;stroke:#111;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;opacity:.22;animation:lineFlow 75s linear infinite}
-
-.topo-lines.secondary{stroke-width:.8;opacity:.12;animation-duration:105s;animation-direction:reverse}
-
-.topo-lines.bright{stroke-width:1.15;opacity:.28;animation-duration:60s}
-
+#topo-background svg{position:absolute;width:120%;height:120%;left:-10%;top:-10%;display:block}
+.topo-lines{fill:none;stroke:#fff;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round;opacity:.24;stroke-dasharray:5 9;animation:lineFlow 75s linear infinite}
+.topo-lines.secondary{stroke-width:.8;opacity:.14;stroke-dasharray:2 10;animation-duration:105s;animation-direction:reverse}
+.topo-lines.bright{stroke-width:1.15;opacity:.36;stroke-dasharray:45 15;animation-duration:60s}
 .topo-drift{transform-box:fill-box;transform-origin:center;animation:topoDrift 42s ease-in-out infinite alternate}
-
 .topo-drift.reverse{animation-duration:58s;animation-direction:alternate-reverse}
-
 .topo-drift.slow{animation-duration:72s}
-
 @keyframes lineFlow{to{stroke-dashoffset:-700}}
-
 @keyframes topoDrift{
-
 0%{transform:translate(-16px,-12px) scale(1) rotate(-.4deg)}
-
 50%{transform:translate(14px,12px) scale(1.025) rotate(.5deg)}
-
 100%{transform:translate(-9px,18px) scale(1.01) rotate(-.2deg)}
-
 }
-
 header,main,footer{position:relative;z-index:1}
-
 .container{position:relative}
 
-
-
 /* NAVEGACIÓN */
-
 header{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(0,0,0,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-
 .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-
 .logo{color:#fff;font-size:25px;font-weight:800;letter-spacing:4px;white-space:nowrap;display:flex;align-items:center;gap:12px}
-
 .logo img{width:46px;height:46px;object-fit:contain;border-radius:50%;display:block;flex-shrink:0;background:#fff}
-
 nav{display:flex;gap:28px;align-items:center}
-
 nav a{color:#fff;font-size:13px;letter-spacing:.3px;opacity:.82;transition:opacity .25s,border-color .25s,background .25s}
-
 nav a:hover{opacity:1}
-
 nav .nav-button{padding:10px 19px;border:1px solid rgba(255,255,255,.55);border-radius:30px;opacity:1}
-
 nav .nav-button:hover{background:#fff;color:#000}
-
 .menu{display:none;border:1px solid rgba(255,255,255,.3);background:#080808;color:#fff;font-size:25px;width:44px;height:44px;border-radius:10px;cursor:pointer;align-items:center;justify-content:center}
 
-
-
 /* BOTONES */
-
 .btn{padding:14px 24px;border-radius:5px;font-weight:700;font-size:13px;letter-spacing:.3px;transition:transform .25s,background .25s,color .25s,border-color .25s;display:inline-flex;align-items:center;justify-content:center;gap:10px;cursor:pointer;text-align:center;min-height:49px}
-
 .btn-primary{background:#fff;color:#000;border:1px solid #fff}
-
 .btn-primary:hover{transform:translateY(-3px);background:#dcdcdc;border-color:#dcdcdc}
-
 .btn-outline{border:1px solid rgba(255,255,255,.65);color:#fff;background:rgba(0,0,0,.58)}
-
 .btn-outline:hover{background:#fff;color:#000;border-color:#fff;transform:translateY(-2px)}
-
 .buttons{display:flex;gap:14px;flex-wrap:wrap}
 
-
-
 /* PORTADA */
-
 .hero{min-height:100vh;display:flex;align-items:center;position:relative;background:transparent;color:#fff;isolation:isolate}
-
 .hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,0,0,.58),rgba(0,0,0,.08) 80%),radial-gradient(ellipse at 20% 45%,transparent,rgba(0,0,0,.28) 78%);pointer-events:none}
-
 .hero-content{max-width:900px;padding-top:125px;padding-bottom:65px}
-
 .badge{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border:1px solid rgba(255,255,255,.36);font-size:10px;letter-spacing:2.5px;margin-bottom:29px;background:rgba(0,0,0,.55);backdrop-filter:blur(8px)}
-
 .badge:before{content:"";width:6px;height:6px;background:#fff;border-radius:50%;box-shadow:0 0 12px #fff}
-
 .hero h1{font-family:"Playfair Display",serif;font-size:clamp(46px,7.2vw,88px);line-height:1.02;margin-bottom:28px;letter-spacing:-1.8px;max-width:880px}
-
 .hero h1 span{display:block;color:#bdbdbd}
-
 .hero p{font-size:18px;max-width:660px;color:#d0d0d0;margin-bottom:35px}
-
 .hero-mark{display:flex;align-items:center;gap:13px;margin-top:48px;color:#aaa;font-size:10px;letter-spacing:2.5px;text-transform:uppercase}
-
 .hero-mark:before{content:"";height:1px;width:42px;background:#fff}
 
-
-
 /* SECCIONES */
-
 .intro,.portfolio,.plans{padding:112px 0;background:rgba(0,0,0,.38)}
-
 .intro-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
-
 .kicker{text-transform:uppercase;letter-spacing:3px;font-size:10px;font-weight:800;color:#c5c5c5;margin-bottom:16px}
-
 h2{font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,59px);line-height:1.08;margin-bottom:22px;letter-spacing:-.5px}
-
 .intro p{color:var(--muted);font-size:16px}
-
 .intro-card{position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(255,255,255,.075),rgba(255,255,255,.018));border:1px solid rgba(255,255,255,.22);color:#fff;padding:42px;border-radius:3px;backdrop-filter:blur(12px);box-shadow:0 15px 60px rgba(0,0,0,.3)}
-
 .intro-card:before{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:#fff}
-
 .intro-card h3{font-family:"Playfair Display",serif;font-size:30px;margin-bottom:15px}
-
 .intro-card p{color:#c7c7c7}
-
 .local-seo{padding:35px 0 95px;background:rgba(0,0,0,.35)}
-
 .local-seo-inner{background:rgba(255,255,255,.035);border:1px solid var(--line);border-radius:3px;padding:38px;backdrop-filter:blur(8px)}
-
 .local-seo h2{font-size:clamp(30px,4vw,43px)}
-
 .local-seo p{color:#bdbdbd;font-size:15px;margin-top:12px}
-
 .services{background:rgba(0,0,0,.72);color:#fff;padding:110px 0;border-top:1px solid rgba(255,255,255,.09);border-bottom:1px solid rgba(255,255,255,.09)}
-
 .section-head{max-width:760px;margin-bottom:50px}
-
 .section-head h2{margin-bottom:15px}
-
 .section-head p{color:#b7b7b7;font-size:15px}
-
 .service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-
 .service{position:relative;overflow:hidden;padding:28px 24px;border:1px solid rgba(255,255,255,.17);border-radius:3px;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(0,0,0,.24));backdrop-filter:blur(8px);transition:transform .3s,border-color .3s,background .3s}
-
 .service:after{content:"";position:absolute;left:0;bottom:0;height:2px;width:0;background:#fff;transition:width .35s var(--ease)}
-
 .service:hover{transform:translateY(-5px);background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.48)}
-
 .service:hover:after{width:100%}
-
 .icon{font-size:27px;margin-bottom:18px;filter:grayscale(1)}
-
 .service h3{margin-bottom:10px;font-size:17px}
-
 .service p{color:#b4b4b4;font-size:13px}
 
-
-
 /* PORTFOLIO */
-
 .portfolio{padding:110px 0}
-
 .portfolio-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:25px}
-
 .project{position:relative;min-height:510px;overflow:hidden;border-radius:3px;color:#fff;display:flex;align-items:flex-end;isolation:isolate;border:1px solid rgba(255,255,255,.25);background:#101010}
-
 .project-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform .8s var(--ease);z-index:-2;filter:grayscale(.8) brightness(.72)}
-
 .project:hover .project-bg{transform:scale(1.055);filter:grayscale(.35) brightness(.8)}
-
 .project-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.04) 0%,rgba(0,0,0,.18) 30%,rgba(0,0,0,.96) 100%);z-index:-1}
-
 .project-content{position:relative;padding:34px;width:100%}
-
 .demo-label{display:inline-block;font-size:9px;letter-spacing:1.6px;border:1px solid rgba(255,255,255,.65);padding:7px 11px;margin-bottom:15px;background:rgba(0,0,0,.58)}
-
 .project h3{font-family:"Playfair Display",serif;font-size:39px;margin-bottom:10px}
-
 .project p{color:#e0e0e0;max-width:480px;font-size:14px;margin-bottom:22px}
-
 .project-actions{display:flex;gap:10px;flex-wrap:wrap}
-
 .project-link{display:inline-flex;align-items:center;gap:12px;padding:12px 18px;border:1px solid #fff;font-weight:800;font-size:12px;color:#000;background:#fff;cursor:pointer;transition:.25s}
-
 .project-link:hover{background:#d7d7d7;border-color:#d7d7d7;transform:translateY(-2px)}
-
 .project-link span{font-size:16px}
-
 .plan-note{margin:30px auto 0;max-width:720px;text-align:center;color:#aaa;font-size:12px}
 
-
-
 /* PROCESO */
-
 .process{background:rgba(0,0,0,.72);padding:110px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-
 .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-
 .step{background:rgba(255,255,255,.035);border:1px solid var(--line);padding:27px 23px;border-radius:3px;backdrop-filter:blur(8px);transition:background .25s,border-color .25s}
-
 .step:hover{background:rgba(255,255,255,.075);border-color:rgba(255,255,255,.4)}
-
 .number{font-family:"Playfair Display",serif;font-size:37px;color:#fff;margin-bottom:14px}
-
 .step h3{margin-bottom:10px;font-size:16px}
-
 .step p{color:#b6b6b6;font-size:13px}
 
-
-
 /* PLANES: DOS TARJETAS FÁCILES DE DISTINGUIR */
-
 .plans{padding:115px 0;background:rgba(0,0,0,.4)}
-
 .plans .section-head{text-align:center;margin-left:auto;margin-right:auto}
-
 .plans .section-head p{max-width:600px;margin:auto}
-
 .plan-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;max-width:960px;margin:0 auto}
-
 .plan-card{position:relative;isolation:isolate;overflow:hidden;padding:38px;border-radius:5px;display:flex;flex-direction:column;align-items:flex-start;min-width:0;transition:transform .3s var(--ease),border-color .3s,box-shadow .3s}
-
 .plan-card.simple{
-
 background:linear-gradient(145deg,rgba(27,27,27,.96),rgba(5,5,5,.95));
-
 border:1px solid rgba(255,255,255,.32);
-
 box-shadow:0 18px 55px rgba(0,0,0,.32)
-
 }
-
 .plan-card.featured{
-
 background:linear-gradient(145deg,#f4f4f4 0%,#dcdcdc 100%);
-
 color:#050505;border:1px solid #fff;
-
 box-shadow:0 20px 65px rgba(255,255,255,.08)
-
 }
-
 .plan-card:before{content:"";position:absolute;z-index:-1;right:-80px;top:-110px;width:240px;height:240px;border:1px solid rgba(255,255,255,.12);border-radius:50%;box-shadow:0 0 0 18px rgba(255,255,255,.018),0 0 0 38px rgba(255,255,255,.015),0 0 0 60px rgba(255,255,255,.012)}
-
 .plan-card.featured:before{border-color:rgba(0,0,0,.12);box-shadow:0 0 0 18px rgba(0,0,0,.025),0 0 0 38px rgba(0,0,0,.018),0 0 0 60px rgba(0,0,0,.012)}
-
 .plan-card:hover{transform:translateY(-7px)}
-
 .plan-card.simple:hover{border-color:#fff;box-shadow:0 24px 65px rgba(255,255,255,.07)}
-
 .plan-card.featured:hover{box-shadow:0 24px 70px rgba(255,255,255,.14)}
-
 .plan-topline{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;margin-bottom:24px}
-
 .plan-icon{width:52px;height:52px;display:flex;align-items:center;justify-content:center;font-size:25px;border:1px solid rgba(255,255,255,.3);background:rgba(255,255,255,.05)}
-
 .plan-card.featured .plan-icon{border-color:rgba(0,0,0,.18);background:rgba(0,0,0,.04)}
-
 .plan-tag{font-size:9px;letter-spacing:1.4px;text-transform:uppercase;padding:7px 10px;border:1px solid rgba(255,255,255,.35);font-weight:800}
-
 .plan-card.featured .plan-tag{border-color:rgba(0,0,0,.2)}
-
 .plan-card h3{font-family:"Playfair Display",serif;font-size:33px;margin-bottom:12px}
-
 .plan-card>p{color:#c0c0c0;font-size:14px;margin-bottom:20px;min-height:70px}
-
 .plan-card.featured>p{color:#444}
-
 .plan-card ul{list-style:none;margin:0 0 30px;width:100%}
-
 .plan-card li{display:flex;align-items:flex-start;gap:10px;margin:13px 0;color:#dedede;font-size:13px}
-
 .plan-card li:before{content:"✓";font-weight:800;color:#fff;flex-shrink:0}
-
 .plan-card.featured li{color:#242424}
-
 .plan-card.featured li:before{color:#000}
-
 .plan-divider{width:100%;height:1px;background:rgba(255,255,255,.16);margin:0 0 14px}
-
 .plan-card.featured .plan-divider{background:rgba(0,0,0,.14)}
-
 .plan-card .btn{width:100%;margin-top:auto;min-height:54px}
-
 .plan-card.simple .btn-outline{color:#fff;background:transparent;border:1px solid #fff}
-
 .plan-card.simple .btn-outline:hover{background:#fff;color:#000}
-
 .plan-card.featured .btn-primary{color:#fff;background:#000;border-color:#000}
-
 .plan-card.featured .btn-primary:hover{background:#292929}
-
 .plan-caption{font-size:10px;color:#a7a7a7;letter-spacing:1.4px;text-transform:uppercase;margin-top:20px}
-
 .plan-card.featured .plan-caption{color:#555}
-
 .plans .plan-note{margin-top:28px}
 
-
-
 /* CONTACTO */
-
 .cta{padding:115px 0;background:rgba(0,0,0,.8);color:#fff;text-align:center;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-
 .cta-inner{max-width:760px;margin:auto}
-
 .cta h2{font-size:clamp(42px,6vw,67px)}
-
 .cta p{color:#c5c5c5;font-size:16px;margin-bottom:30px}
-
 .cta .kicker{margin-bottom:18px}
 
-
-
 /* PIE */
-
 footer{background:rgba(0,0,0,.95);color:#fff;padding:45px 0;border-top:1px solid var(--line)}
-
 .footer-grid{display:flex;justify-content:space-between;gap:30px;align-items:center}
-
 .footer-brand{display:flex;align-items:center;gap:12px;margin-bottom:7px}
-
 .footer-logo-img{width:43px;height:43px;object-fit:contain;border-radius:50%;display:block;background:#fff}
-
 .footer-logo{font-weight:800;font-size:18px;letter-spacing:3px}
-
 footer p{color:#999;font-size:12px}
-
 .footer-links{display:flex;gap:20px;flex-wrap:wrap}
-
 .footer-links a{color:#bbb;font-size:12px}
-
 .footer-links a:hover{color:#fff}
-
 .social-icons{display:flex;gap:12px;margin-top:18px}
-
 .social-icon{width:42px;height:42px;border:1px solid rgba(255,255,255,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.035)}
-
 .social-icon svg{width:21px;height:21px}
-
 .social-note{margin-top:8px;font-size:10px}
-
 .footer-contact{margin-top:8px}
-
 .whatsapp-link{color:#fff;font-weight:700;text-decoration:underline;text-underline-offset:4px}
 
-
-
 /* MODALES */
-
 .contact-modal{position:fixed;inset:0;background:rgba(0,0,0,.84);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;z-index:3000;padding:20px}
-
 .contact-modal.active{display:flex}
-
 .contact-box{background:#101010;color:#fff;width:min(430px,100%);padding:40px;border-radius:5px;text-align:center;position:relative;border:1px solid rgba(255,255,255,.25);box-shadow:0 20px 70px #000}
-
 .contact-box h3{font-family:"Playfair Display",serif;font-size:31px;margin-bottom:12px}
-
 .contact-box p{color:#bbb;margin-bottom:20px}
-
 .contact-email{display:block;font-weight:700;font-size:16px;color:#fff;overflow-wrap:anywhere}
-
 .contact-phone{display:inline-block;margin-top:6px;font-weight:700;font-size:20px;color:#fff;text-decoration:underline;text-underline-offset:4px}
-
 .close-contact{position:absolute;top:12px;right:18px;border:none;background:transparent;font-size:28px;cursor:pointer;color:#aaa}
-
 .demo-modal{position:fixed;inset:0;z-index:4000;background:rgba(0,0,0,.92);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:18px}
-
 .demo-modal.active{display:flex}
-
 .demo-window{width:min(1200px,100%);height:min(900px,94vh);background:#fff;border-radius:5px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 25px 90px #000}
-
 .demo-toolbar{min-height:58px;background:#050505;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 18px;border-bottom:1px solid #333}
-
 .demo-toolbar strong{font-size:14px}
-
 .demo-toolbar span{font-size:12px;color:#aaa}
-
 .demo-close{width:38px;height:38px;border:1px solid rgba(255,255,255,.3);border-radius:50%;background:transparent;color:#fff;font-size:25px;cursor:pointer;flex-shrink:0}
-
 .demo-frame{width:100%;height:100%;border:0;background:#fff;flex:1}
 
-
-
 @media(max-width:900px){
-
 .menu{display:flex}
-
 nav{display:none;position:absolute;top:82px;left:0;right:0;padding:22px 4%;background:rgba(0,0,0,.98);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;max-height:calc(100vh - 82px);overflow-y:auto}
-
 nav.open{display:flex}
-
 nav a{padding:14px 10px;font-size:15px}
-
 nav .nav-button{text-align:center;margin-top:8px}
-
 .intro-grid{grid-template-columns:1fr;gap:35px}
-
 .service-grid,.process-grid{grid-template-columns:repeat(2,1fr)}
-
 .portfolio-grid{grid-template-columns:1fr}
-
 .plan-grid{max-width:600px}
-
 }
-
 @media(max-width:600px){
-
-\#topo-background svg{width:155%;height:125%;left:-27%;top:-12%}
-
+#topo-background svg{width:155%;height:125%;left:-27%;top:-12%}
 .topo-lines{opacity:.22}
-
 .topo-lines.secondary{opacity:.13}
-
 .topo-lines.bright{opacity:.28}
-
 .nav{min-height:72px;gap:10px}
-
 .logo{font-size:22px;gap:8px;letter-spacing:3px}
-
 .logo img{width:39px;height:39px}
-
 nav{top:72px;max-height:calc(100vh - 72px)}
-
 .hero{min-height:95vh}
-
 .hero-content{padding-top:110px}
-
 .hero h1{font-size:clamp(40px,10vw,53px);letter-spacing:-1px}
-
 .hero p{font-size:15px}
-
 .hero-mark{font-size:9px;letter-spacing:1.5px}
-
 .service-grid,.process-grid{grid-template-columns:1fr}
-
 .project{min-height:430px}
-
 .project-content{padding:24px}
-
 .project h3{font-size:34px}
-
 .intro,.services,.portfolio,.process,.plans,.cta{padding:78px 0}
-
 .local-seo{padding:25px 0 65px}
-
 .local-seo-inner{padding:24px}
-
 .intro-card,.plan-card{padding:26px}
-
 .plan-card h3{font-size:30px}
-
 .plan-card>p{min-height:0}
-
 .plan-topline{margin-bottom:20px}
-
 .plan-card .btn{font-size:12px;padding:13px 14px}
-
 .footer-grid{flex-direction:column;align-items:flex-start}
-
 .footer-links{gap:16px}
-
 .contact-box{padding:35px 24px}
-
 .demo-modal{padding:6px}
-
 .demo-window{height:96vh;border-radius:5px}
-
 .demo-toolbar{padding:8px 12px}
-
 .demo-toolbar span{display:none}
-
 }
-
 @media(prefers-reduced-motion:reduce){
-
 html{scroll-behavior:auto}
-
 .topo-lines,.topo-drift{animation:none!important}
-
 *,*::before,*::after{transition:none!important}
-
 }
-
-
-
-/* AJUSTE SOLICITADO: FONDO BLANCO Y CURVAS TOPOGRÁFICAS NEGRAS CONTINUAS */
-html,body{background:#fff;color:#111}
-#topo-background{background:#fff}
-#topo-background:after{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.18))}
-.topo-lines{stroke:#111;stroke-dasharray:none!important;opacity:.19}
-.topo-lines.secondary{stroke:#222;stroke-dasharray:none!important;opacity:.12}
-.topo-lines.bright{stroke:#000;stroke-dasharray:none!important;opacity:.24}
-header{background:rgba(255,255,255,.88);border-bottom:1px solid rgba(0,0,0,.12)}
-.logo{color:#111}
-nav a{color:#111}
-nav .nav-button{border-color:rgba(0,0,0,.45)}
-nav .nav-button:hover{background:#111;color:#fff}
-.menu{background:#fff;color:#111;border-color:rgba(0,0,0,.25)}
-.hero{color:#111}
-.hero:after{background:linear-gradient(90deg,rgba(255,255,255,.90),rgba(255,255,255,.58) 80%),radial-gradient(ellipse at 20% 45%,transparent,rgba(255,255,255,.18) 78%)}
-.badge{color:#111;border-color:rgba(0,0,0,.25);background:rgba(255,255,255,.75)}
-.badge:before{background:#111;box-shadow:0 0 8px rgba(0,0,0,.18)}
-.hero h1 span{color:#555}
-.hero p{color:#444}
-.hero-mark{color:#555}
-.hero-mark:before{background:#111}
-.btn-primary{background:#111;color:#fff;border-color:#111}
-.btn-primary:hover{background:#333;border-color:#333}
-.btn-outline{border-color:rgba(0,0,0,.55);color:#111;background:rgba(255,255,255,.78)}
-.btn-outline:hover{background:#111;color:#fff;border-color:#111}
-.intro,.portfolio,.plans{background:rgba(255,255,255,.72)}
-.kicker{color:#555}
-.intro p,.local-seo p{color:#444}
-.intro-card{background:rgba(255,255,255,.88);border-color:rgba(0,0,0,.15);color:#111;box-shadow:0 15px 60px rgba(0,0,0,.06)}
-.intro-card:before{background:#111}
-.intro-card p{color:#444}
-.local-seo{background:rgba(255,255,255,.72)}
-.local-seo-inner{background:rgba(255,255,255,.88);border-color:rgba(0,0,0,.14)}
-.services,.process{background:rgba(255,255,255,.82);color:#111;border-color:rgba(0,0,0,.12)}
-.section-head p{color:#444}
-.service{background:rgba(255,255,255,.88);border-color:rgba(0,0,0,.14);color:#111}
-.service p,.step p{color:#444}
-.service:hover{background:#fff;border-color:rgba(0,0,0,.38)}
-.service:after{background:#111}
-.step{background:rgba(255,255,255,.9);border-color:rgba(0,0,0,.14)}
-.step:hover{background:#fff;border-color:rgba(0,0,0,.35)}
-.number{color:#111}
-.plan-card.simple{background:linear-gradient(145deg,#fff,#f5f5f5);color:#111;border-color:rgba(0,0,0,.2);box-shadow:0 18px 55px rgba(0,0,0,.07)}
-.plan-card.simple>p,.plan-card.simple li{color:#444}
-.plan-card.simple li:before{color:#111}
-.plan-card.simple .btn-outline{color:#111;border-color:#111}
-.plan-card.simple .btn-outline:hover{background:#111;color:#fff}
-.plan-card.featured{background:linear-gradient(145deg,#f4f4f4,#e6e6e6);border-color:#d0d0d0;box-shadow:0 20px 65px rgba(0,0,0,.08)}
-.plan-card.featured .btn-primary{color:#fff;background:#111;border-color:#111}
-.cta{background:rgba(255,255,255,.9);color:#111;border-color:rgba(0,0,0,.12)}
-.cta p{color:#444}
-footer{background:rgba(255,255,255,.96);color:#111;border-color:rgba(0,0,0,.12)}
-footer p,.footer-links a{color:#555}
-.footer-links a:hover{color:#111}
-.whatsapp-link{color:#111}
-.social-icon{border-color:rgba(0,0,0,.2);background:rgba(0,0,0,.025)}
-.social-icon svg rect,.social-icon svg circle{stroke:#333}
-.social-icon svg path,.social-icon svg circle:last-child{fill:#333}
-@media(max-width:900px){nav{background:rgba(255,255,255,.98);border-color:rgba(0,0,0,.12)}}
-
 </style>
-
 </head>
-
-
 
 <body>
 
-
-
 <!-- MAPA TOPOGRÁFICO ANIMADO: CURVAS CERRADAS, RELIEVES Y CONTORNOS -->
-
 <div id="topo-background" aria-hidden="true">
-
 <svg viewBox="0 0 1600 1100" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-
 <g class="topo-drift">
-
 <g class="topo-lines">
-
 <!-- Relieve superior izquierdo -->
-
 <path d="M-140 140 C-90 40 35 20 130 68 C210 20 330 42 365 122 C415 205 342 270 255 260 C180 320 70 280 42 220 C-30 225 -105 195 -140 140Z"/>
-
 <path d="M-110 140 C-65 65 35 52 130 94 C205 50 300 67 334 128 C369 189 318 235 246 235 C177 280 95 251 66 205 C0 211 -80 180 -110 140Z"/>
-
 <path d="M-80 142 C-35 85 42 79 132 119 C195 79 272 91 304 136 C329 178 294 208 235 211 C175 249 118 223 89 190 C30 195 -50 167 -80 142Z"/>
-
 <path d="M-45 144 C-5 105 52 105 134 144 C187 107 248 113 275 143 C295 170 267 184 223 187 C176 218 135 198 111 174 C60 178 -15 155 -45 144Z"/>
-
 <path d="M-5 145 C25 125 69 131 137 164 C177 135 225 135 245 151 C258 165 239 163 212 166 C178 189 151 177 130 159 C85 161 25 150 -5 145Z"/>
-
 <!-- Relieve central superior -->
-
 <path d="M440 -90 C510 -10 615 -28 685 36 C760 96 720 170 654 187 C620 255 506 260 454 203 C385 158 375 77 440 -90Z"/>
-
 <path d="M462 -54 C520 13 606 -3 664 49 C718 98 690 151 635 167 C603 219 524 227 478 184 C424 145 414 78 462 -54Z"/>
-
 <path d="M485 -15 C532 30 600 23 645 64 C682 98 658 134 615 147 C584 187 535 193 500 162 C462 130 453 78 485 -15Z"/>
-
 <path d="M510 22 C545 52 594 47 625 78 C650 102 632 120 598 130 C574 157 545 160 521 139 C497 116 491 76 510 22Z"/>
-
 <path d="M536 53 C559 72 591 69 608 89 C621 104 608 111 588 117 C570 132 553 131 541 117 C527 103 525 79 536 53Z"/>
-
 <!-- Relieve superior derecho -->
-
 <path d="M1040 -100 C1110 -20 1220 -48 1285 10 C1360 60 1342 137 1273 165 C1235 224 1125 224 1072 176 C1000 133 985 45 1040 -100Z"/>
-
 <path d="M1067 -55 C1125 7 1215 -15 1266 30 C1322 77 1308 125 1253 145 C1217 193 1143 194 1094 157 C1037 119 1023 50 1067 -55Z"/>
-
 <path d="M1092 -14 C1141 31 1208 18 1245 51 C1284 85 1270 115 1233 128 C1200 162 1157 162 1118 136 C1076 105 1063 51 1092 -14Z"/>
-
 <path d="M1117 26 C1156 57 1200 50 1224 71 C1248 93 1235 105 1211 116 C1187 138 1167 135 1141 115 C1111 92 1100 56 1117 26Z"/>
-
 <path d="M1140 58 C1170 79 1196 77 1207 91 C1217 101 1207 106 1190 111 C1174 123 1164 114 1151 101 C1138 89 1132 73 1140 58Z"/>
-
 <!-- Relieve central -->
-
 <path d="M650 320 C700 245 815 240 890 294 C976 280 1050 340 1040 420 C1075 488 1000 548 920 531 C852 585 755 558 730 500 C650 475 600 397 650 320Z"/>
-
 <path d="M678 337 C720 278 815 274 881 318 C950 306 1018 351 1010 415 C1036 468 980 514 918 502 C856 548 782 527 756 479 C691 458 641 398 678 337Z"/>
-
 <path d="M706 355 C742 309 818 307 874 341 C930 330 986 366 980 414 C999 453 959 484 914 474 C863 510 807 492 782 457 C730 441 679 398 706 355Z"/>
-
 <path d="M735 374 C763 341 820 339 867 363 C910 354 954 381 950 415 C961 440 936 457 908 447 C869 474 828 460 807 435 C766 423 712 400 735 374Z"/>
-
 <path d="M763 390 C786 368 821 368 860 385 C892 376 922 396 920 416 C924 429 910 436 898 423 C875 445 846 429 830 414 C797 406 747 399 763 390Z"/>
-
 <!-- Relieve lateral izquierdo medio -->
-
 <path d="M-120 475 C-55 398 57 408 108 461 C184 455 238 512 213 576 C228 641 157 687 91 658 C18 699 -66 652 -68 590 C-129 566 -161 520 -120 475Z"/>
-
 <path d="M-89 485 C-33 428 52 435 105 486 C164 479 208 523 188 574 C202 625 148 655 95 632 C34 661 -36 626 -39 579 C-86 560 -123 520 -89 485Z"/>
-
 <path d="M-56 495 C-11 455 51 462 102 510 C145 503 177 535 162 572 C174 610 137 627 98 607 C52 626 0 601 -10 567 C-48 553 -83 523 -56 495Z"/>
-
 <path d="M-23 507 C10 480 55 486 99 531 C127 526 149 547 137 573 C146 594 126 604 99 585 C68 598 30 582 18 558 C-10 547 -45 527 -23 507Z"/>
-
 <!-- Relieve lateral derecho medio -->
-
 <path d="M1300 290 C1370 225 1470 255 1508 314 C1588 329 1640 405 1605 466 C1594 539 1505 562 1446 519 C1368 539 1290 488 1304 419 C1253 381 1254 330 1300 290Z"/>
-
 <path d="M1324 310 C1380 263 1458 284 1492 332 C1556 346 1600 404 1573 455 C1559 511 1494 528 1445 490 C1380 508 1322 468 1336 415 C1299 383 1290 344 1324 310Z"/>
-
 <path d="M1348 329 C1390 296 1450 310 1477 349 C1527 361 1565 405 1542 445 C1526 485 1483 495 1445 461 C1395 477 1355 449 1368 411 C1340 384 1329 353 1348 329Z"/>
-
 <path d="M1373 348 C1405 328 1440 336 1462 366 C1501 375 1528 407 1510 435 C1497 461 1471 463 1444 439 C1410 451 1385 429 1397 406 C1378 386 1367 367 1373 348Z"/>
-
 <!-- Relieve inferior izquierdo -->
-
 <path d="M-140 820 C-60 735 62 748 130 805 C215 792 278 855 250 925 C244 1000 152 1037 87 991 C7 1032 -75 986 -72 919 C-145 890 -183 853 -140 820Z"/>
-
 <path d="M-103 832 C-36 768 60 774 128 828 C195 818 246 865 221 923 C215 978 151 1005 93 966 C30 995 -42 958 -40 911 C-97 888 -137 857 -103 832Z"/>
-
 <path d="M-67 843 C-14 801 59 801 126 852 C176 843 214 875 192 921 C187 957 147 974 98 942 C53 961 -10 931 -8 903 C-48 886 -96 862 -67 843Z"/>
-
 <path d="M-31 855 C12 826 61 829 124 875 C158 867 184 886 164 918 C160 937 140 945 103 919 C72 930 26 912 24 894 C-2 881 -53 870 -31 855Z"/>
-
 <!-- Relieve inferior central -->
-
 <path d="M490 680 C550 590 666 590 727 652 C805 637 886 693 869 770 C886 839 814 888 742 858 C670 907 570 874 559 808 C482 779 451 730 490 680Z"/>
-
 <path d="M520 695 C570 625 660 622 721 674 C784 660 855 704 841 766 C854 820 799 854 740 830 C683 866 601 841 588 791 C530 767 491 727 520 695Z"/>
-
 <path d="M550 710 C590 659 658 655 714 696 C764 684 823 715 811 763 C822 801 784 824 737 801 C693 829 630 808 616 776 C576 756 531 731 550 710Z"/>
-
 <path d="M580 726 C610 691 657 687 708 717 C747 707 791 730 781 762 C788 783 768 796 735 778 C704 798 660 783 645 758 C618 746 567 739 580 726Z"/>
-
 <!-- Relieve inferior derecho -->
-
 <path d="M1100 740 C1160 652 1275 650 1340 712 C1420 694 1495 751 1478 828 C1496 900 1419 947 1348 916 C1278 961 1176 925 1167 860 C1092 833 1061 786 1100 740Z"/>
-
 <path d="M1128 755 C1180 687 1270 685 1332 734 C1396 719 1466 762 1450 825 C1462 880 1406 915 1348 887 C1284 924 1205 896 1194 846 C1137 823 1098 784 1128 755Z"/>
-
 <path d="M1156 770 C1199 719 1268 716 1325 757 C1375 744 1435 776 1422 822 C1431 860 1392 885 1347 858 C1291 887 1232 865 1220 833 C1180 812 1135 792 1156 770Z"/>
-
 <path d="M1184 785 C1218 750 1268 747 1318 778 C1355 769 1404 791 1393 821 C1400 842 1378 856 1345 835 C1310 854 1259 836 1246 818 C1217 802 1168 799 1184 785Z"/>
-
 </g>
-
 </g>
-
-
 
 <g class="topo-drift reverse">
-
 <g class="topo-lines secondary">
-
 <!-- Ondas de elevación verticales -->
-
 <path d="M300 -150 C420 -30 315 85 420 180 S530 360 425 470 340 650 450 770 510 960 390 1200"/>
-
 <path d="M322 -150 C442 -30 337 85 442 180 S552 360 447 470 362 650 472 770 532 960 412 1200"/>
-
 <path d="M344 -150 C464 -30 359 85 464 180 S574 360 469 470 384 650 494 770 554 960 434 1200"/>
-
 <path d="M366 -150 C486 -30 381 85 486 180 S596 360 491 470 406 650 516 770 576 960 456 1200"/>
-
 <path d="M388 -150 C508 -30 403 85 508 180 S618 360 513 470 428 650 538 770 598 960 478 1200"/>
-
 <path d="M930 -150 C1050 -30 945 85 1050 180 S1160 360 1055 470 970 650 1080 770 1140 960 1020 1200"/>
-
 <path d="M952 -150 C1072 -30 967 85 1072 180 S1182 360 1077 470 992 650 1102 770 1162 960 1042 1200"/>
-
 <path d="M974 -150 C1094 -30 989 85 1094 180 S1204 360 1099 470 1014 650 1124 770 1184 960 1064 1200"/>
-
 <path d="M996 -150 C1116 -30 1011 85 1116 180 S1226 360 1121 470 1036 650 1146 770 1206 960 1086 1200"/>
-
 <path d="M1018 -150 C1138 -30 1033 85 1138 180 S1248 360 1143 470 1058 650 1168 770 1228 960 1108 1200"/>
-
 </g>
-
 </g>
-
-
 
 <g class="topo-drift slow">
-
 <g class="topo-lines bright">
-
 <path d="M650 930 C730 870 805 885 855 932 C920 900 1000 925 1007 980 C1020 1030 955 1065 900 1038 C830 1085 745 1052 742 1004 C680 991 622 966 650 930Z"/>
-
 <path d="M674 939 C740 894 804 904 855 947 C911 919 980 938 984 980 C995 1017 948 1043 901 1021 C843 1059 768 1034 766 998 C714 987 652 963 674 939Z"/>
-
 <path d="M699 948 C750 918 805 922 855 961 C900 938 958 951 961 980 C970 1004 939 1023 901 1005 C854 1034 790 1015 789 991 C748 981 680 960 699 948Z"/>
-
 </g>
-
 </g>
-
 </svg>
-
 </div>
-
-
 
 <header>
-
 <div class="container nav">
-
 <a href="#inicio" class="logo" aria-label="KEOPS, inicio">
-
 <img src="./keops.png" alt="Logo de KEOPS">
-
 <span>KEOPS</span>
-
 </a>
-
 <nav id="mainNav" aria-label="Navegación principal">
-
 <a href="#servicios">Servicios</a>
-
 <a href="#portfolio">Portfolio</a>
-
 <a href="#proceso">Cómo trabajamos</a>
-
 <a href="#planes">Planes</a>
-
 <a href="#contacto" class="nav-button" onclick="abrirContacto(event)">Contacto ↗</a>
-
 </nav>
-
 <button class="menu" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="mainNav" aria-expanded="false">☰</button>
-
 </div>
-
 </header>
 
-
-
 <main>
-
 <section class="hero" id="inicio">
-
 <div class="container">
-
 <div class="hero-content">
-
 <div class="badge">DISEÑO · DESARROLLO · ARGENTINA</div>
-
 <h1>Diseño web con identidad. <span>Ideas que toman forma.</span></h1>
-
 <p>Creamos páginas web para comercios, alojamientos, restaurantes y emprendimientos de toda Argentina. Diseños cuidados, información clara y formas sencillas de conectar con tus clientes.</p>
-
 <div class="buttons">
-
 <a href="#portfolio" class="btn btn-primary">Explorar proyectos <span>↗</span></a>
-
 <a href="#contacto" onclick="abrirContacto(event)" class="btn btn-outline">Hablemos de tu idea</a>
-
 </div>
-
 <div class="hero-mark">Diseño web desde la Patagonia para toda Argentina</div>
-
 </div>
-
 </div>
-
 </section>
-
-
 
 <section class="intro">
-
 <div class="container intro-grid">
-
 <div>
-
 <div class="kicker">KEOPS · DISEÑO WEB</div>
-
 <h2>Tu negocio merece una presencia digital a su altura.</h2>
-
 <p>Ayudamos a negocios y emprendimientos a construir una presencia digital clara, moderna y confiable. Organizamos la información de tus servicios, presentamos tu marca y facilitamos el contacto con tus futuros clientes.</p>
-
 </div>
-
 <div class="intro-card">
-
 <div class="kicker">DEL CONCEPTO A LA WEB</div>
-
 <h3>Una idea. Una identidad. Una web hecha para vos.</h3>
-
 <p>Conversamos sobre tu negocio, definimos la estructura y el estilo visual, desarrollamos las funciones acordadas y te acompañamos con la publicación del sitio según las características de tu proyecto.</p>
-
 </div>
-
 </div>
-
 </section>
-
-
 
 <section class="local-seo" aria-labelledby="localSeoTitle">
-
 <div class="container">
-
 <div class="local-seo-inner">
-
 <div class="kicker">TU NEGOCIO EN INTERNET</div>
-
 <h2 id="localSeoTitle">Diseño de páginas web para negocios de toda Argentina</h2>
-
 <p>En KEOPS preparamos propuestas web para comercios, profesionales, alojamientos turísticos, restaurantes y emprendimientos de distintos rubros. Podemos organizar la información de tu negocio, mostrar tus productos o servicios y facilitar que los visitantes se comuniquen con vos.</p>
-
 <p>Trabajamos desde la Patagonia y podemos conversar de forma online con negocios de cualquier provincia. Contanos tu idea y prepararemos una propuesta según las necesidades de tu proyecto.</p>
-
 </div>
-
 </div>
-
 </section>
-
-
 
 <section class="services" id="servicios">
-
 <div class="container">
-
 <div class="section-head">
-
 <div class="kicker">QUÉ HACEMOS</div>
-
 <h2>Diseño que se adapta a tu actividad.</h2>
-
 <p>Propuestas de diseño web para negocios y emprendimientos de toda Argentina, con base en la Patagonia.</p>
-
 </div>
-
 <div class="service-grid">
-
 <div class="service"><div class="icon">◈</div><h3>Web institucional</h3><p>Presentá tu empresa, tus servicios, tu ubicación y las formas de contacto en una página organizada y profesional.</p></div>
-
 <div class="service"><div class="icon">⌂</div><h3>Hoteles y cabañas</h3><p>Mostrá habitaciones, instalaciones, experiencias y datos de contacto para recibir consultas de viajeros.</p></div>
-
 <div class="service"><div class="icon">✳</div><h3>Restaurantes</h3><p>Presentá tu menú, horarios, ubicación y datos de contacto de forma clara y atractiva.</p></div>
-
 <div class="service"><div class="icon">⌁</div><h3>Turismo y pesca</h3><p>Mostrá excursiones, guías, experiencias de pesca con mosca y servicios turísticos de la región.</p></div>
-
 </div>
-
 </div>
-
 </section>
-
-
 
 <section class="portfolio" id="portfolio">
-
 <div class="container">
-
 <div class="section-head">
-
 <div class="kicker">PORTFOLIO · PROYECTOS DEMO</div>
-
 <h2>Dos formas de imaginar tu próxima web.</h2>
-
 <p>Explorá dos ejemplos ficticios del mismo negocio para comparar un diseño simple con una propuesta más completa. Son demostraciones visuales, no sitios de clientes reales.</p>
-
 </div>
-
 <div class="portfolio-grid">
-
 <article class="project">
-
 <div class="project-bg" style="background-image:url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1400&q=85')"></div>
-
 <div class="project-overlay"></div>
-
 <div class="project-content">
-
 <div class="demo-label">DEMO 01 · DISEÑO SIMPLE</div>
-
 <h3>Café del Bosque</h3>
-
 <p>Una página cálida y directa para presentar una cafetería, sus especialidades y las formas de contacto.</p>
-
 <div class="project-actions"><button type="button" class="project-link" onclick="abrirDemo('simple')">Explorar Web Simple <span>↗</span></button></div>
-
 </div>
-
 </article>
-
 <article class="project">
-
 <div class="project-bg" style="background-image:url('https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1400&q=85')"></div>
-
 <div class="project-overlay"></div>
-
 <div class="project-content">
-
 <div class="demo-label">DEMO 02 · DISEÑO PROFESIONAL</div>
-
 <h3>Café del Bosque</h3>
-
 <p>Una propuesta más elaborada, con presentación de marca, especialidades, galería y más secciones para recorrer.</p>
-
 <div class="project-actions"><button type="button" class="project-link" onclick="abrirDemo('profesional')">Explorar Web Profesional <span>↗</span></button></div>
-
 </div>
-
 </article>
-
 </div>
-
 <p class="plan-note">Los nombres, textos y negocios de las demos son ficticios. Las imágenes son ilustrativas. Cada proyecto real se adapta a la identidad y necesidades de su negocio.</p>
-
 </div>
-
 </section>
-
-
 
 <section class="process" id="proceso">
-
 <div class="container">
-
 <div class="section-head"><div class="kicker">EL PROCESO</div><h2>Un camino claro, de principio a fin.</h2></div>
-
 <div class="process-grid">
-
 <div class="step"><div class="number">01</div><h3>Nos contás tu idea</h3><p>Hablamos sobre tu negocio, tus objetivos y qué información necesitás mostrar.</p></div>
-
 <div class="step"><div class="number">02</div><h3>Definimos la propuesta</h3><p>Acordamos la estructura, el estilo visual, el contenido y las funciones del proyecto.</p></div>
-
 <div class="step"><div class="number">03</div><h3>Desarrollamos</h3><p>Construimos la página según lo acordado y revisamos su contenido y funcionamiento.</p></div>
-
 <div class="step"><div class="number">04</div><h3>Publicamos</h3><p>Coordinamos la publicación del sitio y conversamos sobre posibles necesidades de mantenimiento.</p></div>
-
 </div>
-
 </div>
-
 </section>
-
-
 
 <section class="plans" id="planes">
-
 <div class="container">
-
 <div class="section-head">
-
 <div class="kicker">ENCONTRÁ TU OPCIÓN</div>
-
 <h2>Dos caminos. Un proyecto a tu medida.</h2>
-
 <p>Elegí la opción que mejor se adapte a tu negocio. Si tenés dudas, te ayudamos a decidir.</p>
-
 </div>
-
-
 
 <div class="plan-grid">
-
 <article class="plan-card simple">
-
 <div class="plan-topline">
-
 <div class="plan-icon">◈</div>
-
 <span class="plan-tag">Esencial</span>
-
 </div>
-
 <h3>Web Simple</h3>
-
 <p>Todo lo necesario para presentar tu negocio online de manera clara, cuidada y profesional.</p>
-
 <div class="plan-divider"></div>
-
 <ul>
-
 <li>Página con información del negocio</li>
-
 <li>Presentación de servicios o productos</li>
-
 <li>Datos de contacto y botón de WhatsApp</li>
-
 <li>Estructura clara y diseño visual cuidado</li>
-
 <li>Publicación online, según lo acordado</li>
-
 </ul>
-
 <a href="https://wa.me/5492945541024?text=Hola%2C%20quiero%20consultar%20por%20una%20Web%20Simple%20de%20KEOPS." target="_blank" rel="noopener noreferrer" class="btn btn-outline" onclick="registrarEvento('consulta_plan_simple')">CONSULTAR WEB SIMPLE <span>↗</span></a>
-
 <div class="plan-caption">Una presencia online clara y directa</div>
-
 </article>
-
-
 
 <article class="plan-card featured">
-
 <div class="plan-topline">
-
 <div class="plan-icon">✦</div>
-
 <span class="plan-tag">Más completo</span>
-
 </div>
-
 <h3>Web Profesional</h3>
-
 <p>Una experiencia más amplia para negocios que necesitan presentar más contenido y destacar su identidad.</p>
-
 <div class="plan-divider"></div>
-
 <ul>
-
 <li>Estructura y diseño personalizados</li>
-
 <li>Varias secciones informativas</li>
-
 <li>Galería de imágenes</li>
-
 <li>Botones y opciones de contacto acordadas</li>
-
 <li>Funciones adicionales, si se definen en el presupuesto</li>
-
 <li>Publicación online, según lo acordado</li>
-
 </ul>
-
 <a href="https://wa.me/5492945541024?text=Hola%2C%20quiero%20consultar%20por%20una%20Web%20Profesional%20de%20KEOPS." target="_blank" rel="noopener noreferrer" class="btn btn-primary" onclick="registrarEvento('consulta_plan_profesional')">CONSULTAR WEB PROFESIONAL <span>↗</span></a>
-
 <div class="plan-caption">Más espacio para mostrar tu marca</div>
-
 </article>
-
 </div>
-
 <p class="plan-note">No publicamos precios fijos: cada presupuesto se define según el contenido, las funciones y las necesidades de tu proyecto. Consultar no te compromete a contratar.</p>
-
 </div>
-
 </section>
-
-
 
 <section class="cta" id="contacto">
-
 <div class="container">
-
 <div class="cta-inner">
-
 <div class="kicker">¿TENÉS UN NEGOCIO?</div>
-
 <h2>Tu próxima idea puede empezar acá.</h2>
-
 <p>Contanos qué hacés y qué necesitás. Conversaremos sobre tu idea y te prepararemos una propuesta personalizada.</p>
-
 <div class="buttons" style="justify-content:center">
-
 <a href="https://wa.me/5492945541024?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20una%20p%C3%A1gina%20web%20con%20KEOPS." target="_blank" rel="noopener noreferrer" class="btn btn-primary" onclick="registrarEvento('solicitar_presupuesto')">Solicitar presupuesto <span>↗</span></a>
-
 <button type="button" onclick="abrirContacto()" class="btn btn-outline">Ver contacto</button>
-
 </div>
-
 </div>
-
 </div>
-
 </section>
-
 </main>
 
-
-
 <footer>
-
 <div class="container footer-grid">
-
 <div>
-
 <div class="footer-brand"><img src="./keops.png" alt="Logo de KEOPS" class="footer-logo-img"><div class="footer-logo">KEOPS</div></div>
-
 <p>Diseño web para negocios y emprendimientos de Argentina, desde la Patagonia.</p>
-
 <p class="footer-contact">Correo: <span>presufacil1@gmail.com</span></p>
-
 <p class="footer-contact">WhatsApp: <a class="whatsapp-link" href="https://wa.me/5492945541024" target="_blank" rel="noopener noreferrer">2945 541024</a></p>
-
 <div class="social-icons" aria-label="Redes sociales">
-
 <div class="social-icon" title="Instagram próximamente" aria-label="Instagram próximamente"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="#d0d8d2" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="#d0d8d2" stroke-width="2"/><circle cx="17.5" cy="6.7" r="1.2" fill="#d0d8d2"/></svg></div>
-
 <div class="social-icon" title="Facebook próximamente" aria-label="Facebook próximamente"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 8.2h2.3V4.7c-.4-.1-1.7-.2-3.2-.2-3.2 0-5.4 1.9-5.4 5.5v3.1H4.4v3.9h3.5v7h4.3v-7h3.5l.6-3.9h-4.1v-1.6c0-1.1.3-2.2 2-2.2z" fill="#d0d8d2"/></svg></div>
-
 </div>
-
 <p class="social-note">Redes sociales: próximamente.</p>
-
 </div>
-
 <div class="footer-links"><a href="#servicios">Servicios</a><a href="#portfolio">Portfolio</a><a href="#planes">Planes</a><a href="#contacto">Contacto</a></div>
-
 </div>
-
 <div class="container" style="margin-top:35px;border-top:1px solid rgba(255,255,255,.12);padding-top:20px"><p>© <span id="currentYear">2026</span> KEOPS · Portfolio de demostración.</p></div>
-
 </footer>
 
-
-
 <div class="demo-modal" id="demoModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="demoTitle">
-
 <div class="demo-window">
-
 <div class="demo-toolbar"><div><strong id="demoTitle">Demo de KEOPS</strong><br><span>Ejemplo ficticio · Vista previa</span></div><button class="demo-close" type="button" onclick="cerrarDemo()" aria-label="Cerrar demostración">×</button></div>
-
 <iframe class="demo-frame" id="demoFrame" title="Vista previa de la página web de ejemplo" loading="lazy"></iframe>
-
 </div>
-
 </div>
-
-
 
 <div class="contact-modal" id="contactModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="contactTitle" onclick="cerrarContacto(event)">
-
 <div class="contact-box" onclick="event.stopPropagation()">
-
 <button class="close-contact" type="button" onclick="cerrarContacto()" aria-label="Cerrar ventana de contacto">×</button>
-
 <h3 id="contactTitle">Hablemos de tu proyecto</h3>
-
 <p>Contanos qué tipo de web necesitás. Conversaremos sobre tu idea y prepararemos un presupuesto personalizado.</p>
-
 <p style="margin-bottom:5px">Correo electrónico</p>
-
 <a class="contact-email" href="mailto:presufacil1@gmail.com">presufacil1@gmail.com</a>
-
 <p style="margin-top:20px;margin-bottom:5px">WhatsApp</p>
-
 <a class="contact-phone" href="https://wa.me/5492945541024" target="_blank" rel="noopener noreferrer">2945 541024</a>
-
 </div>
-
 </div>
-
-
 
 <script>
-
 const menuToggle=document.getElementById("menuToggle");
-
 const mainNav=document.getElementById("mainNav");
-
 const contactModal=document.getElementById("contactModal");
-
 const demoModal=document.getElementById("demoModal");
-
 const demoFrame=document.getElementById("demoFrame");
-
 let previousFocus=null,previousDemoFocus=null;
 
-
-
 function registrarEvento(nombre){
-
 if(typeof gtag==="function")gtag("event",nombre,{event_category:"interaccion_web",event_label:nombre});
-
 }
-
-
 
 function cerrarMenu(){
-
 mainNav.classList.remove("open");
-
 menuToggle.setAttribute("aria-expanded","false");
-
 menuToggle.setAttribute("aria-label","Abrir menú");
-
 menuToggle.textContent="☰";
-
 document.body.classList.remove("menu-open");
-
 }
 
-
-
 menuToggle.addEventListener("click",function(){
-
 const isOpen=mainNav.classList.toggle("open");
-
 menuToggle.setAttribute("aria-expanded",String(isOpen));
-
 menuToggle.setAttribute("aria-label",isOpen?"Cerrar menú":"Abrir menú");
-
 menuToggle.textContent=isOpen?"×":"☰";
-
 document.body.classList.toggle("menu-open",isOpen);
-
 });
-
-
 
 mainNav.querySelectorAll("a").forEach(link=>link.addEventListener("click",cerrarMenu));
 
-
-
 function abrirContacto(event){
-
 if(event)event.preventDefault();
-
 cerrarMenu();
-
 previousFocus=document.activeElement;
-
 contactModal.classList.add("active");
-
 contactModal.setAttribute("aria-hidden","false");
-
 document.body.style.overflow="hidden";
-
 contactModal.querySelector(".close-contact").focus();
-
 }
-
-
 
 function cerrarContacto(event){
-
 if(event&&event.target!==contactModal)return;
-
 if(!contactModal.classList.contains("active"))return;
-
 contactModal.classList.remove("active");
-
 contactModal.setAttribute("aria-hidden","true");
-
 document.body.style.overflow=demoModal.classList.contains("active")?"hidden":"";
-
 if(previousFocus&&typeof previousFocus.focus==="function")previousFocus.focus();
-
 }
-
-
 
 /* ESTILOS DE LAS DOS DEMOS */
-
-const estiloDemo=\`
-
+const estiloDemo=`
 *{box-sizing:border-box}
-
 html{scroll-behavior:smooth}
-
 body{margin:0;font-family:Arial,sans-serif;color:#24352a;line-height:1.6}
-
 a{text-decoration:none;color:inherit}
-
 img{display:block;width:100%;object-fit:cover}
-
 .demo-nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 7%;background:#fff}
-
 .demo-brand{font-family:Georgia,serif;font-size:22px;font-weight:bold}
-
 .demo-navlinks{display:flex;gap:20px;font-size:13px;flex-wrap:wrap}
-
 .demo-button{display:inline-block;background:#304f3c;color:white;padding:12px 20px;border-radius:3px;font-size:13px;font-weight:bold}
-
 .demo-kicker{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:bold;margin-bottom:15px}
-
 .demo-section{padding:65px 8%}
-
 .demo-section h2{font-family:Georgia,serif;font-size:clamp(30px,5vw,46px);line-height:1.12;margin:0 0 18px}
-
 .demo-section p{color:#69736b}
-
 .demo-hero{min-height:390px;display:flex;align-items:center;padding:65px 8%;background-size:cover;background-position:center;color:#fff}
-
 .demo-hero h1{font-family:Georgia,serif;font-size:clamp(40px,7vw,68px);line-height:1.04;margin:0 0 20px;max-width:680px}
-
 .demo-hero p{max-width:520px;color:#f1f1eb;margin-bottom:25px}
-
 .demo-columns{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
-
 .demo-photo{min-height:230px;height:100%;border-radius:5px}
-
 .demo-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:25px}
-
 .demo-item{background:#f3f0e8;padding:22px;border-radius:4px}
-
 .demo-item h3{font-family:Georgia,serif;margin:0 0 8px}
-
 .demo-item p{font-size:13px;margin-bottom:0}
-
 .demo-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:25px}
-
 .demo-gallery img{height:170px;border-radius:4px}
-
 .demo-quote{background:#edf0e9;text-align:center;padding:45px 8%;font-family:Georgia,serif;font-size:23px}
-
 .demo-footer{background:#18271d;color:#fff;padding:32px 8%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-
 .demo-footer p{color:#d0d8d0;font-size:13px;margin:5px 0}
-
 .demo-contact{background:#304f3c;color:#fff;padding:48px 8%;text-align:center}
-
 .demo-contact p{color:#e0e8e0}
-
 .demo-contact h2{font-family:Georgia,serif;font-size:35px;margin:0 0 10px}
-
 .demo-contact .demo-button{background:#fff;color:#24352a}
-
 @media(max-width:650px){
-
 .demo-nav{padding:15px 5%;align-items:flex-start;flex-direction:column}
-
 .demo-navlinks{gap:12px;font-size:12px}
-
 .demo-hero{min-height:380px;padding:45px 6%}
-
 .demo-section{padding:45px 6%}
-
 .demo-columns{grid-template-columns:1fr}
-
 .demo-photo{min-height:220px}
-
 .demo-list{grid-template-columns:1fr}
-
 .demo-gallery{grid-template-columns:1fr 1fr}
-
 .demo-gallery img{height:140px}
-
 .demo-footer{flex-direction:column}
-
 }
+`;
 
-\`;
-
-
-
-const demoSimple=\`
-
+const demoSimple=`
 <!DOCTYPE html><html lang="es-AR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Café del Bosque | Demo Web Simple</title><style>${estiloDemo}</style></head><body>
-
 <header class="demo-nav"><div class="demo-brand">☕ Café del Bosque</div><nav class="demo-navlinks"><a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a><a href="#especialidades">Especialidades</a><a href="#contacto">Contacto</a></nav></header>
-
 <section class="demo-hero" id="inicio" style="background-image:linear-gradient(90deg,rgba(16,30,20,.83),rgba(16,30,20,.24)),url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1400&q=85')"><div><div class="demo-kicker">Un rincón para disfrutar</div><h1>Un buen café, un momento para vos.</h1><p>Sabores artesanales, café recién preparado y un ambiente cálido para compartir algo rico en cualquier momento del día.</p><a class="demo-button" href="#contacto">Encontranos</a></div></section>
-
 <section class="demo-section" id="nosotros"><div class="demo-columns"><div><div class="demo-kicker">Nuestra historia</div><h2>Hecho con cariño, servido con una sonrisa.</h2><p>Somos una cafetería de barrio que disfruta de las cosas simples: buenos ingredientes, aromas irresistibles y una mesa siempre lista para recibirte.</p><a class="demo-button" href="#especialidades">Conocé nuestras especialidades</a></div><img class="demo-photo" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=85" alt="Cafetería acogedora"></div></section>
-
 <section class="demo-section" id="especialidades" style="background:#faf8f2"><div class="demo-kicker">Para disfrutar</div><h2>Nuestras especialidades</h2><p>Una selección preparada para acompañar tus mejores momentos.</p><div class="demo-list"><article class="demo-item"><h3>☕ Café de especialidad</h3><p>Aromático, recién molido y preparado en el momento.</p></article><article class="demo-item"><h3>🥐 Pastelería artesanal</h3><p>Delicias dulces para disfrutar en cada visita.</p></article><article class="demo-item"><h3>🥪 Desayunos y meriendas</h3><p>Opciones ricas para empezar o terminar el día.</p></article></div></section>
-
 <section class="demo-contact" id="contacto"><div class="demo-kicker">Te esperamos</div><h2>Tu próxima pausa está acá.</h2><p>Vení a conocernos o escribinos para consultar.</p><a class="demo-button" href="https://wa.me/5492945541024?text=Hola%2C%20quiero%20consultar%20por%20una%20p%C3%A1gina%20web%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer">Consultar por una web similar</a></section>
-
 <footer class="demo-footer"><div><strong>Café del Bosque</strong><p>Un rincón para disfrutar.</p></div><div><strong>Contacto</strong><p>Ejemplo ficticio · Datos ilustrativos</p><p>Dirección y horarios a definir</p></div></footer>
+</body></html>`;
 
-</body></html>\`;
-
-
-
-const demoProfesional=\`
-
+const demoProfesional=`
 <!DOCTYPE html><html lang="es-AR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Café del Bosque | Demo Web Profesional</title><style>${estiloDemo}
-
 .pro-hero{min-height:480px}
-
 .pro-hero h1{max-width:720px}
-
 .pro-intro{text-align:center;max-width:800px;margin:auto}
-
 .pro-special{background:#f3f0e8}
-
 .pro-special .demo-item{background:#fff}
-
 </style></head><body>
-
 <header class="demo-nav"><div class="demo-brand">CAFÉ DEL BOSQUE</div><nav class="demo-navlinks"><a href="#inicio">Inicio</a><a href="#historia">Nuestra historia</a><a href="#carta">La carta</a><a href="#galeria">Galería</a><a href="#contacto">Contacto</a></nav></header>
-
 <section class="demo-hero pro-hero" id="inicio" style="background-image:linear-gradient(90deg,rgba(13,25,17,.86),rgba(13,25,17,.25)),url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1800&q=85')"><div><div class="demo-kicker">Cafetería · Pastelería artesanal</div><h1>El placer de bajar un cambio.</h1><p>Un espacio para encontrarte con los sabores, las charlas y esos pequeños momentos que hacen bien.</p><a class="demo-button" href="#carta">Descubrí nuestras especialidades</a></div></section>
-
 <section class="demo-section" id="historia"><div class="pro-intro"><div class="demo-kicker">Bienvenidos a nuestra casa</div><h2>Más que café, momentos para recordar.</h2><p>En Café del Bosque creemos que las mejores historias empiezan alrededor de una mesa. Por eso cuidamos cada detalle: desde la selección de nuestros ingredientes hasta la forma en que te recibimos.</p></div><div class="demo-columns" style="margin-top:35px"><img class="demo-photo" src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1000&q=85" alt="Interior cálido de una cafetería"><div><div class="demo-kicker">Nuestra esencia</div><h2>Calidad, calidez y sabor.</h2><p>Preparamos cada café en el momento, acompañamos las tardes con pastelería artesanal y creamos un lugar donde siempre hay tiempo para disfrutar.</p><p>Un concepto pensado para quienes valoran los buenos productos y los espacios acogedores.</p></div></div></section>
-
 <section class="demo-section pro-special" id="carta"><div class="demo-kicker">Una pausa deliciosa</div><h2>Descubrí nuestra carta</h2><p>Opciones preparadas para acompañar cada momento del día.</p><div class="demo-list"><article class="demo-item"><h3>Cafés especiales</h3><p>Espresso, capuchino, café con leche y otras preparaciones para los amantes del buen café.</p></article><article class="demo-item"><h3>Pastelería artesanal</h3><p>Tortas, budines, medialunas y delicias elaboradas para acompañar tu bebida favorita.</p></article><article class="demo-item"><h3>Opciones saladas</h3><p>Tostados, sándwiches y propuestas ricas para compartir un almuerzo liviano.</p></article></div></section>
-
-<section class="demo-section" id="galeria"><div class="demo-kicker">Un vistazo a nuestro mundo</div><h2>Momentos de Café del Bosque</h2><p>Un ambiente cálido, sabores para disfrutar y rincones que invitan a quedarse un rato más.</p><div class="demo-gallery"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80" alt="Café recién preparado"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80" alt="Taza de café"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" alt="Interior de cafetería"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=700&q=80" alt="Mesas de cafetería"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" alt="Pastelería artesanal"><img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=700&q=80" alt="Barra de cafetería"></div></section>
-
+<section class="demo-section" id="galeria"><div class="demo-kicker">Un vistazo a nuestro mundo</div><h2>Momentos de Café del Bosque</h2><p>Un ambiente cálido, sabores para disfrutar y rincones que invitan a quedarse un rato más.</p><div class="demo-gallery"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80" alt="Café recién preparado"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=700&q=80" alt="Taza de café"><img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=700&q=80" alt="Interior de cafetería"><img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=700&q=80" alt="Mesas de cafetería"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=80" alt="Pastelería artesanal"><img src="https://images.unsplash.com/photo-1445116572660-acca5b5b5c?auto=format&fit=crop&w=700&q=80" alt="Barra de cafetería"></div></section>
 <section class="demo-quote">“Los mejores momentos suelen venir acompañados de algo rico.”</section>
-
 <section class="demo-contact" id="contacto"><div class="demo-kicker">Nos encantaría recibirte</div><h2>Hagamos un lugar para vos.</h2><p>Acercate a conocernos o escribinos para consultar horarios y ubicación.</p><a class="demo-button" href="https://wa.me/5492945541024?text=Hola%2C%20quiero%20consultar%20por%20una%20p%C3%A1gina%20web%20para%20mi%20negocio." target="_blank" rel="noopener noreferrer">Consultar por una web similar</a></section>
-
 <footer class="demo-footer"><div><strong>CAFÉ DEL BOSQUE</strong><p>Una pausa para disfrutar.</p></div><div><strong>Encontranos</strong><p>Ejemplo ficticio · Datos ilustrativos</p><p>Dirección y horarios a definir</p></div><div><strong>Seguinos</strong><p>Redes sociales a definir</p></div></footer>
-
-</body></html>\`;
-
-
+</body></html>`;
 
 function abrirDemo(tipo){
-
 cerrarMenu();
-
 previousDemoFocus=document.activeElement;
-
 document.getElementById("demoTitle").textContent=tipo==="simple"?"Vista previa · Web Simple":"Vista previa · Web Profesional";
-
 demoFrame.srcdoc=tipo==="simple"?demoSimple:demoProfesional;
-
 demoModal.classList.add("active");
-
 demoModal.setAttribute("aria-hidden","false");
-
 document.body.style.overflow="hidden";
-
 demoModal.querySelector(".demo-close").focus();
-
 registrarEvento(tipo==="simple"?"abrir_demo_simple":"abrir_demo_profesional");
-
 }
-
-
 
 function cerrarDemo(){
-
 if(!demoModal.classList.contains("active"))return;
-
 demoModal.classList.remove("active");
-
 demoModal.setAttribute("aria-hidden","true");
-
 demoFrame.srcdoc="";
-
 document.body.style.overflow=contactModal.classList.contains("active")?"hidden":"";
-
 if(previousDemoFocus&&typeof previousDemoFocus.focus==="function")previousDemoFocus.focus();
-
 }
-
-
 
 demoModal.addEventListener("click",event=>{if(event.target===demoModal)cerrarDemo()});
 
-
-
 function cerrarTodasLasVentanas(){
-
 cerrarDemo();
-
 cerrarContacto();
-
 cerrarMenu();
-
 }
 
-
-
 document.addEventListener("keydown",event=>{
-
 if(event.key==="Escape")cerrarTodasLasVentanas();
-
 });
 
-
-
 document.getElementById("currentYear").textContent=new Date().getFullYear();
-
 </script>
-
 </body>
-
 </html>
